@@ -1,0 +1,190 @@
+/* Main styles for the portfolio landing page */
+
+@import '../../components/tokens.css';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-family-sans);
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.page-shell {
+    width: min(1440px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 4rem 0 3rem;
+    position: relative;
+}
+
+.hero-tag {
+    margin: 0 0 1.25rem 0;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4.5vw, 3.125rem);
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    max-width: 1000px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 1rem;
+    padding-top: 1.2rem;
+    font-size: 1.0625rem;
+    color: var(--color-text);
+}
+
+.nav-label {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 4rem;
+    color: var(--color-text-secondary);
+}
+
+.nav-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-text);
+}
+
+.divider {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.divider img {
+    width: 100%;
+    height: auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+.project-card {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: var(--color-artipio-bg);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
+}
+
+.project-card--baund {
+    background: var(--color-baund-bg);
+}
+
+.project-card__header {
+    padding: 1.5rem 1.5rem 1rem;
+    background: var(--color-artipio-primary);
+    color: white;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.project-card--baund .project-card__header {
+    background: var(--color-baund-primary);
+}
+
+.project-card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.25rem 1.5rem;
+    min-height: 640px;
+}
+
+.project-card__body h2 {
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-artipio-primary);
+}
+
+.project-card--baund .project-card__body h2 {
+    color: var(--color-baund-primary);
+}
+
+.project-card__body img {
+    width: min(100%, 400px);
+    height: auto;
+    object-fit: contain;
+    margin-top: auto;
+}
+
+.scrollbar {
+    margin-top: 2rem;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f2f2f2 0%, #b9b9b9 50%, #f2f2f2 100%);
+}
+
+@media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-shell {
+        padding-top: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        width: min(100% - 1.25rem, 100%);
+    }
+
+    .hero-tag {
+        font-size: 1rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .project-card__body {
+        min-height: 420px;
+    }
+}
