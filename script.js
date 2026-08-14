@@ -43,6 +43,16 @@ window.addEventListener("scroll", updateHeaderOnScroll, {
 
 window.addEventListener("load", updateHeaderOnScroll);
 
+function restartHeroGif() {
+  const heroGif = document.querySelector(".project-hero__image");
+
+  if (!heroGif) return;
+
+  const originalSrc = heroGif.getAttribute("src").split("?")[0];
+  heroGif.setAttribute("src", `${originalSrc}?restart=${Date.now()}`);
+}
+
+window.addEventListener("pageshow", restartHeroGif);
 const projectMediaImages = document.querySelectorAll(".project-media__image");
 
 projectMediaImages.forEach((projectImage) => {
