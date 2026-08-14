@@ -1,0 +1,577 @@
+/* ========================================
+   Project Detail: Local Configuration
+======================================== */
+
+.project-detail {
+  --project-container-width: 1200px;
+  --project-section-label-width: 203px;
+}
+
+/* ========================================
+   Shared Project Container
+======================================== */
+
+.project-container {
+  width: 100%;
+  max-width: var(--project-container-width);
+  margin-inline: auto;
+}
+
+/* ========================================
+   Site Name Link Reset
+======================================== */
+
+.site-name,
+.site-name:visited,
+.site-name:hover,
+.site-name:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================
+   Project Hero
+======================================== */
+
+.project-hero {
+  position: relative;
+  left: 50%;
+
+  width: 100vw;
+  height: 480px;
+
+  margin-top: -72px;
+  margin-left: -50vw;
+
+  overflow: hidden;
+  background-color: var(--color-project-artipio-primary, #2f89ff);
+}
+
+.project-hero__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: auto;
+  height: 100%;
+  max-width: none;
+
+  transform: translate(-50%, -50%);
+}
+
+/* ========================================
+   Project Introduction
+======================================== */
+
+.project-introduction {
+  margin-top: 64px;
+}
+
+.project-introduction__main {
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1fr);
+  column-gap: 80px;
+  align-items: center;
+}
+
+.project-logo-placeholder {
+  width: 135px;
+  height: 135px;
+}
+
+.project-introduction__copy {
+  min-width: 0;
+}
+
+.project-introduction__copy .type-project-title {
+  margin-bottom: 8px;
+}
+
+/* ========================================
+   Typography
+   Font properties only
+======================================== */
+
+.type-project-title {
+  margin: 0;
+
+  color: var(--color-text-primary, #1d1d1f);
+  font-family: "Switzer", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.type-body-headline {
+  margin: 0;
+
+  font-family: var(--font-family-primary, "Switzer"), sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.type-body-bold {
+  margin: 0;
+
+  font-family: var(--font-family-primary, "Switzer"), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.type-body {
+  margin: 0;
+
+  font-family: var(--font-family-primary, "Switzer"), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.type-body-small {
+  margin: 0;
+  font-family: var(--color-font, "Switzer"), sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.type-description {
+  margin: 0;
+
+  font-family: var(--font-family-mono, "IBM Plex Mono"), monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+}
+
+/* ========================================
+   Text Color Utilities
+======================================== */
+
+.text-high-emphasis {
+  color: var(--on-surface-High-Emphasis, #313131);
+}
+
+.text-primary {
+  color: var(--color-text-primary, #1d1d1f);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary, #6e6e73);
+}
+
+.text-tertiary {
+  color: var(--color-text-tertiary, #939393);
+}
+
+.text-danger {
+  color: var(--color-text-danger, #ff7b7b);
+}
+
+.text-artipio {
+  color: var(--color-project-artipio-primary, #2f89ff);
+}
+.text-white {
+  color: var(--color-surface-primary, #ffffff);
+}
+
+/* ========================================
+   Project Metadata
+======================================== */
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 32px;
+
+  margin: 128px 0 0;
+  padding: 0 0 80px;
+}
+
+.project-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  min-width: 0;
+}
+
+.project-meta dt,
+.project-meta dd {
+  margin: 0;
+}
+
+/* ========================================
+   Divider
+======================================== */
+
+.project-divider {
+  width: 100%;
+  height: 1px;
+
+  margin-block: 0;
+  border: 0;
+
+  background-color: var(--color-divider-subtle, #dfdfdf);
+}
+
+/* ========================================
+   Shared Project Section
+======================================== */
+
+.project-section {
+  display: grid;
+  grid-template-columns:
+    var(--project-section-label-width)
+    minmax(0, 1fr);
+  align-items: start;
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.project-section__header,
+.project-section__content {
+  min-width: 0;
+}
+
+/* ========================================
+   Reusable Content Layout
+======================================== */
+
+.content-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.body-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ========================================
+   Shared Content Block
+======================================== */
+
+.content-block {
+  min-width: 0;
+}
+
+/* ========================================
+   Shared Content Header
+======================================== */
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.content-header__main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.content-header__value {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  text-align: right;
+}
+
+/* ========================================
+   Shared Detail Content
+======================================== */
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-top: 40px;
+}
+
+.detail-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ========================================
+   Reusable Data Cards
+======================================== */
+
+.data-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  min-width: 0;
+  padding: 24px;
+
+  border-radius: 20px;
+  background-color: var(--color-project-artipio-background, #f0f7ff);
+}
+
+.data-card > * {
+  min-width: 0;
+  margin: 0;
+}
+
+.data-card__header,
+.data-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.data-card__header > *,
+.data-card__row > * {
+  min-width: 0;
+}
+
+.data-card__header > :last-child,
+.data-card__row > :last-child {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.data-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.data-card__row dt,
+.data-card__row dd {
+  margin: 0;
+}
+.obj_shadow {
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 12px rgba(29, 29, 31, 0.128));
+}
+.obj_shadow_strong {
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 12px rgba(29, 29, 31, 0.229));
+}
+/* ========================================
+   Reusable Media Detail
+======================================== */
+
+.media-detail {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  column-gap: 130px;
+  align-items: start;
+
+  width: 100%;
+  padding-block: 40px;
+}
+
+.media-detail--gray {
+  background-color: var(--color-surface-subtle, #f7f7f7);
+  box-shadow: 0 0 0 100vmax var(--color-surface-subtle, #f7f7f7);
+  clip-path: inset(0 -100vmax);
+}
+.media-detail--blue {
+  background-color: var(--color-project-artipio-primary, #2f89ff);
+  box-shadow: 0 0 0 100vmax var(--color-project-artipio-primary, #2f89ff);
+  clip-path: inset(0 -100vmax);
+}
+.media-detail__visual {
+  display: block;
+  width: 270px;
+
+  object-fit: contain;
+}
+
+.media-detail__image {
+  display: block;
+
+  width: 270px;
+  height: 586px;
+  max-width: none;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.media-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  min-width: 0;
+}
+
+.media-detail__description {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  min-width: 0;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+}
+
+.image-grid__item {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  padding: 24px;
+}
+.media-detail--space80 {
+  row-gap: 80px;
+}
+/* ========================================
+   Media Detail: Mobile
+======================================== */
+
+@media (max-width: 860px) {
+  .media-detail {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-block: 40px;
+  }
+
+  .media-detail__visual {
+    width: 270px;
+
+    margin-inline: auto;
+  }
+
+  .media-detail__image {
+    width: 270px;
+    height: 586px;
+  }
+
+  .media-detail__content {
+    gap: 40px;
+  }
+
+  .media-detail__description {
+    gap: 40px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+/* ========================================
+   Project Detail: Tablet
+======================================== */
+
+@media (max-width: 1000px) {
+  .project-container {
+    width: calc(100% - 64px);
+  }
+
+  .project-meta {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 40px;
+  }
+
+  .project-section {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+}
+
+/* ========================================
+   Project Detail: Mobile
+======================================== */
+
+@media (max-width: 800px) {
+  .quote-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-container {
+    width: calc(100% - 40px);
+  }
+
+  .project-hero {
+    height: 272px;
+  }
+
+  .project-introduction__main {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .project-logo-placeholder {
+    display: none;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+
+    margin-top: 80px;
+  }
+
+  .project-section {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .content-stack {
+    gap: 64px;
+  }
+
+  .data-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Project Detail: Small Mobile
+======================================== */
+
+@media (max-width: 520px) {
+  .type-project-title {
+    font-size: 40px;
+  }
+
+  .type-body-headline {
+    font-size: 20px;
+  }
+
+  .content-header {
+    align-items: flex-start;
+  }
+
+  .data-card {
+    padding: 20px;
+  }
+}
