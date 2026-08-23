@@ -68,3 +68,20 @@ projectMediaImages.forEach((projectImage) => {
     projectImage.src = staticSrc;
   });
 });
+const menuButton = document.querySelector(".menu-button");
+const primaryNav = document.querySelector("#primary-nav");
+
+if (menuButton && primaryNav && header) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = primaryNav.classList.toggle("is-open");
+
+    header.classList.toggle("is-menu-open", isOpen);
+
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation",
+    );
+    menuButton.classList.toggle("is-open", isOpen);
+  });
+}
