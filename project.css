@@ -74,7 +74,7 @@
   align-items: center;
 }
 
-.project-logo-placeholder {
+.project-introduction__logo {
   width: 135px;
   height: 135px;
 }
@@ -134,7 +134,7 @@
 }
 .type-body-small {
   margin: 0;
-  font-family: var(--color-font, "Switzer"), sans-serif;
+  font-family: var(--font-family-primary, "Switzer"), sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -179,10 +179,6 @@
 .text-artipio {
   color: var(--color-project-artipio-primary, #2f89ff);
 }
-.text-white {
-  color: var(--color-surface-primary, #ffffff);
-}
-
 /* ========================================
    Project Metadata
 ======================================== */
@@ -234,8 +230,7 @@
     minmax(0, 1fr);
   align-items: start;
 
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-block: 80px;
 }
 
 .project-section__header,
@@ -257,17 +252,18 @@
   gap: 80px;
 }
 
-.body-copy {
+.content-stack__body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-width: 0;
 }
 
 /* ========================================
    Shared Content Block
 ======================================== */
 
-.content-block {
+.content-stack__block {
   min-width: 0;
 }
 
@@ -376,14 +372,11 @@
 .data-card__row dd {
   margin: 0;
 }
-.obj_shadow {
+.media-asset--shadow {
   margin-bottom: 16px;
   filter: drop-shadow(0 4px 12px rgba(29, 29, 31, 0.128));
 }
-.obj_shadow_strong {
-  margin-bottom: 16px;
-  filter: drop-shadow(0 4px 12px rgba(29, 29, 31, 0.229));
-}
+
 /* ========================================
    Reusable Media Detail
 ======================================== */
@@ -399,31 +392,18 @@
 }
 
 .media-detail--gray {
-  background-color: var(--color-surface-subtle, #f7f7f7);
-  box-shadow: 0 0 0 100vmax var(--color-surface-subtle, #f7f7f7);
+  --media-detail-background: var(--color-surface-subtle, #f7f7f7);
+
+  background-color: var(--media-detail-background);
+  box-shadow: 0 0 0 100vmax var(--media-detail-background);
   clip-path: inset(0 -100vmax);
 }
-.media-detail--blue {
-  background-color: var(--color-project-artipio-primary, #2f89ff);
-  box-shadow: 0 0 0 100vmax var(--color-project-artipio-primary, #2f89ff);
-  clip-path: inset(0 -100vmax);
-}
+
 .media-detail__visual {
   display: block;
   width: 270px;
 
   object-fit: contain;
-}
-
-.media-detail__image {
-  display: block;
-
-  width: 270px;
-  height: 586px;
-  max-width: none;
-
-  object-fit: contain;
-  object-position: center;
 }
 
 .media-detail__content {
@@ -474,11 +454,6 @@
     margin-inline: auto;
   }
 
-  .media-detail__image {
-    width: 270px;
-    height: 586px;
-  }
-
   .media-detail__content {
     gap: 40px;
   }
@@ -517,9 +492,6 @@
 ======================================== */
 
 @media (max-width: 800px) {
-  .quote-card-grid {
-    grid-template-columns: 1fr;
-  }
   .project-container {
     width: calc(100% - 40px);
   }
@@ -533,7 +505,7 @@
     row-gap: 24px;
   }
 
-  .project-logo-placeholder {
+  .project-introduction__logo {
     display: none;
   }
 
