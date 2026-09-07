@@ -292,6 +292,42 @@ body {
   line-height: 150%;
   letter-spacing: -0.4px;
 }
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal--image {
+  transform: translateY(28px) scale(0.98);
+  transition-duration: 850ms;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-reveal:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.scroll-reveal:nth-child(3) {
+  transition-delay: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal--image {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 /* ========================================
    Temporary Responsive Layout
 ======================================== */
