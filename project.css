@@ -587,6 +587,71 @@
 .media-detail--space80 {
   row-gap: 80px;
 }
+/* [공통] 목차 글자와 본문 글자 모두 아이콘과 세로 중앙 정렬을 맞춥니다 */
+.project-toc__link,
+.type-project-title {
+  display: inline-flex;
+  align-items: center;
+}
+/* 💻 1. 우측 본문 타이틀용 SVG 크기 세팅 (32px) */
+.ico-body {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px; /* 본문은 시원하게 여백 제공 */
+  display: block;
+}
+
+/* 📱 2. 왼쪽 사이드바 목차용 SVG 크기 세팅 (18px) */
+.ico-sidebar {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  display: block;
+  flex: 0 0 18px;
+  background-color: currentColor;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.ico-sidebar--summary {
+  -webkit-mask-image: url("./img/icon/summary.svg");
+  mask-image: url("./img/icon/summary.svg");
+}
+
+.ico-sidebar--voc {
+  -webkit-mask-image: url("./img/icon/voc.svg");
+  mask-image: url("./img/icon/voc.svg");
+}
+
+.ico-sidebar--issue {
+  -webkit-mask-image: url("./img/icon/issue.svg");
+  mask-image: url("./img/icon/issue.svg");
+}
+
+.ico-sidebar--edge {
+  -webkit-mask-image: url("./img/icon/edge.svg");
+  mask-image: url("./img/icon/edge.svg");
+}
+
+.ico-sidebar--ia {
+  -webkit-mask-image: url("./img/icon/ia.svg");
+  mask-image: url("./img/icon/ia.svg");
+}
+
+.ico-sidebar--fluid {
+  -webkit-mask-image: url("./img/icon/fluid.svg");
+  mask-image: url("./img/icon/fluid.svg");
+}
+
+.ico-sidebar--design {
+  -webkit-mask-image: url("./img/icon/design.svg");
+  mask-image: url("./img/icon/design.svg");
+}
+
 /* ========================================
    Media Detail: Mobile
 ======================================== */

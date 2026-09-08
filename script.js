@@ -86,19 +86,12 @@ if (menuButton && primaryNav && header) {
   });
 }
 
-const projectSections = document.querySelectorAll(
-  ".project-section:has(.project-section__header .type-project-title)",
-);
+const projectSections = document.querySelectorAll(".project-section");
 const projectToc = document.querySelector(".project-toc");
 
 if (projectSections.length > 0 && projectToc) {
   projectSections.forEach((section, index) => {
-    const heading = section.querySelector(
-      ".project-section__header .type-project-title",
-    );
     const sectionId = `project-section-${index + 1}`;
-
-    if (!heading) return;
 
     section.id = sectionId;
   });
