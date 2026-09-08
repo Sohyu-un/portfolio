@@ -113,6 +113,28 @@ if (projectSections.length > 0 && projectToc) {
 
   const projectTocLinks = projectToc.querySelectorAll(".project-toc__link");
 
+  projectTocLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      const targetSection = targetId ? document.querySelector(targetId) : null;
+
+      if (!targetSection) return;
+
+      event.preventDefault();
+      history.pushState(null, "", targetId);
+
+      targetSection.classList.remove("is-toc-target");
+      requestAnimationFrame(() => {
+        targetSection.classList.add("is-toc-target");
+      });
+
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  });
+
   const updateProjectToc = (activeSection) => {
     projectTocLinks.forEach((link) => {
       link.classList.toggle(
