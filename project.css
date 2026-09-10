@@ -29,6 +29,14 @@
   text-decoration: none;
 }
 
+@media (min-width: 801px) {
+  .project-page-header {
+    width: 100%;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+}
+
 /* ========================================
    Project Hero
 ======================================== */
