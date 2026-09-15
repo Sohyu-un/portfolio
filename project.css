@@ -266,7 +266,7 @@
 
 .project-toc {
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 0;
 
   width: var(--project-section-label-width);
