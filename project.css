@@ -474,7 +474,7 @@
   padding: 24px;
 
   border-radius: 20px;
-  background-color: var(--color-project-artipio-background, #f0f7ff);
+  background-color: var(--color-project-artipio-background, #f7f7f7);
 }
 
 .data-card > * {
