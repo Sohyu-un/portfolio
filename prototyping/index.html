@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 빌더</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 좌측 사이드바 -->
+    <aside class="sidebar">
+        <div class="section-title">
+            <span>List of questions</span>
+            <!-- 플러스 버튼 -->
+            <button class="btn-add-q" id="addQuestionBtn">
+                <!-- 여기에 플러스 아이콘을 넣으세요 -->
+                +
+            </button>
+        </div>
+        <ul class="question-list-items" id="sidebarList">
+            <li>What is your gender?</li>
+            <li>Please enter your full age.</li>
+            <li>Where do you live?</li>
+        </ul>
+    </aside>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="main-content">
+        <nav class="top-nav">
+            <span>Sample</span>
+            <span class="active">Build Questions</span>
+            <span>Payment</span>
+            <span>Status</span>
+            <span>Results</span>
+        </nav>
+
+        <div class="workspace">
+            <input type="text" class="survey-title-input" value="Culture and MZ generation">
+
+            <div id="questionsContainer">
+                <!-- 기본 질문 카드 -->
+                <div class="question-card">
+                    <h3>What is your gender?</h3>
+                    <div class="options-group">
+                        <label class="option-item"><input type="radio" name="gender"> Male</label>
+                        <label class="option-item"><input type="radio" name="gender"> Female</label>
+                        <label class="option-item"><input type="radio" name="gender"> No response</label>
+                    </div>
+                </div>
+                <!-- 기본 질문 카드 -->
+                <div class="question-card">
+                    <h3>Please enter your full age.</h3>
+                    <input type="text" class="custom-input" placeholder="Please enter your answer here...">
+
+                </div>
+                <div class="question-card">
+                    <h3>Where do you currently live?</h3>
+                    <div class="options-group">
+                        <select class="custom-select" id="usStateSelect">
+                            <option value="" disabled selected>Select your state...</option>
+                            <option value="AL">Alabama (AL)</option>
+                            <option value="AK">Alaska (AK)</option>
+                            <option value="AZ">Arizona (AZ)</option>
+                            <option value="AR">Arkansas (AR)</option>
+                            <option value="CA">California (CA)</option>
+                            <option value="CO">Colorado (CO)</option>
+                            <option value="CT">Connecticut (CT)</option>
+                            <option value="DE">Delaware (DE)</option>
+                            <option value="FL">Florida (FL)</option>
+                            <option value="GA">Georgia (GA)</option>
+                            <option value="HI">Hawaii (HI)</option>
+                            <option value="ID">Idaho (ID)</option>
+                            <option value="IL">Illinois (IL)</option>
+                            <option value="IN">Indiana (IN)</option>
+                            <option value="IA">Iowa (IA)</option>
+                            <option value="KS">Kansas (KS)</option>
+                            <option value="KY">Kentucky (KY)</option>
+                            <option value="LA">Louisiana (LA)</option>
+                            <option value="ME">Maine (ME)</option>
+                            <option value="MD">Maryland (MD)</option>
+                            <option value="MA">Massachusetts (MA)</option>
+                            <option value="MI">Michigan (MI)</option>
+                            <option value="MN">Minnesota (MN)</option>
+                            <option value="MS">Mississippi (MS)</option>
+                            <option value="MO">Missouri (MO)</option>
+                            <option value="MT">Montana (MT)</option>
+                            <option value="NE">Nebraska (NE)</option>
+                            <option value="NV">Nevada (NV)</option>
+                            <option value="NH">New Hampshire (NH)</option>
+                            <option value="NJ">New Jersey (NJ)</option>
+                            <option value="NM">New Mexico (NM)</option>
+                            <option value="NY">New York (NY)</option>
+                            <option value="NC">North Carolina (NC)</option>
+                            <option value="ND">North Dakota (ND)</option>
+                            <option value="OH">Ohio (OH)</option>
+                            <option value="OK">Oklahoma (OK)</option>
+                            <option value="OR">Oregon (OR)</option>
+                            <option value="PA">Pennsylvania (PA)</option>
+                            <option value="RI">Rhode Island (RI)</option>
+                            <option value="SC">South Carolina (SC)</option>
+                            <option value="SD">South Dakota (SD)</option>
+                            <option value="TN">Tennessee (TN)</option>
+                            <option value="TX">Texas (TX)</option>
+                            <option value="UT">Utah (UT)</option>
+                            <option value="VT">Vermont (VT)</option>
+                            <option value="VA">Virginia (VA)</option>
+                            <option value="WA">Washington (WA)</option>
+                            <option value="WV">West Virginia (WV)</option>
+                            <option value="WI">Wisconsin (WI)</option>
+                            <option value="WY">Wyoming (WY)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="questionsContainer">
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <!-- 이미지의 10가지 메뉴가 적용된 팝오버 -->
+    <div class="popover-backdrop" id="popoverBackdrop">
+        <div class="type-popover" id="typePopover">
+            <div class="popover-grid">
+                <!-- 1행 -->
+                <button class="type-btn" data-type="subjective-short">
+                    <i class="icon-placeholder"></i><!-- 아이콘 영역 -->
+                    <span>subjective short<br>answer type</span>
+                </button>
+                <button class="type-btn" data-type="subjective-long">
+                    <i class="icon-placeholder"></i>
+                    <span>subjective long<br>sentence</span>
+                </button>
+                <button class="type-btn" data-type="single-selection">
+                    <i class="icon-placeholder"></i>
+                    <span>single selection</span>
+                </button>
+                <button class="type-btn" data-type="multiple-choice">
+                    <i class="icon-placeholder"></i>
+                    <span>multiple choice</span>
+                </button>
+
+                <!-- 2행 -->
+                <button class="type-btn" data-type="matrix">
+                    <i class="icon-placeholder"></i>
+                    <span>matrix type</span>
+                </button>
+                <button class="type-btn" data-type="plural-matrix">
+                    <i class="icon-placeholder"></i>
+                    <span>plural matrix</span>
+                </button>
+                <button class="type-btn" data-type="scale">
+                    <i class="icon-placeholder"></i>
+                    <span>scale type</span>
+                </button>
+                <button class="type-btn" data-type="ranking">
+                    <i class="icon-placeholder"></i>
+                    <span>ranking type</span>
+                </button>
+
+                <!-- 3행 -->
+                <button class="type-btn" data-type="notice">
+                    <i class="icon-placeholder"></i>
+                    <span>notice</span>
+                </button>
+                <button class="type-btn" data-type="get-view">
+                    <i class="icon-placeholder"></i>
+                    <span>Get View</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

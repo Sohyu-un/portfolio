@@ -1,0 +1,290 @@
+:root {
+  --bg-color: #f5f7fb;
+  --sidebar-width: 260px; /* 💡 프로토타입 자체 사이드바 폭이네요! */
+  --primary-color: #4361ee;
+  --border-color: #e2e8f0;
+  --text-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* 💡 안전장치: 내부의 모든 요소가 iframe 가로 폭을 절대 넘지 못하게 차단 */
+  max-width: 100% !important;
+}
+
+body {
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  /* ❌ 기존 height: 100vh; overflow: hidden; 을 과감히 지우고 아래로 대체합니다 */
+  width: 100% !important;
+  min-height: 100% !important;
+  height: auto !important;
+  overflow: auto !important; /* 💡 잘리는 내용이 있으면 내부 스크롤로 볼 수 있게 허용 */
+}
+
+/* --- 사이드바 --- */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: #ffffff;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-add-q {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add-q:hover {
+  background-color: #f0f4ff;
+}
+
+.question-list-items {
+  list-style: none;
+}
+
+.question-list-items li {
+  padding: 10px 12px;
+  font-size: 13px;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* --- 메인 콘텐츠 작업 영역 --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.top-nav span.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 15px;
+  margin-bottom: -16px;
+}
+
+.workspace {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.survey-title-input {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  background: transparent;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.question-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #f1f5f9;
+}
+
+.question-card h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* --- 팝오버 디자인 (말꼬리 제외 기본 박스 형태) --- */
+.popover-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent; /* 클릭 시 닫기용 투명 배경 */
+  z-index: 999;
+}
+
+.type-popover {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  width: 540px; /* 4열 배치를 위한 적절한 너비 */
+  z-index: 1000;
+}
+
+/* 이미지와 동일한 4열 그리드 레이아웃 */
+.popover-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 12px;
+}
+
+.type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  gap: 8px;
+}
+
+.type-btn:hover span {
+  color: var(--primary-color);
+}
+
+/* 직접 아이콘을 넣으실 공간 확보용 가상 스타일 */
+.icon-placeholder {
+  width: 24px;
+  height: 24px;
+  background-color: #71717a; /* 임시 컬러 블록 */
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.type-btn span {
+  font-size: 12px;
+  color: #71717a;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+  background-color: #ffffff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+/* 마우스를 올렸을 때 (Hover) */
+.custom-input:hover {
+  border-color: #cbd5e1;
+}
+
+/* 포커스 되었을 때 (클릭해서 입력 중일 때) */
+.custom-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15); /* 푸른빛 잔상 효과 */
+}
+
+/* 1. 모든 아이콘 태그(i)의 공통 크기 및 기본 설정 */
+.popover-grid .icon-placeholder {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; /* 기존의 회색 배경을 투명하게 제거 */
+}
+
+/* 2. 각 질문 타입별 실제 아이콘 이미지 파일 매칭 (1행) */
+.type-btn[data-type="subjective-short"] .icon-placeholder {
+  background-image: url("img/icon_subjective_short.svg");
+}
+
+.type-btn[data-type="subjective-long"] .icon-placeholder {
+  background-image: url("img/icon_subjective_long.svg");
+}
+
+.type-btn[data-type="single-selection"] .icon-placeholder {
+  background-image: url("img/icon_single_selection.svg");
+}
+
+.type-btn[data-type="multiple-choice"] .icon-placeholder {
+  background-image: url("img/icon_multiple_choice.svg");
+}
+
+/* 3. 각 질문 타입별 실제 아이콘 이미지 파일 매칭 (2행) */
+.type-btn[data-type="matrix"] .icon-placeholder {
+  background-image: url("img/icon_matrix.svg");
+}
+
+.type-btn[data-type="plural-matrix"] .icon-placeholder {
+  background-image: url("img/icon_plural_matrix.svg");
+}
+
+.type-btn[data-type="scale"] .icon-placeholder {
+  background-image: url("img/icon_scale.svg");
+}
+
+.type-btn[data-type="ranking"] .icon-placeholder {
+  background-image: url("img/icon_ranking.svg");
+}
+
+/* 4. 각 질문 타입별 실제 아이콘 이미지 파일 매칭 (3행) */
+.type-btn[data-type="notice"] .icon-placeholder {
+  background-image: url("img/icon_notice.svg");
+}
+
+.type-btn[data-type="get-view"] .icon-placeholder {
+  background-image: url("img/icon_get_view.svg");
+}
