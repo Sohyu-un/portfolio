@@ -447,46 +447,34 @@
                 <source src="./img/uni_proto.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <div class="detail-content">
+
+                <!-- 프로토타입 설명 텍스트 -->
+                <div class="detail-block">
+                  <p class="type-body text-secondary">
+                    This prototype demonstrates the seamless user flow from the main dashboard straight to the survey
+                    results page. By optimizing the navigation path, it eliminates unnecessary steps and allows users to
+                    access deep-dive data instantly with minimal clicks.
+                  </p>
+                </div>
+
+                <!-- 💡 비디오 태그가 성공했던 구조(media-detail__content)를 그대로 빌려와 iframe을 감쌉니다 -->
+                <div class="media-detail__content" style="margin-top: 30px;">
+                  <iframe src="./prototyping/index.html" width="100%" height="600"
+                    style="display: block; width: 100%; border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);"
+                    title="Prototyping Demo">
+                  </iframe>
+                </div>
+
+              </div>
             </div>
 
           </div>
         </div>
+
+
       </section>
-      <section class="project-section project-container">
-        <header class="project-section__header"></header>
 
-        <div class="project-section__content">
-          <h2 class="type-project-title">
-            <img class="ico-body" src="./img/icon/ia.svg" alt="" />Prototype
-          </h2>
-
-          <h3 class="type-body-bold text-primary">
-            Interactive Prototype: Home to Results
-          </h3>
-
-          <!-- 💡 기존 정렬 시스템(detail-content) 내부로 프로토타입을 집어넣습니다 -->
-          <div class="detail-content">
-
-            <!-- 프로토타입 설명 텍스트 -->
-            <div class="detail-block">
-              <p class="type-body text-secondary">
-                This prototype demonstrates the seamless user flow from the main dashboard straight to the survey
-                results page. By optimizing the navigation path, it eliminates unnecessary steps and allows users to
-                access deep-dive data instantly with minimal clicks.
-              </p>
-            </div>
-
-            <!-- 💡 비디오 태그가 성공했던 구조(media-detail__content)를 그대로 빌려와 iframe을 감쌉니다 -->
-            <div class="media-detail__content" style="margin-top: 30px;">
-              <iframe src="./prototyping/index.html" width="100%" height="600"
-                style="display: block; width: 100%; border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);"
-                title="Prototyping Demo">
-              </iframe>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
 
 
