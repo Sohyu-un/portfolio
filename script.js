@@ -202,3 +202,72 @@ if (revealTargets.length > 0) {
     revealTargets.forEach((element) => element.classList.add("is-visible"));
   }
 }
+
+(function () {
+  const video = document.getElementById("portfolioVideo");
+  if (!video) return;
+
+  // 소리 차단을 완벽하게 무력화하기 위해 한 번 더 선언
+  video.muted = true;
+  video.defaultMuted = true;
+
+  function forcePlay() {
+    if (video.paused) {
+      video
+        .play()
+        .then(() => {
+          // 자동 재생 성공 시 이벤트 리스너들 제거
+          window.removeEventListener("scroll", forcePlay);
+          window.removeEventListener("mousemove", forcePlay);
+          window.removeEventListener("touchstart", forcePlay);
+        })
+        .catch((err) =>
+          console.log("Autoplay blocked, retrying on next action."),
+        );
+    }
+  }
+
+  // 유저가 페이지에서 행동을 취하는 순간 강제로 autoplay 트리거 작동
+  window.addEventListener("scroll", forcePlay, { passive: true });
+  window.addEventListener("mousemove", forcePlay, { passive: true });
+  window.addEventListener("touchstart", forcePlay, { passive: true }); // 모바일용
+})(); // 기존 스크립트 맨 밑의 (function() { ... })(); 코드를 지우고
+// 아래 코드를 맨 밑에 붙여넣으세요.
+
+if ("IntersectionObserver" in window) {
+  const video = document.getElementById("portfolioVideo");
+
+  if (video) {
+    // 비디오용 개별 옵저버 생성: 화면에 10% 이상 등장하면 트리거
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.muted = true;
+            video.defaultMuted = true;
+
+            // 화면에 나타나는 즉시 재생 시도
+            video.play().catch((err) => {
+              // 최초 실패 시 유저가 스크롤 중이므로 액션 이벤트로 재촉발
+              const runOnAction = () => {
+                video.play();
+                window.removeEventListener("scroll", runOnAction);
+                window.removeEventListener("touchstart", runOnAction);
+              };
+              window.addEventListener("scroll", runOnAction, { passive: true });
+              window.addEventListener("touchstart", runOnAction, {
+                passive: true,
+              });
+            });
+
+            // 한 번 재생되면 감시 종료
+            videoObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    videoObserver.observe(video);
+  }
+}

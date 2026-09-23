@@ -535,7 +535,9 @@
   width: 100%;
   padding-block: 40px;
 }
-
+.media-detail.is-half-split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .media-detail--gray {
   background-color: var(--color-surface-subtle, #f7f7f7);
   box-shadow: 0 0 0 100vmax var(--color-surface-subtle, #f7f7f7);
@@ -670,7 +672,10 @@
     row-gap: 40px;
     padding-block: 40px;
   }
-
+  .media-detail.is-half-split {
+    grid-template-columns: 1fr; /* 기둥을 1개로 합쳐서 한 줄 나열로 변경 */
+    row-gap: 40px; /* 위아래 항목 사이의 간격 추가 */
+  }
   .media-detail__visual {
     width: 270px;
 

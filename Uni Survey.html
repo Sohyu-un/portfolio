@@ -103,14 +103,14 @@
                     aria-hidden="true"></span>interview</a></li>
               <li><a class="project-toc__link" href="#project-section-3"><span class="ico-sidebar ico-sidebar--issue"
                     aria-hidden="true"></span>Home</a></li>
-              <!--
+
               <li><a class="project-toc__link" href="#project-section-4"><span class="ico-sidebar ico-sidebar--issue"
-                    aria-hidden="true"></span>Issue 2</a></li>
+                    aria-hidden="true"></span>My Survey</a></li>
               <li><a class="project-toc__link" href="#project-section-5"><span class="ico-sidebar ico-sidebar--edge"
-                    aria-hidden="true"></span>Edge Case </a></li>
+                    aria-hidden="true"></span>Result Page</a></li>
               <li><a class="project-toc__link" href="#project-section-6"><span class="ico-sidebar ico-sidebar--ia"
-                    aria-hidden="true"></span>IA</a></li>
-              <li><a class="project-toc__link" href="#project-section-7"><span class="ico-sidebar ico-sidebar--fluid"
+                    aria-hidden="true"></span>Prototype</a></li>
+              <!-- <li><a class="project-toc__link" href="#project-section-7"><span class="ico-sidebar ico-sidebar--fluid"
                     aria-hidden="true"></span>Fluid Layout</a></li>
               <li><a class="project-toc__link" href="#project-section-8"><span class="ico-sidebar ico-sidebar--design"
                     aria-hidden="true"></span>Design System</a></li>
@@ -300,306 +300,161 @@
         </div>
       </section>
 
-      <!--다시 작업하기-->
-      <div style="display: none !important;">
-        <section class="project-section project-container">
-          <header class="project-section__header"></header>
 
-          <div class="project-section__content">
-            <h2 class="type-project-title"><img class="ico-body" src="./img/icon/issue.svg" alt="" />Issue 2</h2>
+      <section class="project-section project-container">
+        <header class="project-section__header"></header>
 
-            <h3 class="type-body-bold text-primary">
-              Terms Agreement: 7 cases
-            </h3>
+        <div class="project-section__content">
+          <h2 class="type-project-title"><img class="ico-body" src="./img/icon/issue.svg" alt="" />My Survey</h2>
 
-            <div class="detail-content">
-              <!-- Problem -->
+
+
+          <div class="detail-content">
+            <!-- Problem -->
+            <div class="detail-block">
+              <h4 class="type-body-bold text-primary">
+                Problem </h4>
+
+              <p class="type-body text-secondary">
+                The sampling setup page featured fragmented and disorganized condition buttons, which severely increased
+                cognitive load and made it difficult for users to locate key options intuitively. Additionally, the
+                entire creation flow lacked a clear visual timeline, preventing users from recognizing their current
+                step within the sequence at a glance. Lastly, the quota and respondent allocation tables were overly
+                rigid and tedious to manage, causing high interaction fatigue during detailed survey configurations.
+              </p>
+            </div>
+            <div class="media-detail__content">
+
               <div class="detail-block">
                 <h4 class="type-body-bold text-primary">
-                  Solution
+                  Revised UX
                 </h4>
-
-                <p class="type-body text-secondary">
-                  Users struggled to find where to agree to event terms, as the consent checkboxes were hidden deep at
-                  the
-                  bottom of the long scroll.
-                </p>
-              </div>
-
-              <!-- VOC -->
-              <div class="detail-block">
-                <h4 class="type-body-bold text-primary">
-                  Voc
-                </h4>
-
-                <div class="data-card-grid">
-                  <article class="data-card">
-                    <p class="type-body-small text-secondary">
-                      I accidentally
-                      <span class="text-danger">
-                        missed selecting
-                      </span>
-                      the optional agreements during sign-up. What should I do? I want to apply for the event.
-                    </p>
-                  </article>
-
-                  <article class="data-card">
-                    <p class="type-body-small text-secondary">
-                      I did not agree to the optional terms when signing up, but now I want to
-                      <span class="text-danger">
-                        change it to agree.
-                      </span>
-                      However, I don't know where to do it. Please change it to agree for the optional terms.
-                    </p>
-                  </article>
-
-                  <article class="data-card">
-                    <p class="type-body-small text-secondary">
-                      I <span class="text-danger">
-                        accidentally unchecked </span>
-                      the optional agreements and only agreed to the required ones.
-                    </p>
-                  </article>
-
-
-                </div>
-              </div>
-
-              <!-- Previous UX -->
-              <div class="media-detail media-detail--gray">
-                <img class="media-detail__visual" src="./img/artipio_prev_event consent.png"
-                  alt="ARTiPIO project cover image" />
-
-                <div class="media-detail__content">
-                  <h3 class="type-body-bold text-primary">
-                    Previous UX
-                  </h3>
-
-                  <div class="media-detail__description">
-                    <div class="detail-block">
-                      <h4 class="type-body-bold text-primary">
-                        Low Visibility & High Friction
-                      </h4>
-
-                      <p class="type-body text-secondary">
-                        The previous event consent flow caused significant user confusion. The location for terms
-                        agreement was highly unclear, and users were forced to scroll all the way to the bottom of the
-                        screen just to find the required checkboxes. This tedious layout led to high friction and
-                        prevented seamless event participation.
-                      </p>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-              <!-- Revised UX -->
-              <div class="media-detail">
-
-                <img class="media-detail__visual" src="./img/artipio-event.gif" alt="ARTiPIO project cover image" />
-
-                <div class="media-detail__content">
-                  <h3 class="type-body-bold text-primary">
-                    Solution
-                  </h3>
-                  <div class="media-detail__description">
-                    <div class="detail-block">
-                      <h4 class="type-body-bold text-primary">
-                        Accessible Consent Update </h4>
-                      <p class="type-body text-secondary">
-                        Allows users to easily modify and update their marketing agreement directly on the promotion
-                        page
-                        at any time.
-                      </p>
-                    </div>
-
-                    <div class="detail-block">
-                      <h4 class="type-body-bold text-primary">
-                        Optimized Return Flow </h4>
-
-                      <p class="type-body text-secondary">
-                        Introduced a flexible return loop in the UX flow, ensuring existing users who skipped terms
-                        during
-                        sign-up are no longer blocked from participating.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-
-
-
-              </div>
-              <!-- ASIS TOBE -->
-              <div class="image-grid">
-
-                <img class="image-grid__item" src="./img/artipio_asis_event.svg" alt="ARTiPIO project cover image" />
-                <img class="image-grid__item" src="./img/artipio_tobe_event.svg" alt="ARTiPIO project cover image" />
-
+                <img src="./img/uni_mysurvey.png" alt="ARTiPIO project cover image" />
               </div>
             </div>
-          </div>
-        </section>
+            <div class="media-detail is-half-split">
 
-        <!-- edge case -->
-        <section class="project-section project-container">
-          <header class="project-section__header"></header>
-
-          <div class="project-section__content">
-            <h2 class="type-project-title"><img class="ico-body" src="./img/icon/edge.svg" alt="" />Edge Case Handling
-            </h2>
-
-            <h3 class="type-body-bold text-primary">
-              Feature: Subscription Purchase Logic
-            </h3>
-
-            <div class="detail-content">
-              <!-- intro -->
-              <div class="detail-block">
-                <!-- <h4 class="type-body-bold text-primary">
-                Solution
-              </h4> -->
-
-                <p class="type-body text-secondary">
-                  I mapped out four distinct exception scenarios where the user's available deposit and the strict
-                  $25,000
-                  subscription limit conflict.
-                </p>
-                <p class="type-body text-secondary">
-                  When multiple errors occur simultaneously (exceeding both the limit and deposit), the UI intentionally
-                  prioritizes the "Insufficient Deposit" alert over the limit constraint. This strategic nudge guides
-                  users to top up their balance first, providing a clear next action and preventing transaction
-                  drop-off.
-                </p>
-              </div>
-
-              <!-- Previous UX -->
-              <div class="media-detail media-detail--gray media-detail--space80">
-                <img class="media-detail__visual" src="./img/artipio_purchase 1.png"
-                  alt="ARTiPIO project cover image" />
-
-                <div class="media-detail__content">
-                  <h3 class="type-body-bold text-primary ">
-                    Case 1: Funding Gap as the Top Priority </h3>
-                  <p class="type-body text-secondary ">
-                    Scenario: When a funding gap occurs, the UI intentionally guides users to top up their deposit
-                    first,
-                    even if the maximum purchase limit is simultaneously triggered.
+              <div class="media-detail__description">
+                <div class="detail-block">
+                  <h4 class="type-body-bold text-primary">
+                    Intuitive Settings & State-Driven UI </h4>
+                  <p class="type-body text-secondary">
+                    Categorized sampling condition buttons by type and applied unique UI styling for each interactive
+                    state—such as Default, Click, and Selected—to guide users effortlessly through the selection process
+                    and minimize visual noise.
                   </p>
-                  <div class="media-detail__description">
-                    <div class="detail-block">
-                      <img src="./img/artipio_purchase case1.svg" alt="">
-                    </div>
-
-
-                  </div>
                 </div>
+              </div>
+              <div class="media-detail__description">
+                <div class="detail-block">
 
-                <img class="media-detail__visual " src="./img/artipio_purchase 2.png"
-                  alt="ARTiPIO project cover image" />
+                  <h4 class="type-body-bold text-primary">
+                    Clear Process Navigation</h4>
+                  <p class="type-body text-secondary">
+                    Introduced a structured visual sequence (Sample → Creating → Payment → Process → Result) at the top
+                    of the interface, providing absolute clarity on the current status and guiding the user seamlessly
+                    through the next steps. </p>
 
-                <div class="media-detail__content">
-                  <h3 class="type-body-bold text-primary ">
-                    Case 2: Handling Maximum Limit </h3>
-                  <p class="type-body text-secondary ">
-                    Scenario: The entered amount exceeds the maximum legal limit ($25,000). The system strictly blocks
-                    the
-                    transaction and guides the user to adjust their amount. </p>
-                  <div class="media-detail__description">
-                    <div class="detail-block">
-                      <img src="./img/artipio_purchase case2.svg" alt="">
-                    </div>
-
-
-                  </div>
                 </div>
-
               </div>
 
             </div>
+
           </div>
-        </section>
-        <!-- ratio -->
-        <section class="project-section project-container">
-          <header class="project-section__header"></header>
+        </div>
+      </section>
 
-          <div class="project-section__content">
-            <h2 class="type-project-title"><img class="ico-body" src="./img/icon/ia.svg" alt="" />IA</h2>
+      <!-- edge case -->
+      <section class="project-section project-container">
+        <header class="project-section__header"></header>
 
-            <h3 class="type-body-bold text-primary">
-              Flow of purchasing subscription
-            </h3>
+        <div class="project-section__content">
+          <h2 class="type-project-title"><img class="ico-body" src="./img/icon/edge.svg" alt="" />Result Page
+          </h2>
 
-            <div class="detail-content">
-              <!-- Problem -->
+
+
+          <div class="detail-content">
+            <!-- intro -->
+            <div class="detail-block">
+              <h3 class="type-body-bold text-primary">
+                Problem </h3>
+
+              <p class="type-body text-secondary">
+                The previous system separated the tracking and results pages, forcing users to navigate back and forth
+                to see the entire survey status. Furthermore, data was listed without clear visual cues, making it
+                difficult to extract statistical insights quickly.
+              </p>
+
+            </div>
+
+            <!-- Revised UX -->
+            <div class="media-detail__content">
+
               <div class="detail-block">
                 <h4 class="type-body-bold text-primary">
-                  The 4 Hard Gates to Purchase </h4>
-
-                <p class="type-body text-secondary">
-                  To comply with strict financial regulations, users must pass four consecutive verification stages
-                  before
-                  they can complete a purchase. Since failing any single step completely blocks the transaction, I
-                  designed targeted modal flows and action buttons to guide users through each hurdle with minimal
-                  friction.
-                </p>
-
+                  Revised UX
+                </h4>
+                <img src="./img/uni_board.png" alt="ARTiPIO project cover image" />
               </div>
+            </div>
 
-              <!-- IA structure -->
-              <div class="media-detail__content">
 
-                <div class="media-detail__description">
-                  <div class="detail-block">
-                    <img src="./img/artipio_IA.png" alt="">
-                  </div>
-                </div>
-              </div>
+            <div class="media-detail__description">
               <div class="detail-block">
-
-                <div class="data-card-grid">
-                  <article class="data-card">
-                    <h4 class="type-body-bold text-primary">
-                      1. Identity Verification </h4>
-                    <p class="type-body-small text-secondary">
-                      Categorizes users by age requirements (over/under 19). If authentication
-                      fails, purchase functionality is strictly locked.
-
-                    </p>
-                  </article>
-
-                  <article class="data-card">
-                    <h4 class="type-body-bold text-primary">
-                      2. Residential Address </h4>
-                    <p class="type-body-small text-secondary">
-                      Captures essential legal data mandated under local financial laws to authorize subscription
-                      eligibility.
-                    </p>
-                  </article>
-
-                  <article class="data-card">
-                    <h4 class="type-body-bold text-primary">
-                      3. Virtual Account Setup </h4>
-                    <p class="type-body-small text-secondary">
-                      Enables seamless fund routing through automated escrow account creation with certain Bank.
-                    </p>
-                  </article>
-                  <article class="data-card">
-                    <h4 class="type-body-bold text-primary">
-                      4. Investment Suitability Test </h4>
-                    <p class="type-body-small text-secondary">
-                      A legally mandated investor-protection assessment that evaluates the user's risk tolerance before
-                      unlocking the final purchase action. </p>
-                  </article>
-
-
-                </div>
+                <h4 class="type-body-bold text-primary">
+                  Unified Dashboard </h4>
+                <p class="type-body text-secondary">
+                  I unified active tracking and final results into a single dashboard, allowing users to oversee the
+                  survey lifecycle in one place. By introducing colorful charts with quick-toggle metrics
+                  (Percentages, Headcounts), users can instantly customize data views with absolute clarity.
+                </p>
               </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+      <!-- ratio -->
+      <section class="project-section project-container">
+        <header class="project-section__header"></header>
+
+        <div class="project-section__content">
+          <h2 class="type-project-title"><img class="ico-body" src="./img/icon/ia.svg" alt="" />Prototype
+          </h2>
+
+          <h3 class="type-body-bold text-primary">
+            Interactive Prototype: Home to Results </h3>
+
+          <div class="detail-content">
+            <!-- Problem -->
+            <div class="detail-block">
+
+
+              <p class="type-body text-secondary">
+                This prototype demonstrates the seamless user flow from the main dashboard straight to the survey
+                results page. By optimizing the navigation path, it eliminates unnecessary steps and allows users to
+                access deep-dive data instantly with minimal clicks.
+              </p>
 
             </div>
-          </div>
-        </section>
 
+            <!-- IA structure -->
+            <div class="media-detail__content">
+              <video id="portfolioVideo" class="media-detail__visual" autoplay loop muted playsinline
+                style="display: block; width: 100%; height: auto;">
+                <source src="./img/uni_proto.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!--다시 작업하기-->
+
+      <div style="display: none !important;">
         <section class="project-section project-container">
           <header class="project-section__header"></header>
 
