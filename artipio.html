@@ -546,9 +546,10 @@
                 subscription limit conflict.
               </p>
               <p class="type-body text-secondary">
-                When multiple errors occur simultaneously (exceeding both the limit and deposit), the UI intentionally
-                prioritizes the "Insufficient Deposit" alert over the limit constraint. This strategic nudge guides
-                users to top up their balance first, providing a clear next action and preventing transaction drop-off.
+                When a funding gap and a purchase limit constraint occur at the same time, the UI systematically manages
+                the layout to prevent visual clutter. Instead of stacking multiple red error messages that increase
+                cognitive load, the interface prioritizes a single, clear validation message. This ensures the user
+                receives a straightforward, step-by-step guidance to adjust their transaction seamlessly.
               </p>
             </div>
 
