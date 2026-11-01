@@ -16,6 +16,12 @@
   --grid-gap: 16px;
 }
 
+@import url("https://googleapis.com");
+
+.voc-quote {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
 /* ========================================
    Reset
 ======================================== */
