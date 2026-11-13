@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ARTiPIO case study — from launch to continuous improvement." />
+  <title>ARTiPIO — Selena (Sohyun) Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="artipio-new.js"></script>
+  <link rel="stylesheet" href="newstyle.css" />
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+
+<body class="case-study" id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="index.html" aria-label="Selena — homepage">Selena</a>
+    <nav class="navigation" aria-label="Primary navigation">
+      <a class="navigation-active" href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main" class="cs-main">
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="cs-hero-placeholder">
+        <img class="project-hero__image" src="./img/artipio-hero.gif" width="4096" height="972" alt="ARTiPIO project cover image" />
+        <script>
+          // A fresh image URL restarts the single-play GIF on every page load.
+          (() => {
+            const hero = document.currentScript.previousElementSibling;
+            const source = new URL(hero.getAttribute("src"), document.baseURI);
+            source.searchParams.set("playback", `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+            hero.src = source.href;
+          })();
+        </script>
+      </div>
+      <div class="cs-hero-copy container cs-scroll-reveal">
+        <p class="cs-eyebrow label accent">CASE STUDY / ARTiPIO</p>
+        <h1 class="cs-title" id="cs-title">ARTiPIO</h1>
+        <p class="cs-description secondary">ARTiPIO is a platform that offers various investment opportunities in
+          artworks, enabling users to invest with small amounts of money. It features expertly curated pieces to ensure
+          that investors have access to high-quality artworks. Additionally, ARTiPIO provides valuable insights into art
+          market trends and specific artworks, helping users make informed decisions.</p>
+        <dl class="cs-metadata">
+          <div>
+            <dt>Duration</dt>
+            <dd>2023 12 - 2026 6</dd>
+          </div>
+          <div>
+            <dt>Position</dt>
+            <dd>UIUX Designer / Visual Design</dd>
+          </div>
+          <div>
+            <dt>Tool</dt>
+            <dd>Figma, Photoshop, Illustrator</dd>
+          </div>
+          <div>
+            <dt>Structure</dt>
+            <dd>Web-Application</dd>
+          </div>
+          <div>
+            <dt>Category</dt>
+            <dd>Finance</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <section class="cs-section container" aria-labelledby="cs-summary-title">
+      <div class="cs-section-header cs-scroll-reveal">
+        <h2 class="cs-section-title" id="cs-summary-title"><img src="assets/artipio/summary.svg" width="28" height="28"
+            alt="" />Summary</h2>
+        <p class="label secondary">PROJECT OVERVIEW</p>
+      </div>
+      <div class="cs-overview">
+        <div class="cs-overview-intro cs-scroll-reveal">
+          <div class="cs-project-logo"><img src="img/artipio_logo.svg" width="135" height="135" alt="ARTiPIO" /></div>
+          <div class="cs-overview-copy">
+            <h3>From launch to continuous improvement.</h3>
+            <p class="secondary">As the sole product designer, I shaped ARTiPIO's initial experience and continued
+              improving its usability and core flows after launch.</p>
+          </div>
+        </div>
+        <div class="cs-timeline">
+          <div class="cs-milestone cs-scroll-reveal">
+            <div class="cs-milestone-copy">
+              <h3>0 → 1</h3>
+              <h4>Product Launch</h4>
+              <p class="secondary">Designed the initial product experience as the sole product designer.</p>
+            </div>
+          </div>
+          <p class="cs-timeline-arrow accent" aria-hidden="true">↓</p>
+          <div class="cs-milestone cs-scroll-reveal">
+            <div class="cs-milestone-copy">
+              <h3>1 → Better</h3>
+              <h4>Product Evolution</h4>
+              <p class="secondary">Expanded features, optimized core flows, and improved the overall product experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-divider" aria-hidden="true"></div>
+    </section>
+    <section class="cs-section cs-voc container" aria-labelledby="cs-voc-title">
+      <div class="cs-section-header cs-scroll-reveal">
+        <h2 class="cs-section-title" id="cs-voc-title"><img src="assets/artipio/voc.svg" width="34" height="34"
+            alt="" />VOC Analysis</h2>
+
+      </div>
+      <div class="cs-voc-content">
+        <div class="cs-voc-analysis">
+          <figure class="cs-voc-chart cs-scroll-reveal">
+            <svg viewBox="0 0 330 330" role="img" aria-labelledby="voc-chart-title voc-chart-desc">
+              <title id="voc-chart-title">96 VOC cases</title>
+              <desc id="voc-chart-desc">Account: 40 cases (41.67%). Events: 7 cases (7.29%). Other: 49 cases (51.04%).
+              </desc>
+              <defs>
+                <mask id="cs-voc-draw-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="330" height="330">
+                  <circle class="cs-voc-chart-sweep" cx="165" cy="165" r="136.5" pathLength="96"
+                    fill="none" stroke="white" stroke-width="57" stroke-dasharray="96 0" />
+                </mask>
+              </defs>
+              <!-- Normalized circumference: each segment represents its count out of 96. -->
+              <g fill="none" stroke-width="57" transform="rotate(-90 165 165)" mask="url(#cs-voc-draw-mask)">
+                <circle class="cs-voc-chart-other" cx="165" cy="165" r="136.5" />
+                <circle class="cs-voc-chart-account" cx="165" cy="165" r="136.5" pathLength="96"
+                  stroke-dasharray="40 56" />
+                <circle class="cs-voc-chart-events" cx="165" cy="165" r="136.5" pathLength="96" stroke-dasharray="7 89"
+                  stroke-dashoffset="-40" />
+              </g>
+              <text class="cs-voc-chart-total" x="165" y="153" text-anchor="middle">96</text>
+              <text class="cs-voc-chart-label" x="165" y="189" text-anchor="middle">VOC cases</text>
+            </svg>
+          </figure>
+          <div class="cs-voc-breakdown">
+            <div class="cs-voc-issue-group cs-scroll-reveal">
+              <h3 class="cs-voc-issue-heading"><span><i class="cs-voc-dot" aria-hidden="true"></i>Account
+                  Issues</span><strong>40</strong></h3>
+              <dl class="cs-voc-issue-list">
+                <div class="cs-voc-highlight">
+                  <dt>Deposit Issues</dt>
+                  <dd>19</dd>
+                </div>
+                <div>
+                  <dt>Account Creation</dt>
+                  <dd>11</dd>
+                </div>
+                <div>
+                  <dt>Other Account Issues</dt>
+                  <dd>10</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="cs-voc-issue-group cs-voc-events cs-scroll-reveal">
+              <h3 class="cs-voc-issue-heading"><span><i class="cs-voc-dot" aria-hidden="true"></i>Event
+                  Issues</span><strong>7</strong></h3>
+              <dl class="cs-voc-issue-list">
+                <div>
+                  <dt>Terms &amp; Conditions Agreement</dt>
+                  <dd>7</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="cs-voc-opportunities">
+          <article class="cs-voc-card cs-scroll-reveal">
+            <p class="label accent">01 / DEPOSIT</p>
+            <h3>Clarifying how users fund their investments</h3>
+            <p class="secondary">Confusion during deposits prevented users from funding their accounts, a required step
+              before investing.</p>
+          </article>
+          <article class="cs-voc-card cs-voc-events cs-scroll-reveal">
+            <p class="label cs-voc-consent">02 / CONSENT</p>
+            <h3>Making required event consent easier to find</h3>
+            <p class="secondary">Users struggled to locate required consent, creating friction in the event
+              participation process.</p>
+          </article>
+        </div>
+      </div>
+      <div class="cs-voc-insight cs-scroll-reveal">
+        <h3 class="label accent">KEY INSIGHT</h3>
+        <p>The challenge wasn't just the interface.<br>It was helping users navigate complex financial and
+          participation requirements.</p>
+      </div>
+    </section>
+    <section class="cs-section cs-deposit container" aria-labelledby="cs-deposit-title">
+      <div class="cs-deposit-header cs-scroll-reveal">
+        <p class="label accent">01 / DEPOSIT</p>
+        <h2 id="cs-deposit-title">Deposit Methods & Banking Restrictions </h2>
+      </div>
+      <div class="cs-deposit-content">
+        <figure class="cs-deposit-preview cs-scroll-reveal">
+          <figcaption>Existing Design</figcaption>
+          <div class="cs-deposit-mockup">
+            <img src="img/artipio_prev_deposit account.png" width="840" height="1788"
+              alt="Existing Deposit Account screen with account information and banking restrictions in Important Notices." />
+            <span class="cs-deposit-marker cs-deposit-marker-one"
+              aria-label="Problem 1: unclear deposit method">1</span>
+            <span class="cs-deposit-marker cs-deposit-marker-two" aria-label="Problem 2: transfer restrictions">2</span>
+          </div>
+        </figure>
+        <div class="cs-deposit-copy">
+          <article class="cs-deposit-problem cs-scroll-reveal">
+            <p class="label accent">01 / UNCLEAR DEPOSIT METHOD</p>
+            <h3 class="cs-deposit-title-small">Unclear Deposit Methods</h3>
+            <p class="secondary">Users were unsure how to transfer money to their virtual accounts using supported
+              banking methods.</p>
+          </article>
+          <article class="cs-deposit-problem cs-scroll-reveal">
+            <p class="label accent">02 / TRANSFER RESTRICTIONS</p>
+            <h3 class="cs-deposit-title-small">Banking Restrictions</h3>
+            <p class="secondary">Financial institution restrictions could cause transfers through certain third-party
+              payment apps to fail, leaving users unsure how to complete their deposits.</p>
+          </article>
+          <div class="cs-deposit-quotes">
+            <figure class="cs-deposit-quote cs-scroll-reveal">
+              <div>
+                <p class="label accent">User Quote</p>
+                <blockquote>“How do I <span class="accent">deposit</span> investment funds?”</blockquote>
+              </div>
+              <figcaption class="secondary">Unclear deposit instructions</figcaption>
+            </figure>
+            <figure class="cs-deposit-quote cs-scroll-reveal">
+              <div>
+                <p class="label accent">User Quote</p>
+                <blockquote>“I'm trying to recharge by transferring funds from the Kakao app to the registered Nonghyup
+                  account, but the <span class="accent">recharge keeps failing.</span>”</blockquote>
+              </div>
+              <figcaption class="secondary">Transfer failure through third-party payment apps</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cs-section cs-redesign container" aria-labelledby="cs-redesign-title">
+      <div class="cs-redesign-header cs-scroll-reveal">
+        <p class="label accent">01 / DEPOSIT REDESIGN</p>
+        <h2 id="cs-redesign-title">Making Deposits Easier to Follow</h2>
+      </div>
+      <div class="cs-redesign-layout">
+        <figure class="cs-redesign-preview cs-scroll-reveal">
+          <img src="img/artipio-account.gif" width="718" height="1444"
+            alt="Animated redesigned Deposit Account screen showing bank identification and step-by-step transfer instructions." />
+        </figure>
+        <article class="cs-redesign-card cs-redesign-card-one cs-scroll-reveal">
+          <p class="label accent">SOLUTION 01</p>
+          <h3>Clear Bank Identification</h3>
+          <p class="secondary">Displayed the registered withdrawal bank's name to help users identify the correct app
+            for transferring funds.</p>
+          <span class="cs-redesign-connector" aria-hidden="true"></span>
+        </article>
+        <article class="cs-redesign-card cs-redesign-card-two cs-scroll-reveal">
+          <p class="label accent">SOLUTION 02</p>
+          <h3>Guided Deposit Process</h3>
+          <p class="secondary">Added step-by-step transfer instructions and emphasized the Copy button to guide users
+            through the external banking process.</p>
+          <span class="cs-redesign-connector" aria-hidden="true"></span>
+        </article>
+      </div>
+    </section>
+    <section class="cs-section cs-consent container" aria-labelledby="cs-consent-title">
+      <div class="cs-consent-header cs-scroll-reveal">
+        <p class="label cs-consent-accent">02 / CONSENT</p>
+        <h2 id="cs-consent-title">Users struggled to find and update event consent.</h2>
+      </div>
+      <div class="cs-consent-problem-layout">
+        <figure class="cs-consent-existing cs-scroll-reveal">
+          <img src="img/artipio_prev_event consent.png" width="840" height="1788"
+            alt="Existing event page with consent checkboxes at the bottom of the long page." />
+        </figure>
+        <div class="cs-consent-problems">
+          <div class="cs-consent-problem-list">
+            <article class="cs-consent-card cs-scroll-reveal">
+              <p class="label secondary">01 / LOW VISIBILITY</p>
+              <div class="cs-consent-problem-detail">
+                <div class="cs-consent-icon"><img src="img/artipio-new/consent-visibility-off.svg" width="145"
+                    height="145" alt="" /></div>
+                <div class="cs-consent-problem-copy">
+                  <h3>Hidden Consent Options</h3>
+                  <p class="secondary">Users struggled to locate consent checkboxes at the bottom of long event pages.</p>
+                </div>
+              </div>
+            </article>
+            <article class="cs-consent-card cs-scroll-reveal">
+              <p class="label secondary">02 / DIFFICULT TO UPDATE</p>
+              <div class="cs-consent-problem-detail">
+                <div class="cs-consent-icon"><img src="img/artipio-new/consent-update-disabled.svg" width="145"
+                    height="145" alt="" /></div>
+                <div class="cs-consent-problem-copy">
+                  <h3>Limited Return Path</h3>
+                  <p class="secondary">Users who skipped optional consent struggled to update their choices later.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cs-consent-card-pair">
+            <figure class="cs-consent-quote cs-scroll-reveal">
+              <div>
+                <p class="label cs-consent-accent">USER QUOTE</p>
+                <blockquote>“I accidentally <span class="cs-consent-accent">missed selecting</span> the optional
+                  agreements during sign-up. What should I do? I want to apply for the event.”</blockquote>
+              </div>
+              <figcaption class="secondary">Missed optional consent</figcaption>
+            </figure>
+            <figure class="cs-consent-quote cs-scroll-reveal">
+              <div>
+                <p class="label cs-consent-accent">USER QUOTE</p>
+                <blockquote>“I did not agree to the optional terms when signing up, but now <span
+                    class="cs-consent-accent">I want to change it</span> to agree. However, I don't know where to do
+                  it.”</blockquote>
+              </div>
+              <figcaption class="secondary">Difficulty updating consent</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="cs-consent-header cs-scroll-reveal">
+        <p class="label cs-consent-accent">02 / CONSENT REDESIGN</p>
+        <h2 id="cs-consent-redesign-title">Making Consent Easier to Update</h2>
+      </div>
+      <div class="cs-consent-redesign-layout" role="group" aria-labelledby="cs-consent-redesign-title">
+        <figure class="cs-consent-animation cs-scroll-reveal">
+          <img src="img/artipio-event.gif" width="698" height="1404"
+            alt="Animated event redesign showing accessible marketing consent updates on the promotion page." />
+        </figure>
+        <div class="cs-consent-solutions">
+          <article class="cs-consent-card cs-scroll-reveal">
+            <p class="label secondary">01 / LOW VISIBILITY</p>
+            <div class="cs-consent-icon"><img src="img/artipio-new/consent-checklist.svg" width="145" height="145"
+                alt="" /></div>
+            <h3>Accessible Consent Update</h3>
+            <p class="secondary">Users can update marketing consent directly on the promotion page.</p>
+          </article>
+          <article class="cs-consent-card cs-scroll-reveal">
+            <p class="label secondary">02 / DIFFICULT TO UPDATE</p>
+            <div class="cs-consent-icon"><img src="img/artipio-new/consent-autorenew.svg" width="145" height="145"
+                alt="" /></div>
+            <h3>Optimized Return Flow</h3>
+            <p class="secondary">Users can return to update skipped consent and continue event participation.</p>
+          </article>
+        </div>
+      </div>
+      <div class="cs-consent-flow" role="group" aria-label="Consent participation flow before and after redesign">
+        <article class="cs-flow-panel cs-flow-before cs-scroll-reveal">
+          <header class="cs-flow-header">
+            <p class="secondary">AS-IS</p>
+            <h3>Blocked Participation</h3>
+          </header>
+          <div class="cs-flow-sequence">
+            <div class="cs-flow-node">Sign-up</div>
+            <div class="cs-flow-arrow" aria-hidden="true">↓</div>
+            <div class="cs-flow-node cs-flow-decision">Agree to optional terms?</div>
+            <div class="cs-flow-arrow cs-flow-no"><span>NO</span><span aria-hidden="true">↓</span></div>
+            <div class="cs-flow-node cs-flow-blocked"><span aria-hidden="true">⊗</span>Participation blocked</div>
+          </div>
+        </article>
+        <article class="cs-flow-panel cs-flow-after cs-scroll-reveal">
+          <header class="cs-flow-header">
+            <p class="accent">TO-BE / REDESIGNED</p>
+            <h3>A Re-entry Path to Participation</h3>
+          </header>
+          <div class="cs-flow-sequence">
+            <div class="cs-flow-node">Promotion Page</div>
+            <div class="cs-flow-arrow" aria-hidden="true">↓</div>
+            <div class="cs-flow-node cs-flow-decision" id="cs-consent-decision">Agree to Optional Terms?</div>
+            <div class="cs-flow-branches">
+              <svg class="cs-flow-branch-lines" viewBox="0 0 800 28" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M400 0 V8 H200 V26 M400 8 H600 V26 M194 20 L200 26 L206 20 M594 20 L600 26 L606 20" />
+              </svg>
+              <div class="cs-flow-branch">
+                <p class="cs-flow-branch-label secondary">YES</p>
+                <div class="cs-flow-node cs-flow-outcome"><span aria-hidden="true">◎</span>Event Participation</div>
+              </div>
+              <div class="cs-flow-branch cs-flow-branch-update">
+                <p class="cs-flow-branch-label secondary">NO</p>
+                <div class="cs-flow-node cs-flow-outcome cs-flow-update"><span class="accent"
+                    aria-hidden="true">⟳</span>Update Consent</div>
+                <div class="cs-flow-reentry">
+                  <p class="accent"><svg class="cs-flow-return-icon" width="24" height="24" viewBox="0 0 24 24"
+                      aria-hidden="true">
+                      <path d="M9 4 4 9l5 5M4 9h9a6 6 0 1 1 0 12" />
+                    </svg>New re-entry path</p>
+                  <p class="secondary">Users can return to the consent step without restarting the participation
+                    process.</p>
+                  <span class="cs-flow-sr-only">Update Consent returns to the optional consent decision.</span>
+                </div>
+                <svg class="cs-flow-return-line" viewBox="0 0 100 120" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M100 110 H104 V0 H100 M102 -3 L100 0 L102 3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

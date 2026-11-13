@@ -1,0 +1,501 @@
+/* Case-study layouts only. Shared tokens and navigation come from newstyle.css. */
+.case-study {
+  --cs-hero-aspect-ratio: 1401 / 420;
+  --cs-section-space: var(--space-12);
+  --cs-content-gap: var(--space-10);
+  --cs-logo-size: 5.0625rem;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .case-study { --page-gutter: 7.5vw; }
+}
+
+.case-study .cs-main { padding-bottom: 6.0625rem; }
+.case-study .cs-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cs-content-gap);
+  padding-block: 0 var(--cs-section-space);
+}
+.case-study .cs-hero-placeholder {
+  width: 100%;
+  aspect-ratio: var(--cs-hero-aspect-ratio);
+}
+.case-study .cs-hero-placeholder > img { width: 100%; height: 100%; object-fit: cover; }
+.case-study .cs-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+.case-study .cs-eyebrow { display: flex; align-items: center; gap: var(--space-2); }
+.case-study .cs-eyebrow::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--indicator-active);
+}
+.case-study .cs-title { width: 100%; max-width: none; text-align: center; }
+.case-study .cs-description { width: 100%; text-align: center; }
+.case-study .cs-metadata {
+  display: grid;
+  grid-template-columns: minmax(0, 180px) repeat(3, minmax(0, 220px)) minmax(0, 180px);
+  justify-content: space-between;
+  column-gap: var(--space-5);
+  row-gap: var(--space-5);
+  width: 100%;
+  margin: 0;
+  padding-top: var(--space-5);
+}
+.case-study .cs-metadata > div { min-width: 0; }
+.case-study .cs-metadata dt { margin-bottom: var(--space-1); }
+.case-study .cs-metadata dd { margin: 0; color: var(--text-secondary); }
+.case-study .cs-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cs-content-gap);
+  padding-block: var(--cs-section-space);
+}
+.case-study .cs-section-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.case-study .cs-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--heading-h1-font-size);
+}
+.case-study .cs-section-title img { flex: 0 0 auto; }
+.case-study .cs-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--cs-content-gap); }
+.case-study .cs-overview-intro { display: grid; grid-template-columns: var(--cs-logo-size) minmax(0, 1fr); gap: var(--cs-content-gap); align-items: start; }
+.case-study .cs-project-logo { width: var(--cs-logo-size); height: var(--cs-logo-size); }
+/* Keep the existing 135px SVG intact and scale its complete wrapper to Figma's 81px slot. */
+.case-study .cs-project-logo img { max-width: none; transform: scale(0.6); transform-origin: top left; }
+.case-study .cs-overview-copy { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
+.case-study .cs-overview h3 {
+  margin: 0;
+  font-size: var(--heading-h2-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-timeline { display: flex; flex-direction: column; }
+.case-study .cs-milestone { display: flex; align-items: stretch; position: relative; padding-left: 6px; }
+.case-study .cs-milestone::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--text-accent);
+}
+.case-study .cs-milestone-copy { min-width: 0; display: flex; flex-direction: column; gap: var(--space-1); padding-inline: var(--space-5); }
+.case-study .cs-milestone h4 { margin: 0; font-size: var(--title-medium-font-size); font-weight: var(--font-weight-medium); line-height: var(--body-line-height); }
+.case-study .cs-timeline-arrow { line-height: var(--body-line-height); }
+.case-study .cs-divider { height: 1px; background: var(--border-default); }
+
+/* VOC Analysis reuses the case-study grid, type scale, and spacing tokens. */
+.case-study .cs-voc {
+  --background-surface: #303030;
+  --secondary-500: #00d8ad;
+}
+.case-study .cs-voc-content {
+  display: grid;
+  grid-template-columns: minmax(0, 785fr) minmax(0, 559fr);
+  gap: var(--cs-content-gap);
+  align-items: start;
+}
+.case-study .cs-voc-analysis {
+  display: grid;
+  grid-template-columns: minmax(0, 330fr) minmax(0, 380fr);
+  gap: var(--space-9);
+  align-items: center;
+  min-width: 0;
+}
+.case-study .cs-voc-chart { margin: var(--space-1) 0 0; }
+.case-study .cs-voc-chart svg { display: block; width: 100%; height: auto; }
+.case-study .cs-voc-chart-other { stroke: var(--border-default); }
+.case-study .cs-voc-chart-account { stroke: var(--text-accent); }
+.case-study .cs-voc-chart-events { stroke: var(--secondary-500); }
+.case-study .cs-voc-chart-total {
+  fill: var(--text-primary);
+  font-size: 56px;
+  font-weight: var(--font-weight-semibold);
+}
+.case-study .cs-voc-chart-label { fill: var(--text-secondary); font-size: var(--title-medium-font-size); }
+.case-study .cs-voc-breakdown { min-width: 0; }
+.case-study .cs-voc-issue-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+  font-size: var(--title-medium-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.case-study .cs-voc-issue-heading > span { display: flex; align-items: center; gap: var(--space-2); }
+.case-study .cs-voc-issue-heading strong { font-size: var(--heading-h3-font-size); font-weight: var(--font-weight-semibold); }
+.case-study .cs-voc-dot { width: 13px; height: 13px; flex: 0 0 13px; border-radius: 50%; background: var(--text-accent); }
+.case-study .cs-voc-events .cs-voc-dot { background: var(--secondary-500); }
+.case-study .cs-voc-issue-list { display: flex; flex-direction: column; gap: var(--space-4); margin: 0; padding-left: var(--space-3); color: var(--text-secondary); }
+.case-study .cs-voc-issue-list > div { display: flex; justify-content: space-between; gap: var(--space-3); }
+.case-study .cs-voc-issue-list dd { margin: 0; }
+.case-study .cs-voc-highlight { color: var(--text-primary); }
+.case-study .cs-voc-issue-group + .cs-voc-issue-group { margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--border-default); }
+.case-study .cs-voc-opportunities { display: flex; flex-direction: column; gap: var(--cs-content-gap); min-width: 0; }
+.case-study .cs-voc-card { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-5); border-radius: var(--space-5); background: var(--background-surface); }
+.case-study .cs-voc-card h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
+.case-study .cs-voc-card .label { font-weight: 700; }
+.case-study .cs-voc-consent { color: var(--secondary-500); }
+.case-study .cs-voc-insight {
+  /* Include the parent section gap in the 148px separation. */
+  margin-top: calc(9.25rem - var(--cs-content-gap));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  max-width: 74.5625rem; /* 1193px insight text width in Figma. */
+  text-align: center;
+}
+.case-study .cs-voc-insight h3 { margin: 0; font-weight: var(--font-weight-semibold); }
+.case-study .cs-voc-insight > p {
+  font-size: var(--heading-h3-font-size);
+  font-weight: var(--heading-h3-font-weight);
+  line-height: var(--heading-h3-line-height);
+  letter-spacing: var(--heading-h3-letter-spacing);
+}
+
+/* Deposit Problem — scoped so the preceding sections retain their styles. */
+.case-study .cs-deposit { --cs-deposit-surface: #303030; }
+.case-study .cs-deposit-header,
+.case-study .cs-deposit-problem { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-deposit-header > .label,
+.case-study .cs-deposit-quote:first-child .label { font-weight: 700; }
+.case-study .cs-deposit-header h2 {
+  font-size: var(--heading-h1-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-deposit-content {
+  display: grid;
+  grid-template-columns: minmax(0, 590fr) minmax(0, 672.5fr);
+  gap: var(--cs-content-gap);
+  align-items: stretch;
+}
+.case-study .cs-deposit-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 658px;
+  margin: 0;
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--space-5);
+  background: var(--cs-deposit-surface);
+}
+.case-study .cs-deposit-preview > figcaption { align-self: stretch; color: #fff; }
+.case-study .cs-deposit-mockup {
+  position: relative;
+  width: 270px;
+  max-width: 100%;
+  aspect-ratio: 270 / 586;
+  container-type: inline-size;
+}
+.case-study .cs-deposit-mockup img { width: 100%; height: 100%; }
+.case-study .cs-deposit-marker {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 10.37037%; /* 28px on Figma's 270px mockup. */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--action-primary-background);
+  color: #fff;
+  font-size: 20px;
+  font-size: 7.407407cqw;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+/* Group 2859: coordinates relative to the complete image, including its frame. */
+.case-study .cs-deposit-marker-one { left: 76.296296%; top: 16.638225%; }
+.case-study .cs-deposit-marker-two { left: 9.259259%; top: 75.170648%; }
+.case-study .cs-deposit-copy { display: flex; flex-direction: column; min-width: 0; }
+.case-study .cs-deposit-problem { flex: 1; padding-bottom: var(--space-5); }
+.case-study .cs-deposit-problem h3 {
+  margin: 0;
+  font-size: var(--heading-h2-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-deposit-problem .cs-deposit-title-small {
+  font-size: var(--heading-h3-font-size);
+  font-weight: var(--heading-h3-font-weight);
+  line-height: var(--heading-h3-line-height);
+  letter-spacing: var(--heading-h3-letter-spacing);
+}
+.case-study .cs-deposit-quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+.case-study .cs-deposit-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-1);
+  min-width: 0;
+  min-height: 244px;
+  margin: 0;
+  padding: var(--space-5);
+  border-radius: var(--space-5);
+  background: var(--cs-deposit-surface);
+}
+.case-study .cs-deposit-quote > div { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-deposit-quote blockquote { margin: 0; font-size: var(--body-default-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); }
+/* Deposit Redesign — the Figma composition uses a 1401px content canvas. */
+.case-study .cs-redesign { --cs-redesign-surface: #303030; }
+.case-study .cs-redesign-header { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-redesign-header > .label { font-weight: 700; }
+.case-study .cs-redesign-header h2 {
+  font-size: var(--heading-h1-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-redesign-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 424fr) minmax(0, 291fr) minmax(0, 424fr);
+  column-gap: 4.925%;
+  padding-inline: 4.425%;
+  min-height: 658px;
+  align-items: start;
+}
+.case-study .cs-redesign-preview {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  margin: 28px 0 0;
+  min-width: 0;
+  aspect-ratio: 291 / 601;
+  overflow: hidden;
+  /* Follow the source bezel's outer curve, clipping its white corner pixels. */
+  border-radius: 18% / 8.715%;
+}
+.case-study .cs-redesign-preview img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.case-study .cs-redesign-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--text-accent);
+  border-radius: var(--space-5);
+  background: var(--cs-redesign-surface);
+}
+.case-study .cs-redesign-card h3 {
+  margin: 0;
+  font-size: var(--heading-h3-font-size);
+  font-weight: var(--heading-h3-font-weight);
+  line-height: var(--heading-h3-line-height);
+  letter-spacing: var(--heading-h3-letter-spacing);
+}
+.case-study .cs-redesign-card-one { grid-column: 1; grid-row: 1; margin-top: 215px; }
+.case-study .cs-redesign-card-two { grid-column: 3; grid-row: 1; margin-top: 111px; }
+.case-study .cs-redesign-connector {
+  position: absolute;
+  top: 94px;
+  width: 10.6132%; /* 45px at the design's 424px card width. */
+  height: 1px;
+  background: var(--text-accent);
+}
+.case-study .cs-redesign-card-one .cs-redesign-connector { left: 100%; }
+.case-study .cs-redesign-card-two .cs-redesign-connector { right: 100%; }
+.case-study .cs-redesign-connector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 5.33px;
+  height: 5.33px;
+  border-radius: 50%;
+  background: var(--text-accent);
+  transform: translateY(-50%);
+}
+.case-study .cs-redesign-card-one .cs-redesign-connector::after { right: -2.665px; }
+.case-study .cs-redesign-card-two .cs-redesign-connector::after { left: -2.665px; }
+/* Opt in before first paint; absent JS or reduced motion leaves base content visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .cs-reveal-ready .case-study .cs-scroll-reveal:not(.cs-reveal-played) { opacity: 0; transform: translateY(20px); }
+  .case-study .cs-scroll-reveal.cs-reveal-playing { animation: cs-scroll-in 500ms ease-out both; }
+  .case-study .cs-voc-chart.cs-reveal-playing .cs-voc-chart-label { animation: cs-chart-label 500ms 250ms ease-out both; }
+}
+@keyframes cs-scroll-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes cs-chart-label { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 1199px) {
+  .case-study .cs-redesign-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--cs-content-gap); padding: 0; min-height: 0; }
+  .case-study .cs-redesign-preview { grid-column: 1 / -1; grid-row: 1; width: 291px; max-width: 100%; margin: 0 auto; }
+  .case-study .cs-redesign-card-one { grid-column: 1; grid-row: 2; margin: 0; }
+  .case-study .cs-redesign-card-two { grid-column: 2; grid-row: 2; margin: 0; }
+  .case-study .cs-redesign-connector { display: none; }
+}
+@media (max-width: 767px) {
+  .case-study .cs-redesign-layout { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-redesign-header h2 { font-size: var(--heading-h2-font-size); }
+  .case-study .cs-redesign-card-two { grid-column: 1; grid-row: 3; }
+}
+
+@media (max-width: 1100px) {
+  .case-study .cs-deposit-quotes { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-deposit-quote { min-height: 160px; }
+}
+@media (max-width: 800px) {
+  .case-study .cs-deposit-content { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-deposit-copy { gap: var(--cs-content-gap); }
+  .case-study .cs-deposit-problem { padding-bottom: 0; }
+  .case-study .cs-deposit-quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .case-study .cs-deposit-header h2 { font-size: var(--heading-h2-font-size); }
+  .case-study .cs-deposit-quotes { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-deposit-preview { min-height: 0; }
+}
+
+@media (max-width: 1100px) {
+  .case-study .cs-voc-content { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-voc-analysis { max-width: 785px; }
+  .case-study .cs-voc-opportunities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+}
+@media (max-width: 600px) {
+  .case-study .cs-voc-analysis,
+  .case-study .cs-voc-opportunities { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-voc-chart { width: min(100%, 330px); margin-inline: auto; }
+}
+
+@media (max-width: 1100px) {
+  .case-study .cs-metadata { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--space-7); }
+  .case-study .cs-overview-intro { gap: var(--space-5); }
+}
+@media (max-width: 800px) {
+  .case-study { --cs-section-space: var(--space-8); --cs-content-gap: var(--space-7); }
+  .case-study .cs-overview { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-section-header { flex-wrap: wrap; }
+  .case-study .cs-title { font-size: clamp(2.5rem, 10vw, 5rem); }
+  .case-study .cs-main { padding-bottom: var(--space-10); }
+  .case-study .cs-timeline { gap: var(--space-2); }
+}
+@media (max-width: 480px) {
+  .case-study .cs-metadata { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+  .case-study .cs-overview-intro { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-description { text-align: left; }
+}
+
+/* Consent — isolated from the approved Deposit layouts. */
+.case-study .cs-consent {
+  --cs-consent-accent: #00d8ad;
+  --cs-consent-surface: #303030;
+}
+.case-study .cs-consent-accent { color: var(--cs-consent-accent); }
+.case-study .cs-consent-header { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-consent-header > .label { font-weight: 700; }
+.case-study .cs-consent-header h2 {
+  font-size: var(--heading-h1-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-consent-problem-layout { display: grid; grid-template-columns: minmax(0, 19.1875rem) minmax(0, 1fr); gap: var(--cs-content-gap); width: 100%; max-width: 68.75rem; align-self: center; align-items: start; }
+/* Separate Problem and Redesign like the other case-study sections. */
+.case-study .cs-consent-problem-layout + .cs-consent-header { margin-top: calc(2 * var(--cs-section-space) - var(--cs-content-gap)); }
+.case-study .cs-consent-existing { width: 100%; max-width: 19.1875rem; justify-self: center; margin: 0; }
+.case-study .cs-consent-existing img { width: 100%; height: auto; }
+.case-study .cs-consent-problems { display: flex; flex-direction: column; gap: var(--cs-content-gap); min-width: 0; }
+.case-study .cs-consent-card-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--cs-content-gap); align-items: start; }
+.case-study .cs-consent-card,
+.case-study .cs-consent-quote { display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-5); border-radius: var(--space-5); background: var(--cs-consent-surface); min-width: 0; }
+.case-study .cs-consent-problems .cs-consent-card { background: transparent; border: 0; border-radius: 0; }
+.case-study .cs-consent-problem-list { display: grid; gap: var(--space-3); }
+.case-study .cs-consent-problem-list > .cs-consent-card + .cs-consent-card { border-top: 1px solid var(--border-default); }
+.case-study .cs-consent-problem-detail { display: flex; align-items: center; gap: var(--space-5); min-width: 0; }
+.case-study .cs-consent-problem-copy { display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; }
+.case-study .cs-consent-problem-detail .cs-consent-icon { width: 60px; height: 60px; }
+.case-study .cs-consent-problem-detail .cs-consent-icon img { transform: scale(0.4137931034); }
+.case-study .cs-consent-card > .label { font-weight: 700; }
+.case-study .cs-consent-icon { width: 103px; height: 103px; flex: 0 0 auto; }
+.case-study .cs-consent-icon img { max-width: none; transform: scale(0.7103448276); transform-origin: top left; }
+.case-study .cs-consent-card h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
+.case-study .cs-consent-quote { justify-content: space-between; min-height: 244px; margin: 0; }
+.case-study .cs-consent-quote > div { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-consent-quote blockquote { margin: 0; font-size: var(--body-default-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); }
+.case-study .cs-consent-redesign-layout { display: grid; grid-template-columns: minmax(0, 350fr) minmax(0, 437fr); gap: var(--cs-content-gap); width: 100%; max-width: 843px; align-self: center; align-items: start; }
+.case-study .cs-consent-animation {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  /* Trace only the static device silhouette; preserve the complete GIF canvas ratio. */
+  -webkit-mask: url("img/artipio-new/consent-phone-mask.svg") center / 100% 100% no-repeat;
+  mask: url("img/artipio-new/consent-phone-mask.svg") center / 100% 100% no-repeat;
+}
+.case-study .cs-consent-animation img { width: 100%; height: auto; }
+.case-study .cs-consent-solutions { display: flex; flex-direction: column; gap: var(--cs-content-gap); min-width: 0; }
+/* Compact comparison: shared sequence, immediate split, integrated update branch. */
+.case-study .cs-consent-flow { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); gap: var(--space-3); width: 100%; max-width: 1120px; align-self: center; align-items: start; }
+.case-study .cs-flow-panel { display: grid; gap: var(--space-3); min-width: 0; padding: var(--space-5); border-radius: var(--space-5); background: #282828; }
+.case-study .cs-flow-header { display: grid; gap: var(--space-1); }
+.case-study .cs-flow-header > p { font-size: var(--body-small-font-size); }
+.case-study .cs-flow-header h3 { margin: 0; font-size: var(--title-medium-font-size); line-height: var(--body-line-height); font-weight: var(--font-weight-medium); }
+.case-study .cs-flow-sequence { display: grid; min-width: 0; }
+.case-study .cs-flow-node { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--space-1); padding: var(--space-2) var(--space-3); border-radius: var(--space-2); background: #383838; text-align: center; min-width: 0; }
+.case-study .cs-flow-decision { border: 1px solid #858585; }
+.case-study .cs-flow-before .cs-flow-decision { background: transparent; }
+.case-study .cs-flow-arrow { display: flex; justify-content: center; align-items: center; gap: var(--space-1); padding-block: 4px; color: #858585; line-height: 1; }
+.case-study .cs-flow-no { flex-direction: column; gap: 2px; padding-block: var(--space-1); }
+.case-study .cs-flow-no > span:first-child { font-size: var(--label-small-font-size); }
+.case-study .cs-flow-blocked { border: 1px solid #a06b6b; color: #c99191; background: #413030; }
+.case-study .cs-flow-blocked > span { font-size: var(--heading-h3-font-size); line-height: 1; }
+.case-study .cs-flow-branches { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); padding-top: 28px; align-items: start; }
+.case-study .cs-flow-branch-lines { position: absolute; top: 0; left: 0; width: 100%; height: 28px; fill: none; stroke: #858585; stroke-width: 1.5; }
+.case-study .cs-flow-branch { display: grid; position: relative; min-width: 0; }
+.case-study .cs-flow-branch-label { text-align: center; font-size: var(--label-small-font-size); padding-bottom: 4px; }
+.case-study .cs-flow-update { border: 1px solid var(--text-accent); border-radius: var(--space-2) var(--space-2) 0 0; background: #303747; }
+.case-study .cs-flow-reentry { display: grid; gap: var(--space-1); padding: var(--space-2); border: 1px solid var(--text-accent); border-top: 0; border-radius: 0 0 var(--space-2) var(--space-2); background: #6385f50a; }
+.case-study .cs-flow-reentry > .accent { display: flex; align-items: center; gap: var(--space-1); font-weight: var(--font-weight-medium); }
+.case-study .cs-flow-reentry > .secondary { font-size: var(--body-small-font-size); }
+.case-study .cs-flow-return-icon { flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.case-study .cs-flow-return-line { position: absolute; top: -52px; left: 0; width: 100%; height: 120px; overflow: visible; fill: none; stroke: var(--text-accent); stroke-width: 1.5; pointer-events: none; }
+.case-study .cs-flow-return-line path { vector-effect: non-scaling-stroke; }
+.case-study .cs-flow-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: no-preference) {
+  .case-study .cs-flow-return-line path { stroke-dasharray: 6 4; animation: cs-consent-path 2s linear infinite; }
+}
+@keyframes cs-consent-path { to { stroke-dashoffset: -20; } }
+@media (max-width: 1199px) {
+  .case-study .cs-consent-problem-layout { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-consent-card-pair { gap: var(--space-5); }
+}
+@media (max-width: 767px) {
+  .case-study .cs-consent-header h2 { font-size: var(--heading-h2-font-size); }
+  .case-study .cs-consent-card-pair,
+  .case-study .cs-consent-redesign-layout,
+  .case-study .cs-consent-flow { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-consent-animation { width: min(100%, 340px); justify-self: center; }
+  .case-study .cs-consent-quote { min-height: 0; }
+  .case-study .cs-flow-panel { padding: var(--space-3); }
+  .case-study .cs-flow-node { padding: var(--space-2); }
+  .case-study .cs-flow-branches { column-gap: var(--space-2); row-gap: 0; }
+  .case-study .cs-flow-branch { display: contents; }
+  .case-study .cs-flow-branch-label { grid-row: 1; }
+  .case-study .cs-flow-outcome { grid-row: 2; }
+  .case-study .cs-flow-branch:first-of-type > .cs-flow-branch-label,
+  .case-study .cs-flow-branch:first-of-type > .cs-flow-outcome { grid-column: 1; }
+  .case-study .cs-flow-branch-update > .cs-flow-branch-label,
+  .case-study .cs-flow-update { grid-column: 2; }
+  .case-study .cs-flow-reentry { grid-column: 1 / -1; grid-row: 3; border-top: 1px solid var(--text-accent); border-top-left-radius: var(--space-2); }
+  .case-study .cs-flow-return-line { top: -24px; }
+}
