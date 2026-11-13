@@ -38,6 +38,7 @@
       register('.cs-consent-quote', 200, 100);
       register('.cs-consent-solutions > article', 200, 100);
       register('.cs-flow-panel', 0, 100);
+      register('.cs-edge-header, .cs-edge-values, .cs-edge-layout');
 
       // Keep the exact strings from the document as the authoritative final values.
       const metrics = new Map([...main.querySelectorAll(
@@ -156,5 +157,120 @@
     document.addEventListener('DOMContentLoaded', initialize, { once: true });
   } else {
     initialize();
+  }
+})();
+
+// Edge Case Design: commit warning priority only after a completed move.
+(() => {
+  const initializeEdge = () => {
+    const section = document.querySelector('.cs-edge');
+    if (!section) return;
+    const LIMIT = 25000;
+    const MAX = 40000;
+    const MOVE_MS = 900;
+    const HOLD_MS = 2200;
+    const states = [
+      { deposit: 10000, entered: 20000, warning: 0 },
+      { deposit: 10000, entered: 32000, warning: 0 },
+      { deposit: 35000, entered: 30000, warning: 1 },
+      { deposit: 30000, entered: 35000, warning: 1 }
+    ];
+    const position = value => (value / MAX) * 100;
+    const deposit = section.querySelector('.cs-edge-deposit');
+    const entered = section.querySelector('.cs-edge-entered');
+    const limit = section.querySelector('.cs-edge-limit');
+    const counter = section.querySelector('.cs-edge-counter');
+    const warnings = section.querySelectorAll('.cs-edge-warning');
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+    let target = 0;
+    let phase = 'hold';
+    let remaining = HOLD_MS;
+    let deadline = 0;
+    let timer = null;
+    let visible = false;
+    const canRun = () => visible && !document.hidden && !motion.matches;
+    const place = state => {
+      deposit.style.left = `${position(state.deposit)}%`;
+      entered.style.left = `${position(state.entered)}%`;
+    };
+    const commit = () => {
+      const state = states[index];
+      counter.textContent = `${String(index + 1).padStart(2, '0')} / 04`;
+      warnings.forEach((card, warning) => {
+        card.classList.toggle('is-active', warning === state.warning);
+        card.setAttribute('aria-current', String(warning === state.warning));
+      });
+      deposit.setAttribute('aria-label', `Deposit: $${state.deposit.toLocaleString('en-US')}`);
+      entered.setAttribute('aria-label', `Entered Amount: $${state.entered.toLocaleString('en-US')}`);
+    };
+    const schedule = () => {
+      if (!canRun() || timer !== null) return;
+      if (phase === 'move') {
+        section.style.setProperty('--cs-edge-move-ms', `${remaining}ms`);
+        place(states[target]);
+      }
+      deadline = performance.now() + remaining;
+      timer = window.setTimeout(() => {
+        timer = null;
+        if (phase === 'hold') {
+          phase = 'move';
+          target = (index + 1) % states.length;
+          remaining = MOVE_MS;
+        } else {
+          index = target;
+          commit();
+          phase = 'hold';
+          remaining = HOLD_MS;
+        }
+        schedule();
+      }, remaining);
+    };
+    const pause = () => {
+      if (timer === null) return;
+      clearTimeout(timer);
+      timer = null;
+      remaining = Math.max(0, deadline - performance.now());
+      if (phase === 'move') {
+        // Freeze rendered positions so neither marker continues while offscreen.
+        const depositLeft = getComputedStyle(deposit).left;
+        const enteredLeft = getComputedStyle(entered).left;
+        section.style.setProperty('--cs-edge-move-ms', '0ms');
+        deposit.style.left = depositLeft;
+        entered.style.left = enteredLeft;
+        void section.offsetWidth;
+      }
+    };
+    const configure = () => {
+      if (!canRun()) pause();
+      if (motion.matches) {
+        index = target = 0;
+        phase = 'hold';
+        remaining = HOLD_MS;
+        section.style.setProperty('--cs-edge-move-ms', '0ms');
+        place(states[0]);
+        commit();
+        void section.offsetWidth;
+      } else {
+        schedule();
+      }
+    };
+    limit.style.left = `${position(LIMIT)}%`;
+    place(states[0]);
+    commit();
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        visible = entries[0].isIntersecting;
+        configure();
+      });
+      observer.observe(section.querySelector('.cs-edge-layout'));
+    }
+    document.addEventListener('visibilitychange', configure);
+    motion.addEventListener('change', configure);
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeEdge, { once: true });
+  } else {
+    initializeEdge();
   }
 })();

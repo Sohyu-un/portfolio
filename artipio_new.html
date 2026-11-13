@@ -40,7 +40,7 @@
         </script>
       </div>
       <div class="cs-hero-copy container cs-scroll-reveal">
-        <p class="cs-eyebrow label accent">ARTiPIO</p>
+        <p class="cs-eyebrow label accent">Case Study</p>
         <h1 class="cs-title" id="cs-title">ARTiPIO</h1>
         <p class="cs-description secondary">ARTiPIO is a platform that offers various investment opportunities in
           artworks, enabling users to invest with small amounts of money. It features expertly curated pieces to ensure
@@ -398,6 +398,60 @@
             </div>
           </div>
         </article>
+      </div>
+    </section>
+    <section class="cs-section cs-edge container" id="cs-edge" aria-labelledby="cs-edge-title">
+      <div class="cs-divider" aria-hidden="true"></div>
+      <header class="cs-edge-header cs-scroll-reveal">
+        <p class="label accent">03 / EDGE CASE DESIGN</p>
+        <h2 id="cs-edge-title">Which warning should users see first?</h2>
+        <p class="secondary">When purchase conditions overlap, I defined which warning to prioritize based on a fixed
+          purchase limit and two changing values.</p>
+      </header>
+      <div class="cs-edge-values cs-scroll-reveal">
+        <p>THREE VALUES · ONE PRIORITY DECISION</p>
+        <div class="cs-edge-value-grid">
+          <div><img src="assets/artipio/edge-limit.svg" width="32" height="32" alt="" />
+            <h3>Purchase Limit</h3>
+            <p class="secondary">Fixed condition</p>
+          </div>
+          <div><img src="assets/artipio/edge-deposit.svg" width="32" height="32" alt="" />
+            <h3>Deposit</h3>
+            <p class="secondary">Changing value</p>
+          </div>
+          <div><img src="assets/artipio/edge-entered.svg" width="32" height="32" alt="" />
+            <h3>Entered Amount</h3>
+            <p class="secondary">Changing value</p>
+          </div>
+        </div>
+      </div>
+      <div class="cs-edge-layout cs-scroll-reveal">
+        <figure class="cs-edge-graph" aria-label="Purchase limit fixed at $25,000 on a $0 to $40,000 scale">
+          <figcaption><span>Warning logic</span><span class="cs-edge-counter secondary">01 / 04</span></figcaption>
+          <div class="cs-edge-scale">
+            <div class="cs-edge-axis" aria-hidden="true"></div>
+            <div class="cs-edge-marker cs-edge-limit" style="left: 62.5%" aria-label="Purchase Limit: $25,000">
+              <span>Limit</span><i aria-hidden="true"></i>
+              <p class="cs-edge-fixed">$25,000</p>
+            </div>
+            <div class="cs-edge-marker cs-edge-deposit" style="left: 25%" aria-label="Deposit: $10,000">
+              <span>Deposit</span><i aria-hidden="true"></i></div>
+            <div class="cs-edge-marker cs-edge-entered" style="left: 50%" aria-label="Entered Amount: $20,000">
+              <span>Entered</span><i aria-hidden="true"></i></div>
+          </div>
+        </figure>
+        <div class="cs-edge-warnings">
+          <article class="cs-edge-warning is-active" data-warning="0" aria-current="true">
+            <p class="label secondary">WARNING 01</p>
+            <h3>“Insufficient deposit balance”</h3>
+            <p class="secondary">The available deposit is the more restrictive condition.</p>
+          </article>
+          <article class="cs-edge-warning" data-warning="1" aria-current="false">
+            <p class="label secondary">WARNING 02</p>
+            <h3>“Exceeds $25,000 purchase limit”</h3>
+            <p class="secondary">The fixed purchase limit is the more restrictive condition.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>

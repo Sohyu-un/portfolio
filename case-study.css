@@ -499,3 +499,58 @@
   .case-study .cs-flow-reentry { grid-column: 1 / -1; grid-row: 3; border-top: 1px solid var(--text-accent); border-top-left-radius: var(--space-2); }
   .case-study .cs-flow-return-line { top: -24px; }
 }
+
+/* Edge Case Design — isolated from completed case-study sections. */
+.case-study .cs-edge { --cs-edge-surface: #282a29; --cs-edge-green: #88c8b6; --cs-edge-orange: #edac90; --cs-edge-blue: #98a3ff; }
+.case-study .cs-edge-header { display: grid; gap: var(--space-1); }
+.case-study .cs-edge-header > .label { font-weight: 700; }
+.case-study .cs-edge-header h2 { font-size: var(--heading-h1-font-size); font-weight: var(--font-weight-semibold); line-height: var(--heading-line-height); letter-spacing: var(--heading-letter-spacing); }
+.case-study .cs-edge-values { display: grid; gap: var(--space-7); }
+.case-study .cs-edge-values > p { font-size: var(--body-small-font-size); }
+.case-study .cs-edge-value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--cs-content-gap); }
+.case-study .cs-edge-value-grid > div { display: grid; align-content: start; gap: var(--space-1); min-width: 0; }
+.case-study .cs-edge-value-grid h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
+.case-study .cs-edge-layout { display: grid; grid-template-columns: minmax(0, 841fr) minmax(0, 505fr); gap: var(--cs-content-gap); align-items: stretch; }
+.case-study .cs-edge-graph { position: relative; margin: 0; width: 100%; min-width: 0; aspect-ratio: 841 / 482; min-height: 360px; border-radius: 30px; background: var(--cs-edge-surface); container-type: inline-size; }
+.case-study .cs-edge-graph figcaption { position: absolute; top: var(--space-4); left: var(--space-5); right: var(--space-3); display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); font-size: var(--body-small-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); letter-spacing: var(--text-letter-spacing); }
+.case-study .cs-edge-counter { font-variant-numeric: tabular-nums; }
+.case-study .cs-edge-scale { position: absolute; inset: 0 6.8%; }
+.case-study .cs-edge-axis { position: absolute; top: 53.7%; left: 0; right: 0; height: 4px; background: #7b8580; transform: translateY(-50%); }
+.case-study .cs-edge-marker { position: absolute; top: 53.7%; width: 0; height: 0; color: var(--cs-edge-blue); }
+.case-study .cs-edge-marker i { position: absolute; width: clamp(20px, 4.75cqw, 40px); aspect-ratio: 1; border-radius: 50%; background: currentColor; transform: translate(-50%, -50%); }
+.case-study .cs-edge-marker span { position: absolute; left: 0; transform: translateX(-50%); white-space: nowrap; font-size: clamp(1rem, 4.16cqw, 2.1875rem); font-weight: var(--font-weight-medium); line-height: 1.2; }
+.case-study .cs-edge-limit { transform: translateX(-15px); }
+.case-study .cs-edge-limit::before { content: ""; position: absolute; width: 2px; height: 60px; transform: translate(-50%, -50%); background: currentColor; }
+.case-study .cs-edge-limit span { bottom: clamp(88px, 14.3cqw, 120px); }
+.case-study .cs-edge-deposit { color: var(--cs-edge-green); }
+.case-study .cs-edge-deposit span { bottom: clamp(42px, 6.5cqw, 55px); }
+.case-study .cs-edge-entered { color: var(--cs-edge-orange); }
+.case-study .cs-edge-entered span { top: clamp(45px, 8.3cqw, 70px); }
+.case-study .cs-edge-deposit,
+.case-study .cs-edge-entered { transition: left var(--cs-edge-move-ms, 900ms) ease-in-out; }
+.case-study .cs-edge-fixed { position: absolute; bottom: 38px; left: 0; transform: translateX(-50%); white-space: nowrap; font-size: var(--body-small-font-size); line-height: 1; }
+.case-study .cs-edge-warnings { display: grid; grid-template-rows: repeat(2, 1fr); gap: var(--space-7); min-width: 0; }
+.case-study .cs-edge-warning { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; padding: var(--space-5); border: 1px solid transparent; border-radius: var(--space-5); background: #303030; opacity: .5; transition: opacity 350ms ease, border-color 350ms ease, background-color 350ms ease; }
+.case-study .cs-edge-warning.is-active { opacity: 1; border-color: var(--text-accent); background: transparent; }
+.case-study .cs-edge-warning > .label { font-weight: 700; }
+.case-study .cs-edge-warning h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
+@media (min-width: 1001px) {
+  .case-study .cs-edge-graph { height: 100%; }
+  .case-study .cs-edge-warnings { align-self: stretch; }
+}
+@media (max-width: 1000px) {
+  .case-study .cs-edge-layout { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-edge-warnings { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+}
+@media (max-width: 600px) {
+  .case-study .cs-edge-header h2 { font-size: var(--heading-h2-font-size); }
+  .case-study .cs-edge-value-grid { gap: var(--space-2); }
+  .case-study .cs-edge-value-grid h3 { font-size: var(--body-default-font-size); line-height: var(--body-line-height); }
+  .case-study .cs-edge-value-grid .secondary { font-size: var(--body-small-font-size); }
+  .case-study .cs-edge-warnings { grid-template-columns: minmax(0, 1fr); }
+  .case-study .cs-edge-graph { min-height: 300px; }
+  .case-study .cs-edge-counter, .case-study .cs-edge-fixed { font-size: var(--body-small-font-size); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-study .cs-edge-marker, .case-study .cs-edge-warning { transition: none; }
+}
