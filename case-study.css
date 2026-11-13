@@ -554,3 +554,25 @@
 @media (prefers-reduced-motion: reduce) {
   .case-study .cs-edge-marker, .case-study .cs-edge-warning { transition: none; }
 }
+
+/* Purchase decision and recording crop only; the source is 720 × 1462. */
+.case-study .cs-purchase-decision { margin-top: 0; }
+.case-study .cs-purchase-preview {
+  position: relative;
+  align-self: center;
+  width: min(100%, 350px);
+  aspect-ratio: 706 / 1423;
+  margin: 0;
+  overflow: hidden;
+  -webkit-mask: url("img/artipio-new/purchase-phone-mask.svg") center / 100% 100% no-repeat;
+  mask: url("img/artipio-new/purchase-phone-mask.svg") center / 100% 100% no-repeat;
+}
+.case-study .cs-purchase-video {
+  position: absolute;
+  /* Retain source pixels x=5…710, y=22…1444, without stretching. */
+  width: 101.983003%;
+  max-width: none;
+  height: auto;
+  left: -0.708215%;
+  top: -1.546030%;
+}
