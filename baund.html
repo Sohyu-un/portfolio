@@ -5,12 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Baund | Sohyun Portfolio</title>
+    <title>Baund — Work in progress | Sohyun Portfolio</title>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="project.css" />
 
     <script src="script.js" defer></script>
+    <style>
+        .work-in-progress {
+            min-height: 65vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .work-in-progress h1,
+        .work-in-progress p {
+            margin: 0;
+        }
+
+        .work-in-progress a {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,6 +51,13 @@
                 <i class="icon-hamburger" aria-hidden="true"></i> <i class="icon-close" aria-hidden="true"></i>
             </button>
         </header>
+        <section class="work-in-progress" aria-labelledby="progress-title">
+            <p>Baund</p>
+            <h1 id="progress-title">Work in progress</h1>
+            <p>This project page is currently being updated. Please check back soon.</p>
+            <a href="index.html">Back to home <span aria-hidden="true">↗</span></a>
+        </section>
+        <template id="baund-project-draft">
         <article class="project-detail">
             <!-- Project Hero -->
             <section class="project-hero">
@@ -387,6 +416,7 @@
             </section>
             </div>
         </article>
+        </template>
         <!-- 💡 추가된 Footer HTML (</div>와 </main> 사이에 넣어주세요) -->
         <footer class="site-footer">
             <p class="footer-text">
