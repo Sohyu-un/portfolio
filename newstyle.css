@@ -14,7 +14,7 @@
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
-  --display-hero-font-size: clamp(2.5rem, 5.55556vw, 5rem);
+  --display-hero-font-size: clamp(2.5rem, 5.55556vw, 3.875rem);
   --display-hero-line-height: 1.2;
   --display-hero-letter-spacing: -0.0175em;
   --heading-h1-font-size: 2.5rem;
@@ -26,7 +26,7 @@
   --heading-line-height: 1.2;
   --heading-letter-spacing: -0.025em;
   --title-medium-font-size: 1.25rem;
-  --body-default-font-size: 1rem;
+  --body-default-font-size: 1.125rem;
   --body-small-font-size: 0.875rem;
   --label-small-font-size: 0.75rem;
   --body-line-height: 1.4;

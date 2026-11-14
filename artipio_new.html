@@ -41,33 +41,7 @@
       </div>
       <div class="cs-hero-copy container cs-scroll-reveal">
         <p class="cs-eyebrow label accent">Case Study</p>
-        <h1 class="cs-title" id="cs-title">ARTiPIO</h1>
-        <p class="cs-description secondary">ARTiPIO is a platform that offers various investment opportunities in
-          artworks, enabling users to invest with small amounts of money. It features expertly curated pieces to ensure
-          that investors have access to high-quality artworks. Additionally, ARTiPIO provides valuable insights into art
-          market trends and specific artworks, helping users make informed decisions.</p>
-        <dl class="cs-metadata">
-          <div>
-            <dt>Duration</dt>
-            <dd>2023 12 - 2026 6</dd>
-          </div>
-          <div>
-            <dt>Position</dt>
-            <dd>Product Designer</dd>
-          </div>
-          <div>
-            <dt>Tool</dt>
-            <dd>Figma, Photoshop, Illustrator</dd>
-          </div>
-          <div>
-            <dt>Structure</dt>
-            <dd>Web-Application</dd>
-          </div>
-          <div>
-            <dt>Category</dt>
-            <dd>Finance</dd>
-          </div>
-        </dl>
+        <h1 class="cs-title" id="cs-title">Designing for usability across complex financial services.</h1>
       </div>
     </section>
     <section class="cs-section container" aria-labelledby="cs-summary-title">
@@ -90,7 +64,8 @@
             <div class="cs-milestone-copy">
               <h3>0 → 1</h3>
               <h4>Product Launch</h4>
-              <p class="secondary">Designed the initial product experience as the sole product designer.</p>
+              <p class="secondary">Led the initial product design of an art investment app that reached
+                <strong>10,000+ installs</strong> within its first year.</p>
             </div>
           </div>
           <p class="cs-timeline-arrow accent" aria-hidden="true">↓</p>
@@ -98,19 +73,42 @@
             <div class="cs-milestone-copy">
               <h3>1 → Better</h3>
               <h4>Product Evolution</h4>
-              <p class="secondary">Expanded features, optimized core flows, and improved the overall product experience.
-              </p>
+              <p class="secondary">Improved core financial workflows through user feedback and design
+                iterations, reducing deposit-related inquiries by <strong>80%</strong>.</p>
             </div>
           </div>
         </div>
       </div>
+      <dl class="cs-metadata">
+        <div>
+          <dt>Duration</dt>
+          <dd>2023 12 - 2026 6</dd>
+        </div>
+        <div>
+          <dt>Position</dt>
+          <dd>Product Designer</dd>
+        </div>
+        <div>
+          <dt>Tool</dt>
+          <dd>Figma, Photoshop, Illustrator</dd>
+        </div>
+        <div>
+          <dt>Structure</dt>
+          <dd>Web-Application</dd>
+        </div>
+        <div>
+          <dt>Category</dt>
+          <dd>Finance</dd>
+        </div>
+      </dl>
       <div class="cs-divider" aria-hidden="true"></div>
     </section>
     <section class="cs-section cs-voc container" aria-labelledby="cs-voc-title">
-      <div class="cs-section-header cs-scroll-reveal">
+      <div class="cs-section-header cs-voc-header cs-scroll-reveal">
         <h2 class="cs-section-title" id="cs-voc-title"><img src="assets/artipio/voc.svg" width="34" height="34"
             alt="" />VOC Analysis</h2>
-
+        <p class="secondary">To identify where users struggled after launch, I analyzed 96 customer inquiries and
+          identified recurring friction points across the investment experience.</p>
       </div>
       <div class="cs-voc-content">
         <div class="cs-voc-analysis">
@@ -171,13 +169,13 @@
         <div class="cs-voc-opportunities">
           <article class="cs-voc-card cs-scroll-reveal">
             <p class="label accent">01 / DEPOSIT</p>
-            <h3>Clarifying how users fund their investments</h3>
+            <h3>Unclear Deposit Methods and Requirements</h3>
             <p class="secondary">Confusion during deposits prevented users from funding their accounts, a required step
               before investing.</p>
           </article>
           <article class="cs-voc-card cs-voc-events cs-scroll-reveal">
             <p class="label cs-voc-consent">02 / CONSENT</p>
-            <h3>Making required event consent easier to find</h3>
+            <h3>Difficulty Finding and Updating Consent</h3>
             <p class="secondary">Users struggled to locate required consent, creating friction in the event
               participation process.</p>
           </article>
@@ -191,7 +189,7 @@
     </section>
     <section class="cs-section cs-deposit container" aria-labelledby="cs-deposit-title">
       <div class="cs-deposit-header cs-scroll-reveal">
-        <p class="label accent">01 / DEPOSIT</p>
+        <h3 class="accent">Pain Point 01</h3>
         <h2 id="cs-deposit-title">Deposit Methods & Banking Restrictions </h2>
       </div>
       <div class="cs-deposit-content">
@@ -266,7 +264,7 @@
     </section>
     <section class="cs-section cs-consent container" aria-labelledby="cs-consent-title">
       <div class="cs-consent-header cs-scroll-reveal">
-        <p class="label cs-consent-accent">02 / CONSENT</p>
+        <h3 class="cs-consent-accent">Pain Point 2</h3>
         <h2 id="cs-consent-title">Users struggled to find and update event consent.</h2>
       </div>
       <div class="cs-consent-problem-layout">
@@ -435,21 +433,23 @@
               <p class="cs-edge-fixed">$25,000</p>
             </div>
             <div class="cs-edge-marker cs-edge-deposit" style="left: 25%" aria-label="Deposit: $10,000">
-              <span>Deposit</span><i aria-hidden="true"></i></div>
+              <span>Deposit</span><i aria-hidden="true"></i>
+            </div>
             <div class="cs-edge-marker cs-edge-entered" style="left: 50%" aria-label="Entered Amount: $20,000">
-              <span>Entered</span><i aria-hidden="true"></i></div>
+              <span>Entered</span><i aria-hidden="true"></i>
+            </div>
           </div>
         </figure>
         <div class="cs-edge-warnings">
           <article class="cs-edge-warning is-active" data-warning="0" aria-current="true">
             <p class="label secondary">WARNING 01</p>
             <h3>“Insufficient deposit balance”</h3>
-            <p class="secondary">The available deposit is the more restrictive condition.</p>
+            <p class="secondary">The available deposit is lower than the purchase limit.</p>
           </article>
           <article class="cs-edge-warning" data-warning="1" aria-current="false">
             <p class="label secondary">WARNING 02</p>
             <h3>“Exceeds $25,000 purchase limit”</h3>
-            <p class="secondary">The fixed purchase limit is the more restrictive condition.</p>
+            <p class="secondary">The purchase limit is lower than the available deposit.</p>
           </article>
         </div>
       </div>
@@ -461,7 +461,8 @@
           without losing the clarity users need to make informed decisions.</p>
       </div>
       <figure class="cs-purchase-preview" aria-label="ARTiPIO purchase flow">
-        <video class="cs-purchase-video" muted loop playsinline preload="auto" aria-label="ARTiPIO purchase journey demonstration">
+        <video class="cs-purchase-video" muted loop playsinline preload="auto"
+          aria-label="ARTiPIO purchase journey demonstration">
           <source src="./img/artipio_purchasment.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>

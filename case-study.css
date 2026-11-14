@@ -89,6 +89,7 @@
   background: var(--text-accent);
 }
 .case-study .cs-milestone-copy { min-width: 0; display: flex; flex-direction: column; gap: var(--space-1); padding-inline: var(--space-5); }
+.case-study .cs-milestone-copy strong { color: var(--text-primary); }
 .case-study .cs-milestone h4 { margin: 0; font-size: var(--title-medium-font-size); font-weight: var(--font-weight-medium); line-height: var(--body-line-height); }
 .case-study .cs-timeline-arrow { line-height: var(--body-line-height); }
 .case-study .cs-divider { height: 1px; background: var(--border-default); }
@@ -98,6 +99,7 @@
   --background-surface: #303030;
   --secondary-500: #00d8ad;
 }
+.case-study .cs-voc-header { flex-direction: column; align-items: flex-start; }
 .case-study .cs-voc-content {
   display: grid;
   grid-template-columns: minmax(0, 785fr) minmax(0, 559fr);
@@ -170,6 +172,7 @@
 .case-study .cs-deposit { --cs-deposit-surface: #303030; }
 .case-study .cs-deposit-header,
 .case-study .cs-deposit-problem { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-deposit-header > .label { font-size: var(--title-medium-font-size); }
 .case-study .cs-deposit-header > .label,
 .case-study .cs-deposit-quote:first-child .label { font-weight: 700; }
 .case-study .cs-deposit-header h2 {
@@ -386,7 +389,6 @@
   .case-study { --cs-section-space: var(--space-8); --cs-content-gap: var(--space-7); }
   .case-study .cs-overview { grid-template-columns: minmax(0, 1fr); }
   .case-study .cs-section-header { flex-wrap: wrap; }
-  .case-study .cs-title { font-size: clamp(2.5rem, 10vw, 5rem); }
   .case-study .cs-main { padding-bottom: var(--space-10); }
   .case-study .cs-timeline { gap: var(--space-2); }
 }
