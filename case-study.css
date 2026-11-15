@@ -6,8 +6,8 @@
   --cs-logo-size: 5.0625rem;
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .case-study { --page-gutter: 7.5vw; }
+@media (min-width: 1024px) {
+  .case-study { --page-gutter: 11.5vw; }
 }
 
 .case-study .cs-main { padding-bottom: 6.0625rem; }
@@ -104,7 +104,7 @@
   display: grid;
   grid-template-columns: minmax(0, 785fr) minmax(0, 559fr);
   gap: var(--cs-content-gap);
-  align-items: start;
+  align-items: center;
 }
 .case-study .cs-voc-analysis {
   display: grid;
@@ -143,7 +143,7 @@
 .case-study .cs-voc-issue-list dd { margin: 0; }
 .case-study .cs-voc-highlight { color: var(--text-primary); }
 .case-study .cs-voc-issue-group + .cs-voc-issue-group { margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--border-default); }
-.case-study .cs-voc-opportunities { display: flex; flex-direction: column; gap: var(--cs-content-gap); min-width: 0; }
+.case-study .cs-voc-opportunities { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
 .case-study .cs-voc-card { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-5); border-radius: var(--space-5); background: var(--background-surface); }
 .case-study .cs-voc-card h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
 .case-study .cs-voc-card .label { font-weight: 700; }

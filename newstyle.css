@@ -47,7 +47,7 @@
   --space-14: 6rem;
   --content-max-width: 83rem; /* 1328px inside the 1440px frame */
   --page-gutter: 3.5rem;
-  --navigation-height: 6.5rem;
+  --navigation-height: 4rem;
   --project-gap: clamp(2rem, 6.66667vw, 6rem);
   --featured-gap: clamp(2rem, 3.88889vw, 3.5rem);
 }
@@ -378,7 +378,7 @@ h2 {
 @media (max-width: 800px) {
   :root {
     --page-gutter: 1.5rem;
-    --navigation-height: 5rem;
+    --navigation-height: 3rem;
     --space-13: 3.5rem;
   }
   .hero {
