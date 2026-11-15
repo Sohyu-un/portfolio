@@ -254,7 +254,7 @@
   background: var(--cs-deposit-surface);
 }
 .case-study .cs-deposit-quote > div { display: flex; flex-direction: column; gap: var(--space-1); }
-.case-study .cs-deposit-quote blockquote { margin: 0; font-size: var(--body-default-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); }
+.case-study .cs-deposit-quote blockquote { margin: 0; color: var(--text-secondary); font-size: var(--body-default-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); }
 /* Deposit Redesign — the Figma composition uses a 1401px content canvas. */
 .case-study .cs-redesign { --cs-redesign-surface: #303030; }
 .case-study .cs-redesign-header { display: flex; flex-direction: column; gap: var(--space-1); }
@@ -434,7 +434,7 @@
 .case-study .cs-consent-card h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
 .case-study .cs-consent-quote { justify-content: space-between; min-height: 244px; margin: 0; }
 .case-study .cs-consent-quote > div { display: flex; flex-direction: column; gap: var(--space-1); }
-.case-study .cs-consent-quote blockquote { margin: 0; font-size: var(--body-default-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); }
+.case-study .cs-consent-quote blockquote { margin: 0; color: var(--text-secondary); font-size: var(--body-default-font-size); font-weight: var(--font-weight-regular); line-height: var(--body-line-height); }
 .case-study .cs-consent-redesign-layout { display: grid; grid-template-columns: minmax(0, 350fr) minmax(0, 437fr); gap: var(--cs-content-gap); width: 100%; max-width: 843px; align-self: center; align-items: start; }
 .case-study .cs-consent-animation {
   margin: 0;
