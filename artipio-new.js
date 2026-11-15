@@ -330,3 +330,30 @@
     initializePurchase();
   }
 })();
+
+// Swap out SMIL entirely for readers who request reduced motion.
+(() => {
+  const initializeJourney = () => {
+    const animated = document.querySelector('.account-journey');
+    if (!animated || !window.matchMedia) return;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const finalState = animated.cloneNode(true);
+    finalState.querySelectorAll('animate').forEach(animation => animation.remove());
+    const dots = finalState.querySelectorAll('circle');
+    dots[3].setAttribute('cx', '241');
+    dots[3].setAttribute('fill', '#6385F5');
+    dots[4].remove();
+    finalState.querySelector('g').setAttribute('opacity', '1');
+    let current = animated;
+    const update = () => {
+      const next = motion.matches ? finalState : animated;
+      if (current === next) return;
+      current.replaceWith(next);
+      current = next;
+    };
+    update();
+    motion.addEventListener('change', update);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeJourney, { once: true });
+  else initializeJourney();
+})();
