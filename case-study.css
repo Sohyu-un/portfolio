@@ -6,10 +6,6 @@
   --cs-logo-size: 5.0625rem;
 }
 
-@media (min-width: 1024px) {
-  .case-study { --page-gutter: 11.5vw; }
-}
-
 .case-study .cs-main { padding-bottom: 6.0625rem; }
 .case-study .cs-hero {
   display: flex;
