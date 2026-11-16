@@ -733,7 +733,17 @@
 .case-study .cs-summary .cs-summary-metrics dd { white-space: nowrap; }
 @container (min-width: 66rem) {
   .case-study .cs-summary .cs-overview {
-    grid-template-columns: minmax(0, 1fr) minmax(37rem, .78fr);
+    grid-template-columns: minmax(0, 1fr) minmax(30rem, .78fr);
+    align-items: center;
+  }
+  .case-study .cs-summary .cs-overview-intro {
+    gap: var(--space-5);
+  }
+  .case-study .cs-summary .cs-summary-metrics {
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  }
+  .case-study .cs-summary .cs-summary-metrics > div {
+    padding-inline: var(--space-1);
   }
 }
 @container (max-width: 36rem) {
