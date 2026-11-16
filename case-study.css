@@ -49,7 +49,7 @@
 .case-study .cs-section {
   display: flex;
   flex-direction: column;
-  gap: var(--cs-content-gap);
+  gap: var(--space-12);
   padding-block: var(--cs-section-space);
 }
 .case-study .cs-section-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
@@ -124,7 +124,7 @@
 /* Separate new topics and conclusions from their preceding content group. */
 .case-study .cs-voc-process + .cs-voc-header,
 .case-study .cs-voc-content + .cs-voc-insight {
-  padding-top: var(--cs-content-gap);
+  padding-top: var(--space-8);
 }
 .case-study .cs-voc-intro { display: grid; justify-items: center; gap: var(--space-6); text-align: center; }
 .case-study .cs-voc-intro h2,
@@ -452,6 +452,7 @@
 }
 @media (max-width: 800px) {
   .case-study { --cs-section-space: var(--space-8); --cs-content-gap: var(--space-7); }
+  .case-study .cs-section { gap: var(--cs-content-gap); }
   .case-study .cs-overview { grid-template-columns: minmax(0, 1fr); }
   .case-study .cs-section-header { flex-wrap: wrap; }
   .case-study .cs-main { padding-bottom: var(--space-10); }
@@ -825,7 +826,7 @@
 .case-study .cs-development-progress button::after { content: ''; width: var(--space-8); height: 3px; background: var(--border-default); border-radius: var(--space-1); }
 .case-study .cs-development-progress button[aria-current="true"]::after { background: var(--text-accent); }
 .case-study .cs-development-qa { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); align-items: center; }
-.case-study .cs-development-carousel + .cs-development-qa { padding-top: var(--cs-content-gap); }
+.case-study .cs-development-carousel + .cs-development-qa { padding-top: var(--space-8); }
 .case-study .cs-development-qa-metric { display: grid; gap: var(--space-3); padding-block: var(--space-5); }
 .case-study .cs-development-qa-metric > div { display: grid; gap: var(--space-1); }
 .case-study .cs-development-qa-metric > .label { font-weight: 700; }
@@ -847,4 +848,23 @@
 }
 @container (max-width: 24rem) {
   .case-study .cs-development-coverage ul { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 800px) {
+  .case-study .cs-voc-process + .cs-voc-header,
+  .case-study .cs-voc-content + .cs-voc-insight,
+  .case-study .cs-development-carousel + .cs-development-qa {
+    padding-top: var(--cs-content-gap);
+  }
+}
+
+/* Centered narrative pauses need breathing room above and below the copy. */
+@media (min-width: 801px) {
+  .case-study .cs-challenge + .cs-architecture-grid {
+    padding-top: var(--cs-content-gap);
+  }
+  .case-study .cs-voc > .cs-voc-insight,
+  .case-study .cs-purchase > .cs-purchase-decision {
+    padding-block: var(--cs-section-space);
+  }
 }
