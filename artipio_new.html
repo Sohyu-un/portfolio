@@ -105,11 +105,41 @@
       <div class="cs-divider" aria-hidden="true"></div>
     </section>
     <section class="cs-section cs-voc container" aria-labelledby="cs-voc-title">
+      <header class="cs-voc-intro cs-scroll-reveal">
+        <p class="label accent">01 / VOC-DRIVEN IMPROVEMENT</p>
+        <h2>What Prevents Users from Investing?</h2>
+      </header>
+      <div class="cs-voc-process">
+        <article class="cs-voc-process-card cs-scroll-reveal">
+          <p class="label secondary">01 / OBSERVATION</p>
+          <img src="assets/artipio/voc/observation.svg" width="32" height="32" alt="" />
+          <div class="cs-voc-card-copy">
+            <h3>Usability Issues</h3>
+            <p class="secondary">Observed sign-up and account setup difficulties.</p>
+          </div>
+        </article>
+        <img class="cs-voc-process-arrow" src="assets/artipio/voc/arrow.svg" width="24" height="24" alt="" />
+        <article class="cs-voc-process-card cs-scroll-reveal">
+          <p class="label secondary">02 / FEEDBACK</p>
+          <img src="assets/artipio/voc/feedback.svg" width="32" height="32" alt="" />
+          <div class="cs-voc-card-copy">
+            <h3>Customer Complaints</h3>
+            <p class="secondary">Collected inquiries during investment offerings.</p>
+          </div>
+        </article>
+        <img class="cs-voc-process-arrow" src="assets/artipio/voc/arrow.svg" width="24" height="24" alt="" />
+        <article class="cs-voc-process-card cs-voc-process-analysis cs-scroll-reveal">
+          <p class="label accent">03 / ANALYSIS</p>
+          <img src="assets/artipio/voc/analysis.svg" width="32" height="32" alt="" />
+          <div class="cs-voc-card-copy">
+            <h3>VOC Analysis</h3>
+            <p class="secondary">Identified recurring usability issues.</p>
+          </div>
+        </article>
+      </div>
       <div class="cs-section-header cs-voc-header cs-scroll-reveal">
-        <h2 class="cs-section-title" id="cs-voc-title"><img src="assets/artipio/voc.svg" width="34" height="34"
+        <h2 class="cs-section-title" id="cs-voc-title"><img src="assets/artipio/voc/voc.svg" width="34" height="34"
             alt="" />VOC Analysis</h2>
-        <p class="secondary">To identify where users struggled after launch, I analyzed 96 customer inquiries and
-          identified recurring friction points across the investment experience.</p>
       </div>
       <div class="cs-voc-content">
         <div class="cs-voc-analysis">
@@ -170,15 +200,19 @@
         <div class="cs-voc-opportunities">
           <article class="cs-voc-card cs-scroll-reveal">
             <p class="label accent">01 / DEPOSIT</p>
-            <h3>Unclear Deposit Methods and Requirements</h3>
-            <p class="secondary">Confusion during deposits prevented users from funding their accounts, a required step
-              before investing.</p>
+            <img src="assets/artipio/voc/deposit.svg" width="32" height="32" alt="" />
+            <div class="cs-voc-card-copy">
+              <h3>Clarifying how users fund their investments</h3>
+              <p class="secondary">19 deposit-related inquiries highlighted confusion in a required investment step.</p>
+            </div>
           </article>
           <article class="cs-voc-card cs-voc-events cs-scroll-reveal">
             <p class="label cs-voc-consent">02 / CONSENT</p>
-            <h3>Difficulty Finding and Updating Consent</h3>
-            <p class="secondary">Users struggled to locate required consent, creating friction in the event
-              participation process.</p>
+            <img src="assets/artipio/voc/consent.svg" width="32" height="32" alt="" />
+            <div class="cs-voc-card-copy">
+              <h3>Making required event consent easier to find</h3>
+              <p class="secondary">7 inquiries highlighted friction around terms and conditions agreement.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -195,7 +229,6 @@
       </div>
       <div class="cs-deposit-content">
         <figure class="cs-deposit-preview cs-scroll-reveal">
-          <figcaption>Existing Design</figcaption>
           <div class="cs-deposit-mockup">
             <img src="img/artipio_prev_deposit account.png" width="840" height="1788"
               alt="Existing Deposit Account screen with account information and banking restrictions in Important Notices." />
@@ -479,8 +512,8 @@
           eliminating unnecessary returns to the purchase page.</p>
       </header>
       <section class="cs-section cs-challenge" aria-labelledby="cs-challenge-title">
-        <svg class="account-journey" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg" role="img"
-          aria-label="Five pre-purchase stages become four by merging two account setup stages.">
+        <svg class="account-journey" viewBox="0 0 400 145" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="Identity Verification, Home Address, Bank Account Registration, Virtual Account Issuance, and Investment Suitability Test. The third and fourth stages merge into Account Setup.">
           <path d="M35 88 H365" fill="none" stroke="#494949" stroke-width="2.5" stroke-linecap="round" />
 
           <!-- Three unchanged steps -->
@@ -503,6 +536,34 @@
             <animate attributeName="opacity" values="1;1;1;0;0;0;1" keyTimes="0;0.2;0.45;0.5;0.78;0.8;1" dur="6s"
               repeatCount="indefinite" />
           </circle>
+
+          <!-- Stage labels beneath the dots; account labels fade during the merge. -->
+          <g fill="#AEAEAE" font-size="8" font-family="Geist, sans-serif" text-anchor="middle">
+            <text x="35" y="109">
+              <tspan x="35">Identity</tspan>
+              <tspan x="35" dy="11">Verification</tspan>
+            </text>
+            <text x="118" y="109">
+              <tspan x="118">Home</tspan>
+              <tspan x="118" dy="11">Address</tspan>
+            </text>
+            <g>
+              <text x="200" y="109">
+                <tspan x="200">Bank Account</tspan>
+                <tspan x="200" dy="11">Registration</tspan>
+              </text>
+              <text x="283" y="109">
+                <tspan x="283">Virtual Account</tspan>
+                <tspan x="283" dy="11">Issuance</tspan>
+              </text>
+              <animate attributeName="opacity" values="1;1;0;0;0;1" keyTimes="0;0.2;0.333333;0.78;0.8;1" dur="6s"
+                repeatCount="indefinite" />
+            </g>
+            <text x="365" y="109">
+              <tspan x="365">Investment</tspan>
+              <tspan x="365" dy="11">Suitability Test</tspan>
+            </text>
+          </g>
 
           <!-- Account Setup label -->
           <g opacity="0">

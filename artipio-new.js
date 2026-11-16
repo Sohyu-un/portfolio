@@ -27,6 +27,8 @@
       register('.cs-hero-copy, .cs-section-header, .cs-deposit-header, .cs-redesign-header, .cs-consent-header');
       register('.cs-overview-intro, .cs-deposit-preview, .cs-redesign-preview, .cs-consent-existing, .cs-consent-animation', 100);
       register('.cs-milestone', 100, 100);
+      register('.cs-voc-intro');
+      register('.cs-voc-process-card', 100, 100);
       register('.cs-voc-chart', 100);
       register('.cs-voc-issue-group', 250, 100);
       register('.cs-voc-card', 300, 100);

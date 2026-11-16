@@ -96,6 +96,23 @@
   --secondary-500: #00d8ad;
 }
 .case-study .cs-voc-header { flex-direction: column; align-items: flex-start; }
+.case-study .cs-voc-intro { display: grid; justify-items: center; gap: var(--space-6); text-align: center; }
+.case-study .cs-voc-intro h2,
+.case-study .cs-voc-process-card h3 {
+  margin: 0;
+  font-size: var(--heading-h3-font-size);
+  font-weight: var(--heading-h3-font-weight);
+  line-height: var(--heading-h3-line-height);
+  letter-spacing: var(--heading-h3-letter-spacing);
+}
+.case-study .cs-voc-intro .label,
+.case-study .cs-voc-process-card .label { font-weight: 700; }
+.case-study .cs-voc-process { display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) 24px minmax(0, 1fr); gap: var(--space-1); align-items: center; }
+.case-study .cs-voc-process-card { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); border-radius: var(--space-5); background: var(--background-surface); min-width: 0; }
+.case-study .cs-voc-process-analysis { border: 2px solid var(--text-accent); background: var(--background-default); }
+.case-study .cs-voc-card-copy { display: grid; gap: var(--space-1); }
+.case-study .cs-voc-process-card > img,
+.case-study .cs-voc-card > img { flex-shrink: 0; }
 .case-study .cs-voc-content {
   display: grid;
   grid-template-columns: minmax(0, 785fr) minmax(0, 559fr);
@@ -140,13 +157,14 @@
 .case-study .cs-voc-highlight { color: var(--text-primary); }
 .case-study .cs-voc-issue-group + .cs-voc-issue-group { margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--border-default); }
 .case-study .cs-voc-opportunities { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
-.case-study .cs-voc-card { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-5); border-radius: var(--space-5); background: var(--background-surface); }
-.case-study .cs-voc-card h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
+.case-study .cs-voc-card { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); border-radius: var(--space-5); background: var(--background-surface); }
+.case-study .cs-voc-card h3 { margin: 0; font-size: var(--title-medium-font-size); font-weight: var(--heading-h3-font-weight); line-height: 1.4; letter-spacing: var(--heading-h3-letter-spacing); }
+.case-study .cs-voc-card .cs-voc-card-copy > p { font-size: 1rem; }
+.case-study .cs-voc-card > img { width: 28px; height: 28px; }
 .case-study .cs-voc-card .label { font-weight: 700; }
 .case-study .cs-voc-consent { color: var(--secondary-500); }
 .case-study .cs-voc-insight {
-  /* Include the parent section gap in the 148px separation. */
-  margin-top: calc(9.25rem - var(--cs-content-gap));
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
@@ -265,7 +283,6 @@
   display: grid;
   grid-template-columns: minmax(0, 424fr) minmax(0, 291fr) minmax(0, 424fr);
   column-gap: 4.925%;
-  padding-inline: 4.425%;
   min-height: 658px;
   align-items: start;
 }
@@ -355,6 +372,8 @@
   .case-study .cs-deposit-quote { min-height: 160px; }
 }
 @media (max-width: 800px) {
+  .case-study .cs-voc-process { grid-template-columns: minmax(0, 1fr); justify-items: stretch; }
+  .case-study .cs-voc-process-arrow { justify-self: center; transform: rotate(90deg); }
   .case-study .cs-deposit-content { grid-template-columns: minmax(0, 1fr); }
   .case-study .cs-deposit-copy { gap: var(--cs-content-gap); }
   .case-study .cs-deposit-problem { padding-bottom: 0; }
