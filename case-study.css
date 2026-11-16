@@ -133,7 +133,7 @@
 .case-study .cs-voc-chart-events { stroke: var(--secondary-500); }
 .case-study .cs-voc-chart-total {
   fill: var(--text-primary);
-  font-size: 56px;
+  font-size: 50px;
   font-weight: var(--font-weight-semibold);
 }
 .case-study .cs-voc-chart-label { fill: var(--text-secondary); font-size: var(--title-medium-font-size); }

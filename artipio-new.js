@@ -69,7 +69,7 @@
         metrics.forEach((text, element) => {
           if (!target.contains(element) || counted.has(element)) return;
           counted.add(element);
-          const value = Number(text.trim());
+          const value = Number(text.trim().replace(/\+$/, ''));
           if (!Number.isFinite(value)) return;
           counters.set(element, { text, value, start: performance.now() + delay });
         });
