@@ -274,7 +274,7 @@ h2 {
   gap: var(--space-3);
   border-top: 1px solid var(--border-default);
   padding-block: var(--space-4) var(--space-2);
-  font-size: var(--body-small-font-size);
+  font-size: var(--body-default-font-size);
 }
 .action-arrow {
   font-size: var(--heading-h3-font-size);
@@ -304,6 +304,26 @@ h2 {
   grid-column: 1;
   grid-row: 1;
   padding-inline: 0 var(--space-12);
+}
+.trellis-artwork {
+  background: #ffe791;
+}
+.trellis-artwork > img {
+  aspect-ratio: 664 / 257;
+  object-fit: contain;
+}
+@media (min-width: 801px) {
+  .project-trellis .trellis-artwork {
+    position: relative;
+    align-self: stretch;
+  }
+  .project-trellis .trellis-artwork > img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    object-position: center;
+  }
 }
 .site-footer {
   margin-top: var(--space-12);
@@ -462,6 +482,12 @@ h2 {
   }
   .project-index {
     gap: var(--space-3);
+  }
+  .project-trellis .project-index {
+    flex-wrap: wrap;
+  }
+  .project-trellis .project-index > :last-child {
+    margin-left: auto;
   }
   .footer-bottom {
     flex-direction: column;
