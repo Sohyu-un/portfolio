@@ -66,6 +66,31 @@
 /* Keep the existing 135px SVG intact and scale its complete wrapper to Figma's 81px slot. */
 .case-study .cs-project-logo img { max-width: none; transform: scale(0.6); transform-origin: top left; }
 .case-study .cs-overview-copy { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
+.case-study .cs-summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-default);
+}
+.case-study .cs-summary-metrics > div { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.case-study .cs-summary-metrics dt { font-size: var(--body-default-font-size); }
+.case-study .cs-summary-metrics dd {
+  order: -1;
+  margin: 0;
+  color: var(--text-accent);
+  font-size: var(--heading-h1-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+@media (max-width: 1100px) {
+  .case-study .cs-summary-metrics { grid-template-columns: minmax(0, 1fr); }
+}
+@media (min-width: 481px) and (max-width: 800px) {
+  .case-study .cs-summary-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 .case-study .cs-overview h3 {
   margin: 0;
   font-size: var(--heading-h2-font-size);
@@ -285,8 +310,28 @@
   display: grid;
   grid-template-columns: minmax(0, 424fr) minmax(0, 291fr) minmax(0, 424fr);
   column-gap: 4.925%;
-  min-height: 658px;
   align-items: start;
+}
+.case-study .cs-deposit-impact {
+  margin-top: calc(-1 * var(--cs-content-gap));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+}
+.case-study .cs-deposit-impact > .label { font-weight: 700; }
+.case-study .cs-deposit-impact-copy { display: grid; gap: var(--space-3); }
+.case-study .cs-deposit-impact-value {
+  font-size: var(--heading-h1-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-deposit-impact-description {
+  font-size: var(--title-medium-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--body-line-height);
 }
 .case-study .cs-redesign-preview {
   grid-column: 2;
@@ -601,7 +646,7 @@
 .case-study .account-journey {
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-width: 48rem;
   height: auto;
   margin: 0 auto 24px;
 }
@@ -634,4 +679,167 @@
   .case-study .cs-architecture-grid { grid-template-columns: minmax(0, 1fr); }
   .case-study .cs-architecture-card { padding: 20px; }
   .case-study .cs-architecture-card-body { gap: 16px; }
+}
+
+/* Summary layout stays scoped to its own available content width. */
+.case-study .cs-summary { container-type: inline-size; }
+.case-study .cs-summary .cs-overview {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+.case-study .cs-summary .cs-overview-intro {
+  grid-template-columns: var(--cs-logo-size) minmax(0, 1fr);
+  gap: var(--space-10);
+  align-items: start;
+}
+.case-study .cs-summary .cs-project-logo img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  transform: none;
+}
+.case-study .cs-summary .cs-overview-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.case-study .cs-summary .cs-overview-copy strong {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+.case-study .cs-summary .cs-summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.case-study .cs-summary .cs-summary-metrics > div {
+  padding: var(--space-3);
+  gap: var(--space-1);
+}
+.case-study .cs-summary .cs-summary-metrics dt {
+  font-size: var(--title-medium-font-size);
+  font-weight: var(--font-weight-medium);
+}
+.case-study .cs-summary .cs-summary-metrics dd { white-space: nowrap; }
+@container (min-width: 66rem) {
+  .case-study .cs-summary .cs-overview {
+    grid-template-columns: minmax(0, 1fr) minmax(37rem, .78fr);
+  }
+}
+@container (max-width: 36rem) {
+  .case-study .cs-summary .cs-overview-intro { gap: var(--space-5); }
+}
+@container (max-width: 24rem) {
+  .case-study .cs-summary .cs-overview-intro { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Design & development — isolated carousel and QA layout. */
+.case-study .cs-development {
+  container-type: inline-size;
+  min-width: 0;
+  --development-gutter: max(var(--page-gutter), calc((100% - var(--content-max-width)) / 2));
+}
+.case-study .cs-development-header { display: grid; gap: var(--space-1); }
+.case-study .cs-development-header > .label { font-weight: 700; }
+.case-study .cs-development-header h2 {
+  font-size: var(--heading-h1-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.case-study .cs-development-carousel { min-width: 0; width: 100%; }
+.case-study .cs-development-track {
+  display: flex;
+  padding-inline: var(--development-gutter);
+  scroll-padding-inline: var(--development-gutter);
+  gap: var(--space-5);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  position: relative;
+}
+.case-study .cs-development-track::-webkit-scrollbar { display: none; }
+.case-study .cs-development-carousel:not(.is-at-end) .cs-development-track {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - var(--space-12)), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - var(--space-12)), transparent);
+}
+.case-study .cs-development-slide {
+  flex: 0 0 44%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  scroll-snap-align: start;
+}
+.case-study .cs-development-image {
+  aspect-ratio: 615 / 464;
+  border-radius: var(--space-5);
+  overflow: hidden;
+}
+.case-study .cs-development-slide:nth-child(2) .cs-development-image { background: #fff; }
+.case-study .cs-development-slide:nth-child(3) .cs-development-image { background: #272727; }
+.case-study .cs-development-image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.case-study .cs-development-slide:nth-child(2) .cs-development-image > img {
+  object-fit: contain;
+}
+.case-study .cs-development-slide h3,
+.case-study .cs-development-qa-metric h3 {
+  margin: 0;
+  font-size: var(--heading-h3-font-size);
+  font-weight: var(--heading-h3-font-weight);
+  line-height: var(--heading-h3-line-height);
+  letter-spacing: var(--heading-h3-letter-spacing);
+}
+.case-study .cs-development-controls { display: flex; align-items: center; justify-content: center; gap: var(--space-7); margin-top: var(--space-10); }
+.case-study .cs-development-controls button {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  min-height: var(--space-8);
+  min-width: var(--space-8);
+}
+.case-study .cs-development-controls button:disabled { opacity: .35; cursor: default; }
+.case-study .cs-development-controls button:focus-visible,
+.case-study .cs-development-track:focus-visible { outline: 2px solid var(--text-accent); outline-offset: 4px; }
+.case-study .cs-development-progress { display: flex; gap: var(--space-2); }
+.case-study .cs-development-progress button::after { content: ''; width: var(--space-8); height: 3px; background: var(--border-default); border-radius: var(--space-1); }
+.case-study .cs-development-progress button[aria-current="true"]::after { background: var(--text-accent); }
+.case-study .cs-development-qa { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); align-items: center; margin-top: var(--cs-content-gap); }
+.case-study .cs-development-qa-metric { display: grid; gap: var(--space-3); padding: var(--space-5); }
+.case-study .cs-development-qa-metric > div { display: grid; gap: var(--space-1); }
+.case-study .cs-development-qa-metric > .label { font-weight: 700; }
+.case-study .cs-development-qa-value { font-size: var(--heading-h1-font-size); font-weight: var(--font-weight-semibold); line-height: var(--heading-line-height); letter-spacing: var(--heading-letter-spacing); }
+.case-study .cs-development-coverage { display: grid; gap: var(--space-5); min-width: 0; }
+.case-study .cs-development-coverage h3 { margin: 0; }
+.case-study .cs-development-coverage ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); margin: 0; padding: 0; list-style: none; }
+.case-study .cs-development-coverage li { display: flex; align-items: center; gap: var(--space-2); color: var(--text-secondary); min-width: 0; }
+.case-study .cs-development-coverage svg { color: var(--text-accent); flex-shrink: 0; }
+@container (max-width: 50rem) {
+  .case-study .cs-development-slide { flex-basis: 72%; }
+  .case-study .cs-development-qa { grid-template-columns: minmax(0, 1fr); gap: var(--space-7); }
+  .case-study .cs-development-qa-metric { padding-inline: 0; }
+}
+@container (max-width: 36rem) {
+  .case-study .cs-development-slide { flex-basis: 100%; }
+  .case-study .cs-development-header h2 { font-size: var(--heading-h2-font-size); }
+  .case-study .cs-development-controls { gap: var(--space-3); }
+}
+@container (max-width: 24rem) {
+  .case-study .cs-development-coverage ul { grid-template-columns: minmax(0, 1fr); }
 }
