@@ -1,178 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & Contact | Selena Sohyun Kim</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #111;
-            margin: 0;
-            padding: 0;
-            background: #fff;
-        }
-
-        /* 네비게이션바 레이아웃 수정 및 고정 */
-        .header {
-            padding: 25px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .site-name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #111;
-            text-decoration: none;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #555;
-            margin-left: 24px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav a:hover {
-            color: #000;
-        }
-
-        .menu-button {
-            display: none;
-            /* 모바일 반응형 스크립트가 없다면 기본 숨김 처리 */
-        }
-
-        .container {
-            max-width: 750px;
-            margin: 80px auto;
-            padding: 0 24px;
-        }
-
-        /* About Me Section */
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-        }
-
-        .title-sub {
-            font-size: 1.25rem;
-            color: #666;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-
-        p {
-            font-size: 1.05rem;
-            color: #333;
-            margin-bottom: 24px;
-        }
-
-        /* Tag Cloud */
-        .tag-container {
-            margin: 32px 0 60px 0;
-        }
-
-        .bio-tag {
-            display: inline-block;
-            background: #f4f4f5;
-            color: #444;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 8px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #eee;
-            margin-top: 60px;
-        }
-
-        .contact-section h2 {
-            font-size: 1.75rem;
-            margin-top: 0;
-            margin-bottom: 12px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .contact-section p {
-            color: #555;
-            font-size: 1rem;
-            margin-bottom: 24px;
-        }
-
-        .email-btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background: #111;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: background 0.2s;
-        }
-
-        .email-btn:hover {
-            background: #333;
-        }
-
-        .social-links {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid #e4e4e7;
-        }
-
-        .social-links a {
-            color: #666;
-            font-size: 0.95rem;
-            margin-right: 20px;
-            text-decoration: underline;
-            font-weight: 500;
-        }
-
-        .social-links a:hover {
-            color: #000;
-        }
-    </style>
-    <!-- 외부 style.css와 위 내부 스타일이 충돌한다면 아래 라인을 주석 처리하거나 제거하세요 -->
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & Contact | Selena Sohyun Kim</title>
+  <meta name="description" content="Meet Selena Sohyun Kim, a product designer studying Human-Computer Interaction at Georgia Tech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="newstyle.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
-
-<body>
-    <main class="page home-page">
-        <!-- 상단 헤더 영역 구조 정상화 -->
-        <header class="header">
-            <a class="site-name" href="index.html">Selena</a>
-            <nav class="nav" id="primary-nav" aria-label="Primary navigation">
-                <!-- <a href="index.html">Home</a>--> <a href="about.html">About</a>
-            </nav>
-            <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="primary-nav"
-                aria-expanded="false">
-                <i class="icon-hamburger" aria-hidden="true"></i>
-                <i class="icon-close" aria-hidden="true"></i>
-            </button>
-        </header>
-
-        <div class="container">
-            <!-- About Me 영역 -->
-            <h1>Selena (Sohyun) Kim</h1>
-            <div class="title-sub">UI/UX & Product Designer</div>
+<body class="case-study about-page" id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="index.html" aria-label="Selena — homepage">Selena</a>
+    <nav class="navigation" aria-label="Primary navigation">
+      <a href="index.html#work">Work</a>
+      <a class="navigation-active" href="about.html" aria-current="page">About</a>
+      <a href="#contact">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main" class="about-main container">
+    <section class="about-intro" aria-labelledby="about-title">
+      <p class="label accent">ABOUT ME</p>
+      <h1 id="about-title">Selena (Sohyun) Kim</h1>
+      <p class="about-role secondary">UI/UX &amp; Product Designer</p>
+    </section>
+    <section class="about-section" aria-labelledby="background-title">
+      <h2 id="background-title">My Background</h2>
+      <div class="about-bio secondary">
             <p>I am a Product Designer currently pursuing my Master’s in Human-Computer Interaction at Georgia Institute
                 of Technology. I specialize in breaking down complex business logic, user constraints, and strict data
                 infrastructures into seamless, intuitive interaction architectures.</p>
@@ -181,33 +39,33 @@
                 execution—collaborating closely with engineering teams to map out foundational design tokens, build
                 atomic component libraries, and solve intricate data edge cases.</p>
 
-            <div class="tag-container">
-                <span class="bio-tag">Figma & FigJam</span>
-                <span class="bio-tag">Design Systems (Atomic)</span>
-                <span class="bio-tag">Interaction Design</span>
-                <span class="bio-tag">Information Architecture</span>
-                <span class="bio-tag">User Flows & Prototyping</span>
-                <span class="bio-tag">Usability Testing</span>
-            </div>
-
-            <!-- Contact 영역 -->
-            <div class="contact-section">
-                <h2>Let's Build Something Together</h2>
-                <p>I am actively seeking UI/UX Design and Product Design Internship opportunities for Summer 2027.
-                    Whether you want to discuss a project, talk about design architecture, or just say hi, feel free to
-                    reach out.</p>
-                <a href="mailto:skim3818@gatech.edu" class="email-btn">skim3818@gatech.edu</a>
-
-
-            </div>
-        </div>
-        <!-- 💡 추가된 Footer HTML (</div>와 </main> 사이에 넣어주세요) -->
-        <footer class="site-footer">
-            <p class="footer-text">
-                © 2026 Selena Sohyun Kim. Designed & Developed by Myself.
-            </p>
-        </footer>
-    </main>
+      </div>
+    </section>
+    <section class="about-section" aria-labelledby="expertise-title">
+      <h2 id="expertise-title">Design Toolkit</h2>
+      <ul class="about-tags" aria-label="Design skills">
+        <li>Figma &amp; FigJam</li>
+        <li>Design Systems (Atomic)</li>
+        <li>Interaction Design</li>
+        <li>Information Architecture</li>
+        <li>User Flows &amp; Prototyping</li>
+        <li>Usability Testing</li>
+      </ul>
+    </section>
+    <section class="about-section about-contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Let's Build Something Together</h2>
+      <div class="about-contact-copy">
+        <p class="label accent">SUMMER 2027 INTERNSHIPS</p>
+        <p class="secondary">I am actively seeking UI/UX Design and Product Design Internship opportunities for Summer 2027. Whether you want to discuss a project, talk about design architecture, or just say hi, feel free to reach out.</p>
+        <a class="about-email" href="mailto:skim3818@gatech.edu">skim3818@gatech.edu <span class="accent" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container">
+    <div class="footer-bottom">
+      <p class="label secondary">© 2026 Selena Sohyun Kim. Designed &amp; Developed by Myself.</p>
+      <a class="label" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 </body>
-
 </html>
