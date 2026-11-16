@@ -95,7 +95,7 @@
   --background-surface: #303030;
   --secondary-500: #00d8ad;
 }
-.case-study .cs-voc-header { flex-direction: column; align-items: flex-start; }
+.case-study .cs-voc-header { flex-direction: column; align-items: flex-start; margin-top: var(--cs-content-gap); }
 .case-study .cs-voc-intro { display: grid; justify-items: center; gap: var(--space-6); text-align: center; }
 .case-study .cs-voc-intro h2,
 .case-study .cs-voc-process-card h3 {
@@ -158,13 +158,13 @@
 .case-study .cs-voc-issue-group + .cs-voc-issue-group { margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--border-default); }
 .case-study .cs-voc-opportunities { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
 .case-study .cs-voc-card { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); border-radius: var(--space-5); background: var(--background-surface); }
-.case-study .cs-voc-card h3 { margin: 0; font-size: var(--title-medium-font-size); font-weight: var(--heading-h3-font-weight); line-height: 1.4; letter-spacing: var(--heading-h3-letter-spacing); }
-.case-study .cs-voc-card .cs-voc-card-copy > p { font-size: 1rem; }
-.case-study .cs-voc-card > img { width: 28px; height: 28px; }
+.case-study .cs-voc-card h3 { margin: 0; font-size: var(--title-medium-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--body-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
+.case-study .cs-voc-card .cs-voc-card-copy > p { font-size: var(--body-default-font-size); }
+.case-study .cs-voc-card > img { width: var(--space-6); height: var(--space-6); }
 .case-study .cs-voc-card .label { font-weight: 700; }
 .case-study .cs-voc-consent { color: var(--secondary-500); }
 .case-study .cs-voc-insight {
-  margin-top: 0;
+  margin-top: var(--cs-content-gap);
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
@@ -186,6 +186,8 @@
 .case-study .cs-deposit { --cs-deposit-surface: #303030; }
 .case-study .cs-deposit-header,
 .case-study .cs-deposit-problem { display: flex; flex-direction: column; gap: var(--space-1); }
+.case-study .cs-deposit-header > h3,
+.case-study .cs-consent-header > h3 { margin: 0; }
 .case-study .cs-deposit-header > .label { font-size: var(--title-medium-font-size); }
 .case-study .cs-deposit-header > .label,
 .case-study .cs-deposit-quote:first-child .label { font-weight: 700; }
