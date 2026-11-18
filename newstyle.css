@@ -277,6 +277,33 @@ h2 {
   padding-block: var(--space-4) var(--space-2);
   font-size: var(--body-default-font-size);
 }
+.artipio-design-system-link {
+  display: flex;
+  align-items: center;
+  gap: clamp(var(--space-1), 1.12vw, var(--space-3));
+  padding: clamp(var(--space-2), 1.67vw, var(--space-5));
+  border: 0.0625rem solid var(--background-default);
+  border-radius: var(--space-3);
+  background: var(--neutral-900);
+  font-size: clamp(1rem, 1.4vw, var(--title-medium-font-size));
+  font-weight: var(--font-weight-medium);
+}
+.artipio-design-system-link img {
+  flex: none;
+  width: clamp(1.5rem, 2.23vw, 2rem);
+  height: auto;
+}
+@media (min-width: 801px) {
+  .project-featured:has(.artipio-design-system-link) > .artipio-artwork {
+    align-self: start;
+  }
+  .project-featured:has(.artipio-design-system-link) > .project-copy {
+    align-self: stretch;
+  }
+  .artipio-design-system-link {
+    margin-top: auto;
+  }
+}
 .action-arrow {
   font-size: var(--heading-h3-font-size);
   font-weight: var(--heading-h3-font-weight);
@@ -503,11 +530,11 @@ h2 {
 }
 
 /* Smooth case-study gutters without changing other portfolio pages. */
-.case-study:has(#cs-summary-title) {
+.case-study:has(:is(#cs-summary-title, #ds-title)) {
   --page-gutter: clamp(1.5rem, calc(22.125vw - 9.5625rem), 11.5vw);
 }
 @media (max-width: 800px) {
-  .case-study:has(#cs-summary-title) {
+  .case-study:has(:is(#cs-summary-title, #ds-title)) {
     --page-gutter: clamp(1.25rem, calc(2.5vw + 0.5rem), 1.5rem);
   }
 }

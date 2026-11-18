@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "ARTiPIO Input Pretendard";
+  src: url("assets/artipio/input/PretendardVariable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+#ds-input .ds-preview-panel {
+  background: #fff;
+}
+
+.ds-input-example {
+  --input-active: #006bd6;
+  --input-border: #d3dae2;
+  --input-underline: #edf0f5;
+  --input-placeholder: #b7c2ce;
+  --input-text: #2f3842;
+  --input-system-icon: #1c2227;
+  color-scheme: light;
+  color: var(--input-text);
+  font-family: "ARTiPIO Input Pretendard", var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  width: min(100%, 327px);
+  height: 58px;
+  padding: 0 17px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  display: grid;
+  align-items: center;
+}
+
+.ds-input-example[data-focused] {
+  border-color: var(--input-active);
+}
+
+.ds-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ds-input-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.ds-input-text input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  caret-color: var(--input-active);
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.ds-input-text input::placeholder {
+  opacity: 1;
+  color: var(--input-placeholder);
+}
+
+.ds-input-example[data-state="cursor_active"] input::placeholder {
+  color: transparent;
+}
+
+.ds-input-example[data-mode="With Icon"][data-focused] input::placeholder {
+  color: var(--input-text);
+}
+
+.ds-input-send,
+.ds-input-clear,
+.ds-input-unit {
+  flex: none;
+}
+
+.ds-input-clear {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ds-input-clear:focus-visible {
+  outline: 2px solid var(--input-active);
+  outline-offset: 2px;
+}
+
+.ds-input-clear[aria-disabled="true"] {
+  cursor: default;
+}
+
+.ds-input-example[data-mode="Account"],
+.ds-input-example[data-mode="Quantity"] {
+  width: min(100%, 375px);
+  height: auto;
+  padding: 8px min(24px, 6.4%) 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ds-input-example[data-mode="Account"] .ds-input-row,
+.ds-input-example[data-mode="Quantity"] .ds-input-row {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--input-underline);
+}
+
+.ds-input-example[data-focused] .ds-input-row {
+  border-bottom-color: var(--input-active);
+}
+
+.ds-input-example[data-mode="Quantity"] {
+  font-size: 30px;
+}
+
+.ds-input-example[data-mode="Quantity"] .ds-input-row {
+  justify-content: center;
+  gap: 4px;
+}
+
+.ds-input-example[data-mode="Quantity"] input {
+  text-align: center;
+}
+
+.ds-input-example[data-mode="Quantity"] input::placeholder {
+  font-weight: 500;
+}
+
+.ds-input-example[data-mode="Quantity"][data-filled] .ds-input-text {
+  flex: 0 1 auto;
+  display: grid;
+}
+
+.ds-input-example[data-mode="Quantity"][data-filled] input,
+.ds-input-measure {
+  grid-area: 1 / 1;
+}
+
+.ds-input-measure {
+  display: none;
+  visibility: hidden;
+  white-space: pre;
+  overflow: hidden;
+}
+
+.ds-input-example[data-mode="Quantity"][data-filled] .ds-input-measure {
+  display: block;
+}
+
+.ds-input-unit {
+  color: var(--input-system-icon);
+}
+
+.ds-input-example [hidden] {
+  display: none;
+}

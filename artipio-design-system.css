@@ -1,0 +1,380 @@
+.case-study .ds-overview {
+  position: relative;
+  overflow: hidden;
+  --cs-hero-aspect-ratio: 1400 / 520;
+  width: calc(100% - 2 * var(--page-gutter));
+  background: var(--background-default);
+}
+
+.case-study .ds-overview > img {
+  position: absolute;
+  top: -3.65%;
+  left: 4.99%;
+  width: 90.03%;
+  height: 107.88%;
+}
+
+.ds-configurator {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: clamp(var(--space-7), 5.55vw, var(--space-13));
+  align-items: start;
+}
+
+.ds-preview-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.ds-preview-panel {
+  min-height: 13.125rem;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--neutral-900);
+  border-radius: var(--space-2);
+}
+
+.ds-button-example {
+  width: min(100%, var(--preview-width));
+}
+
+.ds-button-example[data-size="Small"] {
+  display: grid;
+  align-items: center;
+  height: 48px;
+  outline: 1px dashed var(--text-secondary);
+  outline-offset: -1px;
+  border-radius: var(--space-1);
+}
+
+.ds-button-example[data-size="Medium"] {
+  padding: var(--space-3);
+  background: #fff;
+  color: #303842;
+  border-radius: var(--space-2);
+}
+
+.ds-modal-copy {
+  margin-bottom: var(--space-3);
+  font-size: var(--body-small-font-size);
+}
+
+.ds-modal-title {
+  margin-bottom: 4px;
+  font-size: var(--body-default-font-size);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ds-preview-button {
+  display: block;
+  width: 100%;
+  height: var(--button-height);
+  padding: 0 var(--space-1);
+  border: 1px solid var(--button-border);
+  border-radius: 6px;
+  background: var(--button-background);
+  color: var(--button-text);
+  font-family: "Pretendard", var(--font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+}
+
+.ds-specs {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.ds-specs p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--space-2);
+}
+
+.ds-specs [hidden] {
+  display: none;
+}
+
+.ds-controls {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+
+.ds-controls fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ds-controls .cs-panel-title {
+  margin-bottom: var(--space-1);
+  padding: 0;
+}
+
+@media (min-width: 801px) {
+  .ds-controls fieldset:first-child .cs-panel-title {
+    line-height: calc(var(--heading-h3-font-size) * var(--heading-h3-line-height));
+  }
+}
+
+.ds-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.ds-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--space-1);
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--body-small-font-size);
+  cursor: pointer;
+}
+
+.ds-option[aria-pressed="true"] {
+  border-color: var(--indicator-active);
+  background: var(--neutral-900);
+  color: var(--text-primary);
+}
+
+.ds-option:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+
+#ds-appearance-options .ds-option {
+  padding-inline: var(--space-1);
+}
+
+.ds-swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--swatch-border);
+  border-radius: 4px;
+  background: var(--swatch-background);
+}
+
+@media (max-width: 800px) {
+  .ds-configurator {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ds-size-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ds-size-options .ds-option {
+    gap: 4px;
+    padding-inline: 4px;
+    white-space: nowrap;
+  }
+}
+
+/* Design Foundations specimens */
+.case-study .ds-foundations {
+  gap: var(--cs-content-gap);
+}
+
+.ds-foundation-group header {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.ds-token-scales,
+.ds-type-specimens {
+  width: 94%;
+  max-width: 82rem;
+}
+
+.ds-token-scales {
+  display: grid;
+  gap: var(--space-11);
+  margin-bottom: var(--cs-content-gap);
+  padding-top: var(--space-8);
+}
+
+.ds-token-scale {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ds-token {
+  position: relative;
+  min-width: 0;
+  min-height: 8.75rem;
+}
+
+.ds-token-swatch {
+  display: block;
+  height: 5.6875rem;
+  padding: var(--space-3) var(--space-2);
+  background: var(--swatch);
+  color: #fff;
+  font-weight: var(--font-weight-medium);
+  overflow-wrap: anywhere;
+}
+
+.ds-token-light .ds-token-swatch {
+  color: #1c2227;
+}
+
+.ds-token:first-child .ds-token-swatch {
+  border-radius: 6px 0 0 6px;
+}
+
+.ds-token:last-child .ds-token-swatch {
+  border-radius: 0 6px 6px 0;
+}
+
+.ds-token-primary {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 50%;
+  translate: -50% 0;
+  padding: 4px var(--space-3);
+  border-radius: 100px;
+  background: #006bd6;
+  color: #fff;
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.ds-token-use {
+  display: grid;
+  justify-items: center;
+  position: relative;
+  padding: 0 2px;
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.ds-token-use::before {
+  content: "";
+  height: 24px;
+  margin-bottom: var(--space-1);
+  border-inline-start: 2px dotted #858d98;
+}
+
+.ds-token-use::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 6px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #9ba3ac;
+}
+
+.ds-type-specimens {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(4.5rem, auto));
+  column-gap: var(--space-8);
+  margin-top: var(--cs-content-gap);
+}
+
+.ds-type-column {
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  margin: 0;
+}
+
+.ds-type-row {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding-block: var(--space-1);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.ds-type-row dd,
+.ds-type-samples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px var(--space-3);
+  margin: 0;
+}
+
+.ds-type-row dd {
+  justify-content: space-between;
+}
+
+.ds-type-row .label {
+  font-weight: var(--font-weight-regular);
+}
+
+.ds-type-samples {
+  font-family: "ARTiPIO Input Pretendard", var(--font-family);
+  font-size: var(--specimen-size);
+  line-height: var(--specimen-line-height, normal);
+  letter-spacing: -0.2px;
+}
+
+@media (max-width: 1100px) {
+  .ds-token-scales,
+  .ds-type-specimens {
+    width: 100%;
+  }
+
+  .ds-token-scale {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    row-gap: var(--space-8);
+  }
+
+  .ds-token:nth-child(6n + 1) .ds-token-swatch {
+    border-radius: 6px 0 0 6px;
+  }
+
+  .ds-token:nth-child(6n) .ds-token-swatch {
+    border-radius: 0 6px 6px 0;
+  }
+
+  .ds-token-primary {
+    bottom: calc(100% + 4px);
+  }
+}
+
+@media (max-width: 800px) {
+  .ds-type-specimens {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(10, minmax(4.5rem, auto));
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-token-scale {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ds-token:nth-child(3n + 1) .ds-token-swatch {
+    border-radius: 6px 0 0 6px;
+  }
+
+  .ds-token:nth-child(3n) .ds-token-swatch {
+    border-radius: 0 6px 6px 0;
+  }
+}

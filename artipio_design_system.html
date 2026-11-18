@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The ARTiPIO design system and its interactive button and input components." />
+  <title>ARTiPIO Design System — Selena (Sohyun) Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="newstyle.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <link rel="stylesheet" href="artipio-design-system.css" />
+  <link rel="stylesheet" href="artipio-input-configurator.css" />
+  <script src="artipio-design-system.js" defer></script>
+  <script src="artipio-input-configurator.js" defer></script>
+</head>
+
+<body class="case-study artipio-design-system" id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="index.html" aria-label="Selena — homepage">Selena</a>
+    <nav class="navigation" aria-label="Primary navigation">
+      <a class="navigation-active" href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main" class="cs-main">
+    <section class="cs-hero" aria-labelledby="ds-title">
+      <div class="cs-hero-placeholder ds-overview container">
+        <img src="assets/artipio/design-system-overview.png" width="3840" height="1708"
+          alt="ARTiPIO design system overview showing foundations, core components, and product components." />
+      </div>
+      <div class="cs-hero-copy container">
+        <p class="cs-eyebrow label accent">DESIGN SYSTEM / ARTIPIO</p>
+        <h1 class="cs-title" id="ds-title">Building a Unified Design System</h1>
+      </div>
+    </section>
+
+    <section class="cs-section container ds-foundations" aria-labelledby="ds-foundations-title">
+      <header class="cs-topic-header">
+        <p class="label accent">DESIGN SYSTEM / FOUNDATIONS</p>
+        <h2 id="ds-foundations-title">Design Foundations</h2>
+        <p class="secondary">A shared visual language built on consistent color and typography rules.</p>
+      </header>
+
+      <section class="ds-foundation-group" aria-labelledby="ds-color-title">
+        <header>
+          <h3 class="cs-subheading" id="ds-color-title">Color System</h3>
+          <p class="secondary">Primitive colors connected to their semantic roles.</p>
+        </header>
+        <div class="ds-token-scales">
+          <ul class="ds-token-scale" aria-label="Blue token scale">
+            <li class="ds-token ds-token-light" style="--swatch: #F5FBFF">
+              <span class="ds-token-swatch label">blue-50</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #E3F4FF">
+              <span class="ds-token-swatch label">blue-100</span>
+              <span class="ds-token-use label">surface</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #BAE1FF">
+              <span class="ds-token-swatch label">blue-200</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #8FCFFF">
+              <span class="ds-token-swatch label">blue-300</span>
+              <span class="ds-token-use label">graphic</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #5EBCFF">
+              <span class="ds-token-swatch label">blue-400</span>
+            </li>
+            <li class="ds-token" style="--swatch: #32ACFF">
+              <span class="ds-token-swatch label">blue-500</span>
+              <span class="ds-token-use label">graphic</span>
+            </li>
+            <li class="ds-token" style="--swatch: #019EFF">
+              <span class="ds-token-swatch label">blue-600</span>
+            </li>
+            <li class="ds-token" style="--swatch: #008FFC">
+              <span class="ds-token-swatch label">blue-700</span>
+            </li>
+            <li class="ds-token" style="--swatch: #027DE8">
+              <span class="ds-token-swatch label">blue-800</span>
+            </li>
+            <li class="ds-token" style="--swatch: #006BD6">
+              <span class="ds-token-swatch label">blue-900</span>
+              <span class="ds-token-primary label">Primary</span>
+            </li>
+            <li class="ds-token" style="--swatch: #034CB7">
+              <span class="ds-token-swatch label">blue-950</span>
+            </li>
+            <li class="ds-token" style="--swatch: #002A7C">
+              <span class="ds-token-swatch label">blue-1000</span>
+            </li>
+          </ul>
+          <ul class="ds-token-scale" aria-label="Gray token scale">
+            <li class="ds-token ds-token-light" style="--swatch: #F6F7F8">
+              <span class="ds-token-swatch label">gray-50</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #EDF0F5">
+              <span class="ds-token-swatch label">gray-100</span>
+              <span class="ds-token-use label">line</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #D3DAE2">
+              <span class="ds-token-swatch label">gray-200</span>
+              <span class="ds-token-use label">btn</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #B7C2CE">
+              <span class="ds-token-swatch label">gray-300</span>
+              <span class="ds-token-use label">disabled btn</span>
+            </li>
+            <li class="ds-token ds-token-light" style="--swatch: #9BA9B9">
+              <span class="ds-token-swatch label">gray-400</span>
+            </li>
+            <li class="ds-token" style="--swatch: #8595A8">
+              <span class="ds-token-swatch label">gray-500</span>
+            </li>
+            <li class="ds-token" style="--swatch: #6F8399">
+              <span class="ds-token-swatch label">gray-600</span>
+            </li>
+            <li class="ds-token" style="--swatch: #627487">
+              <span class="ds-token-swatch label">gray-700</span>
+              <span class="ds-token-use label">text-secondary</span>
+            </li>
+            <li class="ds-token" style="--swatch: #516070">
+              <span class="ds-token-swatch label">gray-800</span>
+            </li>
+            <li class="ds-token" style="--swatch: #424D5A">
+              <span class="ds-token-swatch label">gray-900</span>
+            </li>
+            <li class="ds-token" style="--swatch: #2F3842">
+              <span class="ds-token-swatch label">gray-950</span>
+              <span class="ds-token-use label">text-primary</span>
+            </li>
+            <li class="ds-token" style="--swatch: #1C2227">
+              <span class="ds-token-swatch label">gray-1000</span>
+              <span class="ds-token-use label">system icon</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="ds-foundation-group" aria-labelledby="ds-type-title">
+        <header>
+          <h3 class="cs-subheading" id="ds-type-title">Typography System</h3>
+          <p class="secondary">Pretendard / Letter spacing −0.2px / Actual size and weight specimens</p>
+        </header>
+        <div class="ds-type-specimens">
+          <dl class="ds-type-column">
+            <div class="ds-type-row">
+              <dt class="label secondary">Impact</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 30px">
+                  <span style="font-weight: 600">1 Share</span>
+                </div>
+                <span class="label secondary">30px · W500 / 600</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Heading 1</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 24px; --specimen-line-height: 34px">
+                  <span style="font-weight: 600">Art Investment</span>
+                </div>
+                <span class="label secondary">24px · 600 · LH 34px</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Heading 2</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 20px">
+                  <span style="font-weight: 600">Portfolio Overview</span>
+                </div>
+                <span class="label secondary">20px · W600</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Subhead 1</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 18px">
+                  <span style="font-weight: 500">Account Details</span>
+                  <span style="font-weight: 600">Account Details</span>
+                </div>
+                <span class="label secondary">18px · W500 / 600</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Subhead 2</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 16px; --specimen-line-height: 24px">
+                  <span style="font-weight: 400">Investment Details</span>
+                  <span style="font-weight: 500">Investment Details</span>
+                  <span style="font-weight: 700">Investment Details</span>
+                </div>
+                <span class="label secondary">16px · 400 / 500 / 700 · LH 24px</span>
+              </dd>
+            </div>
+          </dl>
+          <dl class="ds-type-column">
+            <div class="ds-type-row">
+              <dt class="label secondary">Subhead 3</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 14px">
+                  <span style="font-weight: 600">Transaction History</span>
+                </div>
+                <span class="label secondary">14px · W600</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Body 1</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 14px; --specimen-line-height: 22px">
+                  <span style="font-weight: 400">Information</span>
+                  <span style="font-weight: 500">Information</span>
+                  <span style="font-weight: 700">Information</span>
+                </div>
+                <span class="label secondary">14px · 400 / 500 / 700 · LH 22px</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Body 2</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 14px; --specimen-line-height: 20px">
+                  <span style="font-weight: 500">Available investment balance</span>
+                </div>
+                <span class="label secondary">14px · 500 · LH 20px</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Caption 1</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 12px">
+                  <span style="font-weight: 400">Last updated today</span>
+                  <span style="font-weight: 500">Last updated today</span>
+                </div>
+                <span class="label secondary">12px · W400 / 500</span>
+              </dd>
+            </div>
+            <div class="ds-type-row">
+              <dt class="label secondary">Caption 2</dt>
+              <dd>
+                <div class="ds-type-samples" style="--specimen-size: 10px">
+                  <span style="font-weight: 400">Additional information</span>
+                </div>
+                <span class="label secondary">10px · W400</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </section>
+
+    <section class="cs-section container" aria-labelledby="ds-buttons-title">
+      <div class="cs-divider" aria-hidden="true"></div>
+      <header class="cs-topic-header">
+        <p class="label accent">DESIGN SYSTEM / BUTTON COMPONENTS</p>
+        <h2 id="ds-buttons-title">A Configurable Button System</h2>
+        <p class="secondary">Inspired by Atlassian Design System, I collaborated with engineers to define button
+          appearance and size properties for consistent combinations across the app.</p>
+      </header>
+
+      <div class="ds-configurator">
+        <section aria-labelledby="ds-preview-title">
+          <div class="ds-preview-heading">
+            <h3 class="cs-subheading" id="ds-preview-title">Live Preview</h3>
+            <p class="label secondary" id="ds-selection"></p>
+          </div>
+          <div class="ds-preview-panel">
+            <div class="ds-button-example" id="ds-button-example">
+              <div class="ds-modal-copy" id="ds-modal-copy" hidden>
+                <p class="ds-modal-title">Confirm action</p>
+                <p>Are you sure you want to continue?</p>
+              </div>
+              <button class="ds-preview-button" type="button" tabindex="-1" aria-disabled="true">Confirm</button>
+            </div>
+            <p class="label secondary">Width: Fill container</p>
+          </div>
+          <div class="ds-specs label secondary" role="status" aria-atomic="true">
+            <p id="ds-specifications"></p>
+            <p id="ds-touch-note" hidden>* Proposed accessibility enhancement; not implemented in the original app.</p>
+          </div>
+        </section>
+
+        <div class="ds-controls">
+          <fieldset>
+            <legend class="cs-panel-title">Button Size</legend>
+            <div class="ds-options ds-size-options" id="ds-size-options"></div>
+          </fieldset>
+          <fieldset>
+            <legend class="cs-panel-title">Button Appearance</legend>
+            <div class="ds-options" id="ds-appearance-options"></div>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <section class="cs-section container" id="ds-input" aria-labelledby="ds-input-title">
+      <div class="cs-divider" aria-hidden="true"></div>
+      <header class="cs-topic-header">
+        <p class="label accent">DESIGN SYSTEM / COMPONENT SYSTEM</p>
+        <h2 id="ds-input-title">A Flexible Input System</h2>
+        <p class="secondary">Designed adaptable input patterns for different user tasks and interaction states.</p>
+      </header>
+
+      <div class="ds-configurator">
+        <section aria-labelledby="ds-input-preview-title">
+          <div class="ds-preview-heading">
+            <h3 class="cs-subheading" id="ds-input-preview-title">Live Preview</h3>
+            <p class="label secondary" data-input-summary role="status">Box / Default</p>
+          </div>
+          <div class="ds-preview-panel">
+            <div class="ds-input-example" data-mode="Standard" data-state="default">
+              <div class="ds-input-row">
+                <div class="ds-input-text">
+                  <span class="ds-input-measure" aria-hidden="true"></span>
+                  <input type="text" aria-label="Standard input" placeholder="Enter information" autocomplete="off"
+                    spellcheck="false" />
+                </div>
+                <span class="ds-input-unit" aria-hidden="true" hidden></span>
+                <img class="ds-input-send" src="assets/artipio/input/send-default.svg" width="24" height="24" alt=""
+                  hidden />
+                <button class="ds-input-clear" type="button" aria-label="Clear account number" hidden>
+                  <img src="assets/artipio/input/clear-default.svg" width="24" height="24" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="ds-specs label secondary">
+            <p data-input-specs><span>Height: 58px</span><span>Font: 16px / Medium</span><span>Radius: 8px</span></p>
+          </div>
+        </section>
+
+        <div class="ds-controls">
+          <fieldset>
+            <legend class="cs-panel-title">Input Shape</legend>
+            <div class="ds-options">
+              <button class="ds-option" type="button" data-input-shape="Box" aria-pressed="true">Box</button>
+              <button class="ds-option" type="button" data-input-shape="Line" aria-pressed="false">Line</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="cs-panel-title">Input Options</legend>
+            <div class="ds-options" data-input-options>
+              <button class="ds-option" type="button" aria-pressed="true">Standard</button>
+              <button class="ds-option" type="button" aria-pressed="false">With Icon</button>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <footer id="contact" class="site-footer container">
+      <div class="contact-invitation">
+        <div class="invitation-copy">
+          <p class="label secondary">HAVE SOMETHING IN MIND?</p>
+          <h2>Let’s make it intuitive.</h2>
+        </div>
+        <a class="contact-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=skim3818%40gatech.edu"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Email skim3818@gatech.edu in Gmail (opens in a new tab)">Get in touch <span
+            aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom label">
+        <p class="secondary">© 2026 Selena Sohyun Kim. Designed and developed by me with assistance from OpenAI Codex.
+        </p><a href="#top">Back to top
+          <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>

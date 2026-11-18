@@ -531,6 +531,7 @@
 .case-study .cs-flow-panel { display: grid; gap: var(--space-3); min-width: 0; padding: var(--space-5); border-radius: var(--space-5); background: #282828; }
 .case-study .cs-flow-header { display: grid; gap: var(--space-1); }
 .case-study .cs-flow-header > p { font-size: var(--body-small-font-size); }
+.case-study .cs-panel-title,
 .case-study .cs-flow-header h3 { margin: 0; font-size: var(--title-medium-font-size); line-height: var(--body-line-height); font-weight: var(--font-weight-medium); }
 .case-study .cs-flow-sequence { display: grid; min-width: 0; }
 .case-study .cs-flow-node { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--space-1); padding: var(--space-2) var(--space-3); border-radius: var(--space-2); background: #383838; text-align: center; min-width: 0; }
@@ -584,8 +585,11 @@
 
 /* Edge Case Design — isolated from completed case-study sections. */
 .case-study .cs-edge { --cs-edge-surface: #282a29; --cs-edge-green: #88c8b6; --cs-edge-orange: #edac90; --cs-edge-blue: #98a3ff; }
+.case-study .cs-topic-header,
 .case-study .cs-edge-header { display: grid; gap: var(--space-1); }
+.case-study .cs-topic-header > .label,
 .case-study .cs-edge-header > .label { font-weight: 700; }
+.case-study .cs-topic-header h2,
 .case-study .cs-edge-header h2 { font-size: var(--heading-h1-font-size); font-weight: var(--font-weight-semibold); line-height: var(--heading-line-height); letter-spacing: var(--heading-letter-spacing); }
 .case-study .cs-edge-values { display: grid; gap: var(--space-7); }
 .case-study .cs-edge-values > p { font-size: var(--body-small-font-size); }
@@ -625,7 +629,8 @@
   .case-study .cs-edge-warnings { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
 }
 @media (max-width: 600px) {
-  .case-study .cs-edge-header h2 { font-size: var(--heading-h2-font-size); }
+  .case-study .cs-topic-header h2,
+.case-study .cs-edge-header h2 { font-size: var(--heading-h2-font-size); }
   .case-study .cs-edge-value-grid { gap: var(--space-2); }
   .case-study .cs-edge-value-grid h3 { font-size: var(--body-default-font-size); line-height: var(--body-line-height); }
   .case-study .cs-edge-value-grid .secondary { font-size: var(--body-small-font-size); }
@@ -822,6 +827,7 @@
 .case-study .cs-development-slide:nth-child(2) .cs-development-image > img {
   object-fit: contain;
 }
+.case-study .cs-subheading,
 .case-study .cs-development-slide h3,
 .case-study .cs-development-qa-metric h3 {
   margin: 0;
