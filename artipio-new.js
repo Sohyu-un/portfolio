@@ -277,54 +277,33 @@
   }
 })();
 
-// Purchase recording: restart on entry and retry after loading or user interaction.
+// Start the purchase recording on page load, even while it is below the fold.
 (() => {
   const initializePurchase = () => {
     const video = document.querySelector('.cs-purchase-video');
-    if (!video || !('IntersectionObserver' in window)) return;
-    const preview = video.closest('.cs-purchase-preview');
-    let visible = false;
-    let requested = false;
-    let pending = false;
-    let restart = true;
-    const update = () => {
-      const shouldPlay = visible && !document.hidden;
-      if (!shouldPlay) {
-        requested = false;
-        restart = true;
-        video.pause();
-        return;
-      }
-      requested = true;
-      if (pending || video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) return;
-      if (restart) {
-        video.currentTime = 0;
-        restart = false;
-      }
-      if (!video.paused) return;
-      video.muted = true;
-      video.defaultMuted = true;
-      pending = true;
-      video.play().then(() => {
-        if (!requested) video.pause();
-      }).catch(() => {
-        // Loading and interaction events below can retry a blocked request.
-      }).finally(() => { pending = false; });
-    };
-    video.muted = true;
+    if (!video) return;
     video.defaultMuted = true;
-    const observer = new IntersectionObserver(entries => {
-      visible = entries[0].isIntersecting;
-      update();
+    video.muted = true;
+    const play = () => {
+      if (!video.paused) return;
+      video.play().catch(error => {
+        console.warn('Purchase video autoplay failed:', error);
+      });
+    };
+    video.addEventListener('canplay', play);
+    window.addEventListener('pageshow', play);
+    // Safari may suspend autoplay below the fold. Retry when the video becomes
+    // visible without pausing playback or requiring a click/scroll gesture.
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) play();
+      });
+      observer.observe(video);
+    }
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) play();
     });
-    observer.observe(preview);
-    video.addEventListener('loadeddata', update);
-    video.addEventListener('canplay', update);
-    document.addEventListener('visibilitychange', update);
-    window.addEventListener('pageshow', update);
-    ['pointerdown', 'touchstart', 'scroll'].forEach(event => {
-      window.addEventListener(event, update, { passive: true });
-    });
+    play();
   };
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializePurchase, { once: true });

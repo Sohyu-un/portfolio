@@ -6,6 +6,7 @@
   --text-secondary: #aeaeae;
   --text-accent: #6385f5;
   --border-default: #494949;
+  --neutral-900: #303030;
   --indicator-active: var(--text-accent);
   --action-primary-background: var(--text-accent);
   --action-primary-text: var(--background-default);
@@ -272,7 +273,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  border-top: 1px solid var(--border-default);
+  border-top: 1px solid var(--neutral-900);
   padding-block: var(--space-4) var(--space-2);
   font-size: var(--body-default-font-size);
 }
