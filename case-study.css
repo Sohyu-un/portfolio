@@ -115,6 +115,24 @@
 .case-study .cs-timeline-arrow { line-height: var(--body-line-height); }
 .case-study .cs-divider { height: 1px; background: var(--border-default); }
 
+.case-study .cs-takeaways {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.case-study .cs-takeaways > li {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-5);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--border-default);
+}
+.case-study .cs-takeaways > li > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
 /* VOC Analysis reuses the case-study grid, type scale, and spacing tokens. */
 .case-study .cs-voc {
   --background-surface: #303030;
