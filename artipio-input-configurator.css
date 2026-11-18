@@ -60,6 +60,7 @@
   background: transparent;
   color: inherit;
   caret-color: var(--input-active);
+  cursor: text;
   font: inherit;
   letter-spacing: inherit;
 }

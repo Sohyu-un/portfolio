@@ -267,6 +267,11 @@
             <h3 class="cs-subheading" id="ds-preview-title">Live Preview</h3>
             <p class="label secondary" id="ds-selection"></p>
           </div>
+          <p class="ds-preview-hint label secondary">
+            <svg class="accent" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+              stroke-linejoin="round" aria-hidden="true"><path d="m3 2 10 6-4.5 1-2 4.5L3 2Z" /></svg>
+            Select an option to customize the button
+          </p>
           <div class="ds-preview-panel">
             <div class="ds-button-example" id="ds-button-example">
               <div class="ds-modal-copy" id="ds-modal-copy" hidden>
@@ -308,13 +313,18 @@
             <h3 class="cs-subheading" id="ds-input-preview-title">Live Preview</h3>
             <p class="label secondary" data-input-summary role="status">Box / Default</p>
           </div>
+          <p class="ds-preview-hint label secondary" id="ds-input-hint">
+            <svg class="accent" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+              stroke-linejoin="round" aria-hidden="true"><path d="m3 2 10 6-4.5 1-2 4.5L3 2Z" /></svg>
+            Click the input and start typing
+          </p>
           <div class="ds-preview-panel">
             <div class="ds-input-example" data-mode="Standard" data-state="default">
               <div class="ds-input-row">
                 <div class="ds-input-text">
                   <span class="ds-input-measure" aria-hidden="true"></span>
-                  <input type="text" aria-label="Standard input" placeholder="Enter information" autocomplete="off"
-                    spellcheck="false" />
+                  <input type="text" aria-label="Standard input" aria-describedby="ds-input-hint"
+                    placeholder="Enter information" autocomplete="off" spellcheck="false" />
                 </div>
                 <span class="ds-input-unit" aria-hidden="true" hidden></span>
                 <img class="ds-input-send" src="assets/artipio/input/send-default.svg" width="24" height="24" alt=""

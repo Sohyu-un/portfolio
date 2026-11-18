@@ -18,7 +18,6 @@
   const modal = document.querySelector("#ds-modal-copy");
   const summary = document.querySelector("#ds-selection");
   const specifications = document.querySelector("#ds-specifications");
-  const touchNote = document.querySelector("#ds-touch-note");
   const controls = document.querySelector(".ds-controls");
 
   function addOptions(container, group, options) {
@@ -61,7 +60,6 @@
     example.style.setProperty("--button-text", appearance.text);
     example.style.setProperty("--button-border", appearance.border);
     modal.hidden = selection.size !== "Medium";
-    touchNote.hidden = !isSmall;
     summary.textContent = `${selection.appearance} / ${selection.size}`;
 
     const height = document.createElement("span");
