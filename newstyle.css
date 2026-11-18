@@ -288,6 +288,10 @@ h2 {
   font-size: clamp(1rem, 1.4vw, var(--title-medium-font-size));
   font-weight: var(--font-weight-medium);
 }
+.artipio-design-system-link:hover {
+  background: color-mix(in srgb, var(--neutral-900) 65%, var(--background-default));
+  text-decoration: none;
+}
 .artipio-design-system-link img {
   flex: none;
   width: clamp(1.5rem, 2.23vw, 2rem);
