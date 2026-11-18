@@ -286,6 +286,20 @@
   letter-spacing: var(--heading-h3-letter-spacing);
 }
 .case-study .cs-deposit-quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+.case-study .cs-deposit-numbered-title { display: flex; align-items: center; gap: var(--space-2); }
+.case-study .cs-deposit-problem-number {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 var(--space-6);
+  width: var(--space-6);
+  height: var(--space-6);
+  border-radius: 50%;
+  background: var(--action-primary-background);
+  color: var(--text-primary);
+  font-size: var(--title-medium-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
 .case-study .cs-deposit-quote {
   display: flex;
   flex-direction: column;
@@ -495,8 +509,8 @@
 .case-study .cs-consent-problem-detail .cs-consent-icon { width: 60px; height: 60px; }
 .case-study .cs-consent-problem-detail .cs-consent-icon img { transform: scale(0.4137931034); }
 .case-study .cs-consent-card > .label { font-weight: 700; }
-.case-study .cs-consent-icon { width: 103px; height: 103px; flex: 0 0 auto; }
-.case-study .cs-consent-icon img { max-width: none; transform: scale(0.7103448276); transform-origin: top left; }
+.case-study .cs-consent-icon { width: 80px; height: 80px; flex: 0 0 auto; }
+.case-study .cs-consent-icon img { max-width: none; transform: scale(0.5517241379); transform-origin: top left; }
 .case-study .cs-consent-card h3 { margin: 0; font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); letter-spacing: var(--heading-h3-letter-spacing); }
 .case-study .cs-consent-quote { justify-content: space-between; min-height: 244px; margin: 0; }
 .case-study .cs-consent-quote > div { display: flex; flex-direction: column; gap: var(--space-1); }
