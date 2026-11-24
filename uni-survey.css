@@ -128,3 +128,214 @@
 @media (max-width: 480px) {
   .uni-survey .data-card { padding: var(--space-4); }
 }
+
+/* Research synthesis */
+.uni-survey .uni-research {
+  container: uni-research / inline-size;
+  display: grid;
+  gap: var(--cs-content-gap);
+}
+.uni-survey .uni-research-header,
+.uni-survey .uni-research-footer,
+.uni-survey .uni-research-panel-header {
+  display: grid;
+  gap: var(--space-2);
+}
+.uni-survey .uni-research-header .cs-divider { margin-bottom: var(--space-3); }
+.uni-survey .uni-research-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+.uni-survey .uni-research h3,
+.uni-survey .uni-research h4,
+.uni-survey .uni-research h5 { margin: 0; }
+.uni-survey .uni-research h3,
+.uni-survey .uni-research-panel-header h4 {
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+}
+.uni-survey .uni-research h3 { font-size: var(--heading-h2-font-size); }
+.uni-survey .uni-research-panel-header h4 { font-size: var(--heading-h3-font-size); }
+.uni-survey .uni-research-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+.uni-survey .uni-research-panel {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  min-width: 0;
+  padding: clamp(var(--space-3), 2.5cqi, var(--space-6));
+  border-radius: var(--space-5);
+  background: color-mix(in srgb, var(--neutral-900), var(--background-default));
+}
+.uni-survey .uni-research-panel-header {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-default);
+}
+.uni-survey .uni-personas {
+  display: grid;
+  gap: var(--space-2);
+}
+.uni-survey .uni-persona {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: var(--space-2);
+  background: var(--neutral-900);
+}
+.uni-survey .uni-persona header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-default);
+}
+.uni-survey .uni-persona svg {
+  display: block;
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  padding: var(--space-1);
+  border-radius: var(--space-2);
+  background: color-mix(in srgb, var(--text-accent) 16%, var(--neutral-900));
+}
+.uni-survey .uni-persona dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--space-1);
+  margin: var(--space-1) 0 0;
+}
+.uni-survey .uni-journey {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2);
+  margin: 0;
+}
+.uni-survey .uni-journey-plot {
+  position: relative;
+  min-height: var(--space-14);
+  height: clamp(8rem, 19cqi, 14rem);
+  margin-block: var(--space-3) var(--space-1);
+}
+.uni-survey .uni-journey-plot svg,
+.uni-survey .uni-journey-markers {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.uni-survey .uni-journey-guides,
+.uni-survey .uni-journey-curve,
+.uni-survey .uni-journey-leader {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+.uni-survey .uni-journey-guides {
+  stroke: var(--border-default);
+  stroke-dasharray: 3 6;
+}
+.uni-survey .uni-journey-curve {
+  stroke: var(--text-accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.uni-survey .uni-journey-leader {
+  display: none;
+  stroke: var(--text-accent);
+  stroke-dasharray: 3 3;
+}
+.uni-survey .uni-journey-stop { stop-color: var(--text-accent); }
+.uni-survey .uni-journey-markers,
+.uni-survey .uni-journey-stages {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  justify-items: center;
+}
+.uni-survey .uni-journey-markers i {
+  position: relative;
+  top: var(--journey-marker-y);
+  width: var(--space-1);
+  height: var(--space-1);
+  border-radius: 50%;
+  background: var(--text-secondary);
+  transform: translateY(-50%);
+}
+.uni-survey .uni-journey-markers .uni-journey-peak {
+  width: var(--space-2);
+  height: var(--space-2);
+  border: 2px solid var(--text-primary);
+  background: var(--text-accent);
+}
+.uni-survey .uni-journey-plot > span {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+}
+.uni-survey .uni-journey-plot > span:first-child { top: 14%; transform: translateY(-100%); }
+.uni-survey .uni-journey-plot > span:last-child { top: 100%; }
+.uni-survey .uni-journey-stages {
+  gap: 0;
+  margin: var(--space-1) 0 0;
+  padding: var(--space-1) 0 0;
+  border-top: 1px solid var(--border-default);
+  list-style: none;
+  font-size: var(--label-small-font-size);
+  text-align: center;
+}
+.uni-survey .uni-journey-stages li {
+  min-width: 0;
+  padding-inline: 2px;
+  overflow-wrap: anywhere;
+}
+.uni-survey .uni-journey-callout {
+  position: relative;
+  justify-self: start;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--text-accent);
+  border-radius: var(--space-2);
+  background: color-mix(in srgb, var(--text-accent) 16%, var(--neutral-900));
+}
+.uni-survey .uni-opportunities {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-default);
+}
+.uni-survey .uni-opportunities ul {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.uni-survey .uni-opportunities li {
+  display: grid;
+  gap: 2px;
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, var(--text-accent) 45%, var(--border-default));
+  border-radius: var(--space-1);
+  background: color-mix(in srgb, var(--text-accent) 10%, var(--neutral-900));
+  font-size: var(--body-small-font-size);
+}
+.uni-survey .uni-opportunities strong { font-weight: var(--font-weight-semibold); }
+@container uni-research (min-width: 32rem) {
+  .uni-survey .uni-opportunities ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@container uni-research (min-width: 60rem) {
+  .uni-survey .uni-research-grid { grid-template-columns: minmax(0, 47fr) minmax(0, 53fr); }
+  .uni-survey .uni-journey-leader { display: inline; }
+  .uni-survey .uni-journey-callout {
+    grid-area: 2 / 1;
+    align-self: start;
+    margin-top: calc(var(--space-3) + clamp(8rem, 19cqi, 14rem) * .185);
+    margin-left: 44%;
+  }
+}

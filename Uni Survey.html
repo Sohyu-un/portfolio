@@ -177,17 +177,146 @@
 
 
             </section>
-            <div class="media-detail__content">
-
-              <div class="media-detail__description">
-                <h3 class="type-body-bold text-primary">
-                  Persona & Journey map </h3>
-                <div class="detail-block">
-                  <img src="./img/uni-journey.png" alt="Fluid Aspect Ratio Scaling">
+            <section class="uni-research" aria-labelledby="uni-research-title">
+              <header class="uni-research-header">
+                <div class="cs-divider" aria-hidden="true"></div>
+                <div class="uni-research-kicker">
+                  <p class="label accent">RESEARCH SYNTHESIS / UNI SURVEY</p>
+                  <p class="label secondary">PERSONAS + JOURNEY</p>
                 </div>
+                <h3 id="uni-research-title">Different users. Shared friction.</h3>
+                <p class="type-body secondary">Three user perspectives revealed where the survey journey needed clearer
+                  guidance and faster access to results.</p>
+              </header>
 
+              <div class="uni-research-grid">
+                <section class="uni-research-panel" aria-labelledby="uni-needs-title">
+                  <header class="uni-research-panel-header">
+                    <p class="label accent">01 / USER NEEDS</p>
+                    <h4 id="uni-needs-title">Who are we designing for?</h4>
+                  </header>
+                  <div class="uni-personas">
+                    <article class="uni-persona">
+                      <header>
+                        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+                          <defs>
+                            <g id="uni-persona-icon">
+                              <circle cx="12" cy="7" r="4" />
+                              <path d="M4 21v-2a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v2" />
+                            </g>
+                          </defs>
+                          <use href="#uni-persona-icon" />
+                        </svg>
+                        <div>
+                          <h5 class="type-body-bold">Graduate student</h5>
+                          <p class="type-body-small secondary">Starting &amp; managing team surveys</p>
+                        </div>
+                      </header>
+                      <dl>
+                        <dt class="label secondary">NEEDS</dt>
+                        <dd class="type-body-small">Templates and shared team management</dd>
+                      </dl>
+                      <p class="type-body-small secondary">Unsure where to start or coordinate with teammates</p>
+                    </article>
+                    <article class="uni-persona">
+                      <header>
+                        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#uni-persona-icon" />
+                        </svg>
+                        <div>
+                          <h5 class="type-body-bold">Marketing specialist</h5>
+                          <p class="type-body-small secondary">Recruiting respondents &amp; evaluating feedback</p>
+                        </div>
+                      </header>
+                      <dl>
+                        <dt class="label secondary">NEEDS</dt>
+                        <dd class="type-body-small">Faster panels and immediate data visuals</dd>
+                      </dl>
+                      <p class="type-body-small secondary">Recruitment and collection take too much time</p>
+                    </article>
+                    <article class="uni-persona">
+                      <header>
+                        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#uni-persona-icon" />
+                        </svg>
+                        <div>
+                          <h5 class="type-body-bold">Survey respondent</h5>
+                          <p class="type-body-small secondary">Finding surveys to complete</p>
+                        </div>
+                      </header>
+                      <dl>
+                        <dt class="label secondary">NEEDS</dt>
+                        <dd class="type-body-small">Discover active surveys in one place</dd>
+                      </dl>
+                      <p class="type-body-small secondary">Available survey opportunities are hard to find</p>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="uni-research-panel" aria-labelledby="uni-journey-title">
+                  <header class="uni-research-panel-header">
+                    <p class="label accent">02 / EXPERIENCE JOURNEY</p>
+                    <h4 id="uni-journey-title">Where does friction peak?</h4>
+                  </header>
+                  <figure class="uni-journey" aria-labelledby="uni-journey-caption">
+                    <figcaption class="type-body-small secondary" id="uni-journey-caption">
+                      Relative concern across the survey process · qualitative synthesis
+                    </figcaption>
+                    <div class="uni-journey-plot">
+                      <span class="label secondary">HIGH</span>
+                      <svg viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="uni-journey-fill" x2="0" y2="1">
+                            <stop class="uni-journey-stop" offset="0" stop-opacity=".24" />
+                            <stop class="uni-journey-stop" offset="1" stop-opacity="0" />
+                          </linearGradient>
+                        </defs>
+                        <path class="uni-journey-guides" d="M0 28H600 M0 84H600 M0 140H600 M0 196H600" />
+                        <path fill="url(#uni-journey-fill)"
+                          d="M50 184C93 167 117 124 150 115S213 91 250 92S305 8 350 9S407 86 450 102S519 148 550 163V196H50Z" />
+                        <path class="uni-journey-curve"
+                          d="M50 184C93 167 117 124 150 115S213 91 250 92S305 8 350 9S407 86 450 102S519 148 550 163" />
+                        <path class="uni-journey-leader" d="M350 15V37" />
+                      </svg>
+                      <div class="uni-journey-markers" aria-hidden="true">
+                        <i style="--journey-marker-y: 92%"></i>
+                        <i style="--journey-marker-y: 57.5%"></i>
+                        <i style="--journey-marker-y: 46%"></i>
+                        <i class="uni-journey-peak" style="--journey-marker-y: 4.5%"></i>
+                        <i style="--journey-marker-y: 51%"></i>
+                        <i style="--journey-marker-y: 81.5%"></i>
+                      </div>
+                      <span class="label secondary">LOW</span>
+                    </div>
+                    <ol class="uni-journey-stages type-body-small secondary" role="list">
+                      <li>Start</li>
+                      <li>Find platform</li>
+                      <li>Create questions</li>
+                      <li>Recruit &amp; collect</li>
+                      <li>Visualize results</li>
+                      <li>Present</li>
+                    </ol>
+                    <div class="uni-journey-callout">
+                      <p class="label accent">HIGHEST CONCERN</p>
+                      <p class="type-body-small">Recruiting respondents</p>
+                    </div>
+                  </figure>
+                  <div class="uni-opportunities">
+                    <h5 class="label accent">DESIGN OPPORTUNITIES</h5>
+                    <ul role="list">
+                      <li><strong>Easy starting point</strong><span class="secondary">Survey templates</span></li>
+                      <li><strong>Respondent access</strong><span class="secondary">Faster collection</span></li>
+                      <li><strong>Clearer insights</strong><span class="secondary">Immediate visualization</span></li>
+                    </ul>
+                  </div>
+                </section>
               </div>
-            </div>
+
+              <footer class="uni-research-footer type-body-small secondary">
+                <div class="cs-divider" aria-hidden="true"></div>
+                <p>Research synthesis / Condensed from the original UNI SURVEY personas and journey map</p>
+              </footer>
+            </section>
           </div>
         </div>
       </section>
