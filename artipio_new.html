@@ -392,58 +392,23 @@
           </article>
         </div>
       </div>
-      <div class="cs-consent-flow" role="group" aria-label="Consent participation flow before and after redesign">
-        <article class="cs-flow-panel cs-flow-before cs-scroll-reveal">
-          <header class="cs-flow-header">
-            <p class="secondary">AS-IS</p>
-            <h3>Blocked Participation</h3>
-          </header>
-          <div class="cs-flow-sequence">
-            <div class="cs-flow-node">Sign-up</div>
-            <div class="cs-flow-arrow" aria-hidden="true">↓</div>
-            <div class="cs-flow-node cs-flow-decision">Agree to optional terms?</div>
-            <div class="cs-flow-arrow cs-flow-no"><span>NO</span><span aria-hidden="true">↓</span></div>
-            <div class="cs-flow-node cs-flow-blocked"><span aria-hidden="true">⊗</span>Participation blocked</div>
-          </div>
-        </article>
-        <article class="cs-flow-panel cs-flow-after cs-scroll-reveal">
-          <header class="cs-flow-header">
-            <p class="accent">TO-BE / REDESIGNED</p>
-            <h3>A Re-entry Path to Participation</h3>
-          </header>
-          <div class="cs-flow-sequence">
-            <div class="cs-flow-node">Promotion Page</div>
-            <div class="cs-flow-arrow" aria-hidden="true">↓</div>
-            <div class="cs-flow-node cs-flow-decision" id="cs-consent-decision">Agree to Optional Terms?</div>
-            <div class="cs-flow-branches">
-              <svg class="cs-flow-branch-lines" viewBox="0 0 800 28" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M400 0 V8 H200 V26 M400 8 H600 V26 M194 20 L200 26 L206 20 M594 20 L600 26 L606 20" />
-              </svg>
-              <div class="cs-flow-branch">
-                <p class="cs-flow-branch-label secondary">YES</p>
-                <div class="cs-flow-node cs-flow-outcome"><span aria-hidden="true">◎</span>Event Participation</div>
-              </div>
-              <div class="cs-flow-branch cs-flow-branch-update">
-                <p class="cs-flow-branch-label secondary">NO</p>
-                <div class="cs-flow-node cs-flow-outcome cs-flow-update"><span class="accent"
-                    aria-hidden="true">⟳</span>Update Consent</div>
-                <div class="cs-flow-reentry">
-                  <p class="accent"><svg class="cs-flow-return-icon" width="24" height="24" viewBox="0 0 24 24"
-                      aria-hidden="true">
-                      <path d="M9 4 4 9l5 5M4 9h9a6 6 0 1 1 0 12" />
-                    </svg>New re-entry path</p>
-                  <p class="secondary">Users can return to the consent step without restarting the participation
-                    process.</p>
-                  <span class="cs-flow-sr-only">Update Consent returns to the optional consent decision.</span>
-                </div>
-                <svg class="cs-flow-return-line" viewBox="0 0 100 120" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M100 110 H104 V0 H100 M102 -3 L100 0 L102 3" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
+      <ol class="cs-consent-card cs-consent-path" role="list" aria-label="Consent recovery path">
+        <li>
+          <span class="label secondary">01</span>
+          <h3>Consent Declined</h3>
+          <p class="secondary">User previously opted out</p>
+        </li>
+        <li>
+          <span class="label secondary">02</span>
+          <h3>Participation Blocked</h3>
+          <p class="secondary">No clear way to update consent</p>
+        </li>
+        <li>
+          <span class="label accent">03 · NEWLY ADDED</span>
+          <h3>Re-entry Path</h3>
+          <p class="secondary">Update consent &amp; continue</p>
+        </li>
+      </ol>
     </section>
     <section class="cs-section cs-edge container" id="cs-edge" aria-labelledby="cs-edge-title">
       <div class="cs-divider" aria-hidden="true"></div>

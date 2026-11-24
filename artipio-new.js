@@ -39,7 +39,6 @@
       register('.cs-consent-problem-list > article', 200, 100);
       register('.cs-consent-quote', 200, 100);
       register('.cs-consent-solutions > article', 200, 100);
-      register('.cs-flow-panel', 0, 100);
       register('.cs-edge-header, .cs-edge-values, .cs-edge-layout');
 
       // Keep the exact strings from the document as the authoritative final values.

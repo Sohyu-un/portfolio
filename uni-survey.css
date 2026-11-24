@@ -4,22 +4,7 @@
   --uni-surface: #303030;
 }
 .uni-survey .project-detail { min-width: 0; }
-.uni-survey .project-hero {
-  position: relative;
-  height: 480px;
-  overflow: hidden;
-  background: #2f89ff;
-}
-/* Retain the existing hero crop and its centered placement. */
-.uni-survey .project-hero__image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: 100%;
-  max-width: none;
-  transform: translate(-50%, -50%);
-}
+.uni-survey .cs-hero-placeholder > img { display: block; }
 .uni-survey .project-introduction {
   padding-block: var(--cs-section-space);
 }
@@ -134,7 +119,6 @@
 }
 @media (max-width: 800px) {
   .uni-survey { --page-gutter: clamp(1.25rem, calc(2.5vw + 0.5rem), 1.5rem); }
-  .uni-survey .project-hero { height: 380px; }
   .uni-survey .project-introduction__main,
   .uni-survey .media-detail,
   .uni-survey .media-detail.is-half-split { grid-template-columns: minmax(0, 1fr); }
